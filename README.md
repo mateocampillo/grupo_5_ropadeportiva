@@ -1,11 +1,11 @@
 # grupo_5_ropadeportiva
 Proyecto Integrador - Grupo 5 - Digital House - Ropa Deportiva
 
-Descripción de productos: Es un ecommerce en el que se venderá ropa deportiva para hombres, mujeres mayores de 18 en adelante. 
+Descripción de productos: Es un ecommerce en el que se venderá todo tipo de indumentaria deportiva, orientando para hombres, mujeres, niños y niñas con interés en el mundo deportivo. Nuestro grupo intentará brindar la mejor experiencia para el usuario, desde la calidad del servicio brindado, las facilidades que se le prestan con la web y, obviamente, con una buena variedad de productos.
 
 Participantes del proyecto: 
 
-Mi nombre es Mateo Campillo, tengo 20 años, soy estudiante universitario y estoy muy entusiasmado en colaborar en este e-commerce que estamos lanzando.
+Mi nombre es Mateo Campillo, tengo 20 años, soy estudiante universitario y estoy muy entusiasmado en colaborar en este e-commerce que estamos lanzando. Este es mi primer proyecto de programacion en grupo, por lo que espero aprender mucho de mis compañeros y voy a dar mi todo para lograr el objetivo.
 
 Me llamo Felipe Colodro, tengo 21 años, soy estudiante de electronica y mi meta es lograr el mejor e-commerce posible.
 
