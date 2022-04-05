@@ -31,9 +31,4 @@ https://ar.puma.com/: Al igual que Adidas, el portal ofrece el precio en su pág
 
 https://www.zara.com/ar/: Llama la atención la simplicidad de la presentación fortalecida por un menu desplegable que por su propia naturaleza permite apreciar mejor las imágenes. 
 
-
-
-
-
-
-
+Enlace al tablero de trabajo: https://trello.com/b/0zFPHmfV/todo-deportes
