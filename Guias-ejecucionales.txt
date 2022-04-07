@@ -1,0 +1,10 @@
+Fuentes:
+
+https://fonts.google.com/specimen/Roboto
+
+Colores:
+
+Amarillo: #ede734
+Negro: #000
+Blanco: #fff
+Gris: #b0b0b0

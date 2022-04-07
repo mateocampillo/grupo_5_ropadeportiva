@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contenedor-header{
@@ -9,7 +10,7 @@
     padding: 10px;
     width: 100%;
     height: auto;
-    background-color: yellow;
+    background-color: #ede734;
     justify-content: center;
     align-items: center;
 }
@@ -20,11 +21,144 @@
 }
 
 .icono-header{
-    width: 25%;
+    width: 30%;
 }
 
 .logo-header{
     width: 30%;
+}
+
+main h2{
+    text-align: center;
+    font-size: 24px;
+}
+
+.main-producto-destacado div{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+}
+
+.main-producto-destacado-imagen{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
+    width: 90%;
+}
+
+.main-temporada{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.main-temporada article{
+    width: 70%;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.main-imagen-producto{
+    width: 80%;
+    border: 1px solid black;
+}
+
+.main-texto-temporada{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-categorias-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+.main-categorias-contenedor div{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 6px;
+    margin: 10px;
+}
+
+.main-categorias-flecha{
+    width: 10%;
+}
+
+.main-descuento{
+    background-color: #ede734;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.main-descuento-texto{
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.main-descuento-contenedor{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 22px;
+    padding: 15px;
+    width: auto;
+    margin: 0px 20px 10px 20px;
+    text-align: center;
+}
+
+.main-volver-arriba{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.main-volver-arriba div{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    width: 60%;
+    padding: 15px;
+    margin: 10px 0px;
+}
+
+.main-volver-arriba-flecha{
+    width: 10%;
+}
+
+.footer-contenedor-exterior{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #fff;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
 }
 
 @media (min-width: 380px){
