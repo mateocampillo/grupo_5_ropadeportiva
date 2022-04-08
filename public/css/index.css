@@ -91,6 +91,7 @@ main h2{
 .main-categorias-contenedor div{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid #000;
     font-size: 1.5rem;
     font-weight: 600;
@@ -148,7 +149,7 @@ main h2{
     width: 10%;
 }
 
-.footer-contenedor-exterior{
+.footer-contenedor-exterior-mobile{
     display: flex;
     justify-content: center;
     background-color: #b0b0b0;
@@ -157,7 +158,7 @@ main h2{
 }
 
 .footer-contenedor{
-    border: 1px solid #fff;
+    border: 1px solid #000;
     width: 95%;
     padding: 10px;
     font-weight: bold;
@@ -173,7 +174,11 @@ main h2{
     font-size: 18px;
 }
 
-@media (min-width: 380px){
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+@media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
 
     .header-logo{
         width: 15%;
@@ -203,9 +208,65 @@ main h2{
     .header-categorias{
         display: none;
     }
+
+    .footer-contenedor-exterior-mobile{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-tablet-pc{
+        display: flex;
+        background-color: #b0b0b0;
+        border: 1px solid #000;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        padding: 7px;
+        text-align: left;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        text-align: center;
+    }
+
+    .footer-contenedor-exterior-tablet-pc hr{
+        border-color: #000;
+        width: 90%;
+        margin: auto;
+        margin: 7px;
+    }
+    
+    .footer-contenedor-email{
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #b0b0b0;
+        margin: 5px 0px 10px 0px;
+        width: 80%;
+    }
+
+    .footer-contenedor-newsletter-redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+
+    .footer-contenedor-redsocial{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 15%;
+    }
+
 }
 
-@media (min-width: 834px){
+@media (min-width: 834px){                    /*Aca empieza la resolucion de PC*/
 
     .header-hamburguesa{
         display: none;
@@ -228,4 +289,15 @@ main h2{
         padding: 10px;
     }
 
+    .footer-contenedor-exterior-tablet-pc h3{
+        font-size: 1.5rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        font-size: 20px;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 10%;
+    }
 }
