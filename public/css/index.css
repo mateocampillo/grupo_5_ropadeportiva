@@ -42,7 +42,7 @@
 
 main h2{
     text-align: center;
-    font-size: 24px;
+    font-size: 1.4rem;
 }
 
 .main-producto-destacado div{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
@@ -67,7 +67,6 @@ main h2{
 .main-temporada article{
     width: 70%;
     margin: 10px;
-    position: relative;
     text-align: center;
 }
 
@@ -79,6 +78,10 @@ main h2{
 .main-texto-temporada{
     font-size: 20px;
     font-weight: 600;
+}
+
+.main-recomendado{
+    display: none;
 }
 
 .main-categorias-contenedor{
@@ -209,6 +212,48 @@ main h2{
         display: none;
     }
 
+    .main-temporada{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-temporada article{
+        width: 44%;
+    }
+
+    .main-recomendado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    .main-recomendado article{
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 10px 0px;
+        width: 50%;
+    }
+
+    .main-recomendado-imagen{
+        border: 1px solid #000;
+        width: 70%;
+    }
+
+    .main-categorias-contenedor{
+        display: none;
+    }
+
+    .main-descuento{
+        display: none;
+    }
+
+    .main-volver-arriba{
+        display: none;
+    }
+
     .footer-contenedor-exterior-mobile{
         display: none;
     }
@@ -288,6 +333,18 @@ main h2{
     .header-categorias div{
         padding: 10px;
     }
+
+    main h2{
+        font-size: 1.7rem;
+    }
+
+    .main-temporada article{
+        width: 22%;
+    }
+
+    .main-imagen-producto{
+        width: 100%;
+    } 
 
     .footer-contenedor-exterior-tablet-pc h3{
         font-size: 1.5rem;
