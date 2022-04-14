@@ -13,6 +13,9 @@
     background-color: #ede734;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
 }
 
 .header-contenedor nav{
@@ -20,7 +23,12 @@
     justify-content: center;
 }
 
-.header-barra-de-busqueda{
+.header-contenedor nav a{
+    display: flex;
+    justify-content: center;
+}
+
+.header-barra-busqueda{
     display: none;
 }
 
@@ -40,19 +48,60 @@
     width: 30%;
 }
 
+main{
+    margin-top: 130px;
+}
+
 main h2{
     text-align: center;
     font-size: 1.4rem;
 }
 
-.main-producto-destacado div{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
-    display: flex;
-    justify-content: center;
-    margin: 15px 0px;
+.main-producto-destacado{
+    position: relative;
+    margin-bottom: 15px;
 }
 
 .main-producto-destacado-imagen{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
-    width: 90%;
+    width: 100%;
+}
+
+.main-producto-destacado-nombre{
+    position: absolute;
+    top: 4%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.main-producto-destacado-descripcion{
+    display: none;
+}
+
+.main-producto-destacado-boton{
+    background-color: rgb(158, 158, 158);
+    color: #000;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 15%;
+    left: 38%;
+}
+
+.main-producto-destacado-icono-flecha-derecha{
+    width: 3%;
+    position: absolute;
+    right: 8%;
+    top: 45%;
+}
+
+.main-producto-destacado-icono-flecha-izquierda{
+    width: 3%;
+    position: absolute;
+    left: 8%;
+    top: 45%;
 }
 
 .main-temporada{
@@ -68,6 +117,11 @@ main h2{
     width: 70%;
     margin: 10px;
     text-align: center;
+    position: relative;
+}
+
+.main-temporada-contenedor-boton{
+    display: none;
 }
 
 .main-imagen-producto{
@@ -78,6 +132,13 @@ main h2{
 .main-texto-temporada{
     font-size: 20px;
     font-weight: 600;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+.main-textoequipo-temporada{
+    display: none;
 }
 
 .main-recomendado{
@@ -136,6 +197,11 @@ main h2{
     margin: 10px 0px;
 }
 
+.main-volver-arriba a{
+    text-decoration: none;
+    color: #000;
+}
+
 .main-volver-arriba div{
     display: flex;
     justify-content: space-around;
@@ -150,6 +216,7 @@ main h2{
 
 .main-volver-arriba-flecha{
     width: 10%;
+    padding-left: 5px;
 }
 
 .footer-contenedor-exterior-mobile{
@@ -191,25 +258,69 @@ main h2{
         width: 30%;
     }
 
-    .header-barra-de-busqueda{
-        display: flex;
-        width: 80%;
-        background-color: #fff;
-        border: 1px solid #000;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1rem;
-        padding: 1%;
-        margin-left: 35px;
+    .header-barra-busqueda{
+        display: block;
+        padding: 0px 15px;
+        position: relative;
     }
 
-    .header-barra-de-busqueda-lupa{
-        display: block;
-        width: 1rem;
+    .header-barra-busqueda input{
+        font-size: 1.3rem;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 3px;
+    }
+
+    .header-barra-busqueda-icono{
+        width: 16px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        cursor: pointer;
+    }
+
+    .header-barra-busqueda-boton{
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
     }
 
     .header-categorias{
         display: none;
+    }
+
+    .main-producto-destacado-nombre{
+        display: block;
+        width: auto;
+        top: 20%;
+        left: 12%;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .main-producto-destacado-descripcion{
+        display: block;
+        width: 60%;
+        position: absolute;
+        left: 12%;
+        bottom: 24%;
+        font-size: 1.5rem;
+    }
+    
+    .main-producto-destacado-boton{
+        font-size: 1.6rem;
+        left: 12%;
+        bottom: 9%;
+    }
+    
+    .main-producto-destacado-icono-flecha-derecha{
+        width: 2%;
+        right: 4%;
+    }
+    
+    .main-producto-destacado-icono-flecha-izquierda{
+        width: 2%;
+        left: 4%;
     }
 
     .main-temporada{
@@ -219,6 +330,19 @@ main h2{
 
     .main-temporada article{
         width: 44%;
+    }
+
+    .main-texto-temporada{
+        display: none;
+    }
+
+    .main-textoequipo-temporada{
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        position: absolute;
+        top: 5%;
+        width: 100%;
     }
 
     .main-recomendado{
@@ -235,6 +359,13 @@ main h2{
         font-size: 1.2rem;
         margin: 10px 0px;
         width: 50%;
+        position: relative;
+    }
+
+    .main-recomendado-nombre{
+        position: absolute;
+        bottom: 12%;
+        width: 100%;
     }
 
     .main-recomendado-imagen{
@@ -282,13 +413,22 @@ main h2{
         margin: auto;
         margin: 7px;
     }
-    
-    .footer-contenedor-email{
+
+    .footer-contenedor-newsletter-input{
+        font-size: 1.2rem;
+        padding: 5px;
         border: 1px solid #000;
+        border-radius: 5px;
         background-color: #fff;
-        color: #b0b0b0;
-        margin: 5px 0px 10px 0px;
-        width: 80%;
+        margin: 3px 0px 5px 0px;
+    }
+
+    .footer-contenedor-newsletter-boton{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
     }
 
     .footer-contenedor-newsletter-redes{
@@ -321,30 +461,66 @@ main h2{
         padding: 0px 20px;
     }
 
+    .header-logo{
+        width: 10%;
+    }
+
     .header-categorias{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 10px;
-        font-size: 1.5rem;
-        width: 50%;
+        font-size: 1.7rem;
+        width: 30%;
     }
 
     .header-categorias div{
         padding: 10px;
     }
 
+    .header-icono{
+        width: 13%;
+    }
+
     main h2{
         font-size: 1.7rem;
+    }
+
+    .main-producto-destacado-imagen{
+        max-height: 780px;
     }
 
     .main-temporada article{
         width: 22%;
     }
 
+    .main-temporada-contenedor-boton{
+        display: block;
+    }
+
+    .main-temporada-boton{
+        font-size: 1.3rem;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+    }
+
     .main-imagen-producto{
         width: 100%;
     } 
+
+    .main-recomendado article{
+        width: 40%;
+    }
+
+    .main-recomendado-nombre{
+        font-size: 1.8rem;
+    }
 
     .footer-contenedor-exterior-tablet-pc h3{
         font-size: 1.5rem;
@@ -355,6 +531,6 @@ main h2{
     }
 
     .footer-contenedor-redsocial-icono{
-        width: 10%;
+        width: 8%;
     }
 }

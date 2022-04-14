@@ -19,12 +19,15 @@
                 <div>Mujeres</div>
                 <div>Infantil</div>
             </div>
-            <div class="header-barra-de-busqueda">
-                <div>Busqueda</div>
-                <div><img class="header-barra-de-busqueda-lupa" src="/images/index/lupa-busqueda.svg" alt="icono lupa"></div>
-            </div>
-            <nav><img class="header-icono" src="/images/index/carrito-de-compras.svg" alt="Carrito de compras"></nav>
-            <nav><img class="header-icono" src="/images/index/user.svg" alt="Usuario"></nav>
+            <form action="/" method="get">
+                <div class="header-barra-busqueda"> 
+                    <label for="busqueda"></label>
+                    <input type="text" name="busqueda" id="busqueda" placeholder="Busqueda">
+                    <button class="header-barra-busqueda-boton" type="submit"><img class="header-barra-busqueda-icono" src="/images/index/lupa-busqueda.svg" alt="icono lupa"></button>
+                </div>
+            </form>
+            <nav><a href="/carrito"><img class="header-icono" src="/images/index/carrito-de-compras.svg" alt="Carrito de compras"></a></nav>
+            <nav><a href="/login"><img class="header-icono" src="/images/index/user.svg" alt="Usuario"></a></nav>
         </div>
     </header>
     <main>
@@ -32,36 +35,59 @@
             <div>
                 <img class="main-producto-destacado-imagen" src="/images/index/producto-placeholder.png" alt="carousel de productos">
             </div>
+            <h2 class="main-producto-destacado-nombre">
+                Producto destacado
+            </h2>
+            <div class="main-producto-destacado-descripcion">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, illum recusandae? Sed debitis voluptatibus ullam cupiditate dolorem?</p>
+            </div>
+            <div>
+                <a href="/"><button class="main-producto-destacado-boton">Ver más</button></a>
+            </div>
+            <div>
+                <img class="main-producto-destacado-icono-flecha-derecha" src="/images/index/mayorque.svg" alt="flecha derecha">
+            </div>
+            <div>
+                <img class="main-producto-destacado-icono-flecha-izquierda" src="/images/index/menorque.svg" alt="flecha izquierda">
+            </div>
         </section>
         <h2>Temporada 2021/22</h2>
         <section class="main-temporada">
             <article>
                 <img class="main-imagen-producto" src="/images/index/producto-placeholder.png" alt="Imagen producto">
                 <div class="main-texto-temporada">Ir al producto</div>
+                <div class="main-textoequipo-temporada">Equipo A</div>
+                <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
             </article>
             <article>
                 <img class="main-imagen-producto" src="/images/index/producto-placeholder.png" alt="Imagen producto">
                 <div class="main-texto-temporada">Ir al producto</div>
+                <div class="main-textoequipo-temporada">Equipo B</div>
+                <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
             </article>
             <article>
                 <img class="main-imagen-producto" src="/images/index/producto-placeholder.png" alt="Imagen producto">
                 <div class="main-texto-temporada">Ir al producto</div>
+                <div class="main-textoequipo-temporada">Equipo C</div>
+                <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
             </article>
             <article>
                 <img class="main-imagen-producto" src="/images/index/producto-placeholder.png" alt="Imagen producto">
                 <div class="main-texto-temporada">Ir al producto</div>
+                <div class="main-textoequipo-temporada">Equipo D</div>
+                <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
             </article>
         </section>
         <h2 class="main-recomendado">Recomendado para tí</h2>
         <section class="main-recomendado">
             <article>
                 <img class="main-recomendado-imagen" src="/images/index/producto-placeholder.png" alt="Imagen producto">
-                <div>Nombre producto</div>
+                <div class="main-recomendado-nombre">Nombre producto</div>
                 <div>Precio</div>
             </article>
             <article>
                 <img class="main-recomendado-imagen" src="/images/index/producto-placeholder.png" alt="Imagen producto">
-                <div>Nombre producto</div>
+                <div class="main-recomendado-nombre">Nombre producto</div>
                 <div>Precio</div>
             </article>
         </section>
@@ -78,7 +104,7 @@
             </div>
         </section>
         <section class="main-volver-arriba">
-            <div>Volver al inicio<img class="main-volver-arriba-flecha" src="/images/index/flecha-arriba.svg" alt="flecha arriba"></div>
+            <div><a href="/">Volver al inicio<img class="main-volver-arriba-flecha" src="/images/index/flecha-arriba.svg" alt="flecha arriba"></a></div>
         </section>
     </main>
     <footer>
@@ -110,9 +136,11 @@
             </div>
             <div class="footer-contenedor-newsletter-redes">
                 <h3>Nuestro newsletter</h3>
-                <div class="footer-contenedor-email">
-                    Introduzca su email
-                </div>
+                <form action="/" method="post">
+                    <label for="mailNewsletter"></label>
+                    <input class="footer-contenedor-newsletter-input" type="email" name="mailNewsletter" id="mailNewsletter" placeholder="Email">
+                    <button class="footer-contenedor-newsletter-boton" type="submit">Enviar</button>
+                </form>
                 <h3>Redes sociales</h3>
                 <div class="footer-contenedor-redsocial">
                     <img class="footer-contenedor-redsocial-icono" src="/images/index/facebook.svg" alt="Icono red social">
