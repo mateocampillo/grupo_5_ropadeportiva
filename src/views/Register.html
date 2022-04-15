@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/Register.css">
     <title>Todo deportes</title>
 </head>
+
 <body>
-    <h1>Hola, soy el Registro</h1>
+    <header>
+        <a href="/">
+            <div class="header-container">
+                <img class="header-logo" src="/images/logo-tododeportes.png" alt="logo">
+            </div>
+        </a>
+    </header>
+    <main>
+        <h1>Unite a nosotros!</h1>
+        <form action="/" method="post" class="formulario-container">
+            <div class="formulario-container-div-texto">
+                <label for="txtName">Nombre y apellido</label>
+                <input type="text" name="txtName" id="txtName" placeholder="Nombre completo" required>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="txtMail">Email</label>
+                <input type="email" name="txtMail" id="txtMail" placeholder="Email" required>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="txtUser">Nombre de usuario</label>
+                <input type="text" name="txtUser" id="txtUser" placeholder="Usuario" required>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="txtPassword">Contraseña</label>
+                <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required>
+                <input type="password" name="txtRePassword" id="txtPassword" placeholder="Repetir contraseña" required>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="dateCumple">Fecha de nacimiento</label>
+                <input type="date" name="dateCumple" id="dateCumple">
+            </div>
+            <div class="formulario-container-div-radio-sex">
+                <label for="radioSex">Sexo</label>
+                <div>Hombre<input type="radio" name="radioSex" id="radioSex" value="chkSexMan"></div>
+                <div>Mujer<input type="radio" name="radioSex" id="radioSex" value="chkSexWoman"></div>
+                <div>Otro<input type="radio" name="radioSex" id="radioSex" value="chkSexOther"></div>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="numberTel">Teléfono</label>
+                <input type="tel" name="numberTel" id="numberTel" placeholder="Teléfono" required>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="optProvincias">Provincia de residencia</label>
+                <select name="optProvincias" id="optProvincias" required>
+                    <option value="baires">Buenos Aires</option>
+                    <option value="caba">CABA</option>
+                    <option value="cat">Catamarca</option>
+                    <option value="cha">Chaco</option>
+                    <option value="chu">Chubut</option>
+                    <option value="cba">Córdoba</option>
+                    <option value="corr">Corrientes</option>
+                    <option value="eRio">Entre Ríos</option>
+                    <option value="for">Formosa</option>
+                    <option value="ju">Jujuy</option>
+                    <option value="lPam">La Pampa</option>
+                    <option value="lRio">La Rioja</option>
+                    <option value="mdz">Mendoza</option>
+                    <option value="mis">Misiones</option>
+                    <option value="neu">Neuquén</option>
+                    <option value="rNeg">Río Negro</option>
+                    <option value="sal">Salta</option>
+                    <option value="sJua">San Juan</option>
+                    <option value="sLui">San Luis</option>
+                    <option value="sCruz">Santa Cruz</option>
+                    <option value="sFe">Santa Fe</option>
+                    <option value="stg">Santiago del Estero</option>
+                    <option value="tie">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+                    <option value="tuc">Tucumán</option>
+                </select>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="txtAddress">Domicilio</label>
+                <input type="text" name="txtStreet" id="txtAddress" placeholder="Calle y número" required>
+                <input type="text" name="txtFloor" id="txtAddress" placeholder="Piso">
+                <input type="text" name="txtPostal" id="txtAddress" placeholder="Codigo Postal" required>
+            </div>
+            <div class="formulario-container-div-checkbox-newsletter">
+                <label for="chkNewsletter">Desea suscribirse a nuestro Newsletter?</label>
+                <input type="checkbox" name="chkNewsletter" id="chkNewsletter" value="chkNewsSi">
+            </div>
+            <div class="formulario-container-div-checkbox-terms">
+                <label for="chkTerms">
+                    Al hacer clic en Registrarme aceptás las <a href="/">condiciones</a>, <a href="/">políticas de datos</a> y <a href="">políticas de cookies</a>.
+                </label>
+                <input type="checkbox" name="chkTerms" id="chkTerms" value="chkTermsAccept">
+            </div>
+            <div class="formulario-container-div-botones">
+                <button type="submit">Registrarme</button>
+                <button type="reset">Borrar</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-contenedor-exterior-mobile">
+            <div class="footer-contenedor">
+                <ul>
+                    <li>Terminos y condiciones</li>
+                    <li>Cambios y devoluciones</li>
+                    <li>Contacto</li>
+                    <li>Compañía</li>
+                </ul>
+                <div>Copyright 2022, all rights reserved.</div>
+            </div>
+        </div>
+        <div class="footer-contenedor-exterior-tablet-pc">
+            <div>
+                <h3>Ayuda</h3>
+                <hr>
+                <div>Cambios y devoluciones</div>
+                <div>Terminos y condiciones</div>
+                <div>Preguntas frecuentas</div>
+            </div>
+            <div>
+                <h3>Acerca de</h3>
+                <hr>
+                <div>Contacto</div>
+                <div>Compañia</div>
+                <div>Empleos</div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

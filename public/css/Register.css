@@ -1,3 +1,285 @@
-h1{
-    font-size: 100px;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+                                                             /* ACA EMPIEZA LA SECCION HEADER */
+
+header{
+    background-color: #ede734;
+    margin: 2px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo{
+    width: 30%;
+}
+
+                                                             /* ACA EMPIEZA LA SECCION MAIN */
+
+main h1{
+    text-align: center;
+    margin: 10px;
+}
+
+.formulario-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-container input{
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.formulario-container label{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.formulario-container-div-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.formulario-container-div-texto select{
+    font-size: 1rem;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 80%;
+}
+
+.formulario-container-div-radio-sex{
+    text-align: center;
+    margin: 10px 0px;
+    width: 30%;
+}
+
+.formulario-container-div-radio-sex div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 15px 0px;
+}
+
+.formulario-container-div-checkbox-newsletter{
+    margin: 10px 0px;
+}
+
+.formulario-container-div-checkbox-newsletter input{
+    margin-left: 15px;
+}
+
+.formulario-container-div-checkbox-terms{
+    margin: 10px 0px;
+    width: 90%;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.formulario-container-div-checkbox-terms a{
+    text-decoration: none;
+    color: #5c5cff;
+}
+
+.formulario-container-div-checkbox-terms a:visited{
+    color: #5c5cff;
+}
+
+.formulario-container-div-botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.formulario-container-div-botones button{
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #5c5cff;
+    margin: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+/*Parte FOOTER*/
+
+footer{
+    margin: 0px 3px 3px;
+}
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+@media (min-width: 380px){
+
+    .header-logo{
+        width: 18%;
+    }
+
+    .formulario-container{
+        align-items: unset;
+    }
+
+    .formulario-container-div-texto input{
+        width: 50%;
+    }
+
+    .formulario-container-div-texto select{
+        width: 60%;
+    }
+
+    .formulario-container-div-radio-sex{
+        align-self: center;
+    }
+
+    .formulario-container-div-checkbox-newsletter{
+        align-self: center;
+    }
+
+    .formulario-container-div-checkbox-terms{
+        align-self: center;
+    }
+
+/* PARTE FOOTER*/
+
+    .footer-contenedor-exterior-mobile{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-tablet-pc{
+        display: flex;
+        background-color: #b0b0b0;
+        border: 1px solid #000;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        padding: 7px;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        text-align: center;
+    }
+
+    .footer-contenedor-exterior-tablet-pc hr{
+        border-color: #000;
+        width: 90%;
+        margin: auto;
+        margin: 7px;
+    }
+
+}
+
+@media (min-width: 834px){
+    
+    .header-logo{
+        width: 7%;
+    }
+
+    .formulario-container-div-texto input{
+        width: 35%;
+        margin: 8px;
+    }
+
+    .formulario-container-div-texto select{
+        width: 35%;
+    }
+
+    .formulario-container-div-radio-sex{
+        width: 10%;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        font-size: 1.5rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        font-size: 20px;
+        flex-grow: 0.3;
+        text-align: center;
+    }
+
 }

@@ -8,3 +8,4 @@ Amarillo: #ede734
 Negro: #000
 Blanco: #fff
 Gris: #b0b0b0
+lila/violeta claro: #5c5cff;
