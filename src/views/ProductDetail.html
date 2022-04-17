@@ -7,6 +7,141 @@
     <title>Todo deportes</title>
 </head>
 <body>
-    <h1>Hola, soy el detalle de producto</h1>
+    <header>
+            <div class="header-contenedor">
+                <nav><img class="header-hamburguesa" src="/images/index/menu-hamburguesa.svg" alt="menu hamburguesa"></nav>
+                <img class="header-logo" src="/images/logo-tododeportes.png" alt="logo pagina">
+                <div class="header-categorias">
+                    <div>Hombres</div>
+                    <div>Mujeres</div>
+                    <div>Infantil</div>
+                </div>
+                <form action="/" method="get">
+                    <div class="header-barra-busqueda"> 
+                        <label for="busqueda"></label>
+                        <input type="text" name="busqueda" id="busqueda" placeholder="Busqueda">
+                        <button class="header-barra-busqueda-boton" type="submit"><img class="header-barra-busqueda-icono" src="/images/index/lupa-busqueda.svg" alt="icono lupa"></button>
+                    </div>
+                </form>
+                <nav><a href="/carrito"><img class="header-icono" src="/images/index/carrito-de-compras.svg" alt="Carrito de compras"></a></nav>
+                <nav><a href="/login"><img class="header-icono" src="/images/index/user.svg" alt="Usuario"></a></nav>
+            </div>       
+        </header>
+        <main>
+            <section>
+                <div class="resumen">
+                    <p>Hombres</p>
+                    <p class="separadores">></p>
+                    <p>Camisetas</p>
+                    <p class="separadores">></p>
+                    <p class="producto">Camiseta titular 2022 - Rosario Central</p>
+                </div>
+            </section>
+            <section>
+                <div class="container-principal">
+                    <img class="imagen-principal" src="img/imagen1.jpg">
+                </div>
+                <div class="container-secundarias">
+                        <img class="imagen-secundaria1" src="img/imagen1.jpg">
+                        <img class="imagen-secundaria2" src="img/imagen2.jpg">
+                        <img class="imagen-secundaria3" src="img/imagen3.jpg">
+                </div>
+                <div class="colores">
+                    <p class="titulo"> Mas colores</p>
+                    <div>
+                        <img class="imagen-secundaria4" src="img/imagen1.jpg">
+                        <img class="imagen-secundaria5" src="img/imagen4.jpg">
+
+                    </div>
+                    <p class="color">Azul/Amarillo</p>
+                </div>
+                <hr>
+                <div>
+                    <p class="nombre"> Camiseta titular 2022 - Rosario Central</p>
+                </div>
+                <div class="talles">
+                    <p class="titulo-talle">Talles disponibles</p>
+                    <div class="talles-disp">
+                        <div class="talle-S"><p>S</p></div>
+                        <div class="talle-M"><p>M</p></div>
+                        <div class="talle-X"><p>X</p></div>
+                        <div class="talle-XL"><p>XL</p></div>
+                    </div>
+                    <div class="guia">
+                        <p class="guia-talles">Guia de talles</p>
+                    </div>
+                </div>
+                <div class="añadir-carrito">
+                    <button>AÑADIR A CARRITO</button>
+                </div>
+                <hr>
+                <div class="detalles">
+                    <p class="titulo-detalle">DETALLES DEL PRODUCTO</p>
+                    <div class="detalles1">
+                        <p class="sub-titulo">NUESTRO MODELO VISTE TALLE L</p>
+                        <div class="detalles1">
+                            <div class="sub-detalles"><div class="width"><p>Talles</p></div>	<p>Cintura 60 cm; Pecho 95 cm; Espalda 49 cm; Cuello 39 cm</p></div>
+                            <div class="sub-detalles"><div class="width"><p>Altura</p></div>	<p>179 cm</p></div>
+                        </div>
+                    </div>
+                    <div class="detalles2">
+                        <p class="sub-titulo">INFORMACION</p>
+                        <div class="detalles1">
+                            <div class="sub-detalles"><div class="width2"><p>Tela</p></div> <p>Algodón</p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Composición</p></div> <p>100% algodón</p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Color</p></div> <p>Bordó</p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Fit</p></div> <p>Regular</p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Detalles</p></div> <p>Estampa</p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Código Artículo</p></div> <p>TR037AT70FDTAR</p></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-contenedor-exterior-mobile">
+                <div class="footer-contenedor">
+                    <ul>
+                        <li>Terminos y condiciones</li>
+                        <li>Cambios y devoluciones</li>
+                        <li>Contacto</li>
+                        <li>Compañía</li>
+                    </ul>
+                    <div>Copyright 2022, all rights reserved.</div>
+                </div>
+            </div>
+            <div class="footer-contenedor-exterior-tablet-pc">
+                <div>
+                    <h3>Ayuda</h3>
+                    <hr>
+                    <div>Cambios y devoluciones</div>
+                    <div>Terminos y condiciones</div>
+                    <div>Preguntas frecuentas</div>
+                </div>
+                <div>
+                    <h3>Acerca de</h3>
+                    <hr>
+                    <div>Contacto</div>
+                    <div>Compañia</div>
+                    <div>Empleos</div>
+                </div>
+                <div class="footer-contenedor-newsletter-redes">
+                    <h3>Nuestro newsletter</h3>
+                    <form action="/" method="post">
+                        <label for="mailNewsletter"></label>
+                        <input class="footer-contenedor-newsletter-input" type="email" name="mailNewsletter" id="mailNewsletter" placeholder="Email">
+                        <button class="footer-contenedor-newsletter-boton" type="submit">Enviar</button>
+                    </form>
+                    <h3>Redes sociales</h3>
+                    <div class="footer-contenedor-redsocial">
+                        <img class="footer-contenedor-redsocial-icono" src="/images/index/facebook.svg" alt="Icono red social">
+                        <img class="footer-contenedor-redsocial-icono" src="/images/index/instagram.svg" alt="Icono red social">
+                        <img class="footer-contenedor-redsocial-icono" src="/images/index/twitter.svg" alt="Icono red social">
+                        <img class="footer-contenedor-redsocial-icono" src="/images/index/tiktok.svg" alt="Icono red social">
+                    </div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
