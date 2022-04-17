@@ -1,3 +1,240 @@
-h1{
-    font-size: 100px;
+*{
+    font-family: 'Roboto', sans-serif;
+}
+/* Main*/ 
+main{
+    width: 95%;
+    text-align: left;
+    padding-left: 2.5%;
+}
+
+/* Resumen*/
+.resumen{
+    display:flex;
+    font-size: 22px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.separadores{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.producto{
+    font-weight: bold;
+}
+
+/* Imagenes*/
+/* Imagen principal*/
+.container-principal{
+    text-align: center;
+}
+.imagen-principal{
+    width: 100%;
+}
+
+
+/* Imagenes secundarias*/
+.container-secundarias{
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15%;
+}
+.imagen-secundaria1{
+    width: 150px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin-right: 5%;
+    box-sizing: border-box;
+}
+.imagen-secundaria2{
+    width: 150px;
+    box-sizing: border-box;
+}
+.imagen-secundaria3{
+    width: 150px;
+    margin-left: 5%;
+    box-sizing: border-box;
+}
+
+/* Data */
+/* Colores*/
+.colores{
+    font-size: 20px;
+
+}
+.imagen-secundaria4{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 150px;
+    margin-right: 1%;
+}
+.imagen-secundaria5{
+    width: 150px;
+}
+.color{
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+}
+/* Nombre*/
+.nombre{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* Talles*/
+.titulo-talle{
+    font-size: 20px;
+}
+.talles-disp{
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+}
+.talle-S{
+    width: 18%;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 30px;
+}
+.talle-M{
+    width: 18%;
+    text-align: center;
+    font-size: 30px;
+    border: groove 0.5px #ebebeb;
+}
+.talle-X{
+    width: 18%;
+    text-align: center;
+    font-size: 30px;
+    border: groove 0.5px #ebebeb;
+}
+.talle-XL{
+    width: 18%;
+    text-align: center;
+    font-size: 30px;
+    border: groove 0.5px #ebebeb;
+}
+.guia-talles{
+    font-size: 13px;
+    text-decoration: underline;
+    color: #3cbdaf; 
+}
+
+/* Añadir a carrito*/
+.añadir-carrito{
+    text-align: center;
+}
+button{
+    width: 65%;
+    height: 75px;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+}
+/* Detalles producto*/
+.detalles{
+    margin-top: 15%;
+}
+.titulo-detalle{
+    font-size: 30px;
+    font-weight: 900;
+}
+.sub-titulo{
+    font-size: 20px;
+}
+.sub-detalles{
+    display: flex;
+    font-size: 26px;
+}
+.width{
+    width: 10%;
+}
+.width2{
+    width: 25%;
+}
+
+/* Agregaciones*/
+hr{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Header*/
+.header-contenedor{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: #ede734;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.header-contenedor nav{
+    display: flex;
+    justify-content: center;
+}
+
+.header-contenedor nav a{
+    display: flex;
+    justify-content: center;
+}
+
+.header-barra-busqueda{
+    display: none;
+}
+
+.header-categorias{
+    display: none;
+}
+
+.header-icono{
+    width: 30%;
+}
+
+.header-hamburguesa{
+    width: 30%;
+}
+
+.header-logo{
+    width: 30%;
+}
+
+/* Footer*/
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
 }
