@@ -1,0 +1,636 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-contenedor{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: #ede734;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.header-contenedor nav{
+    display: flex;
+    justify-content: center;
+}
+
+.header-contenedor nav a{
+    display: flex;
+    justify-content: center;
+}
+
+.header-barra-busqueda{
+    display: none;
+}
+
+.header-categorias{
+    display: none;
+}
+
+.header-icono{
+    width: 30%;
+}
+
+.header-hamburguesa{
+    width: 30%;
+}
+
+.header-logo{
+    width: 30%;
+}
+
+main{
+    margin-top: 0px;
+}
+
+main h2{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.main-producto-destacado{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.main-producto-destacado-imagen{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
+    width: 100%;
+}
+
+.main-producto-destacado-nombre{
+    position: absolute;
+    top: 4%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.main-producto-destacado-descripcion{
+    display: none;
+}
+
+.main-producto-destacado-boton{
+    background-color: rgb(158, 158, 158);
+    color: #000;
+    font-size: 1.3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 15%;
+    left: 38%;
+}
+
+.main-producto-destacado-icono-flecha-derecha{
+    width: 3%;
+    position: absolute;
+    right: 8%;
+    top: 45%;
+}
+
+.main-producto-destacado-icono-flecha-izquierda{
+    width: 3%;
+    position: absolute;
+    left: 8%;
+    top: 45%;
+}
+
+.main-temporada{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.main-temporada article{
+    width: 70%;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.main-temporada-contenedor-boton{
+    display: none;
+}
+
+.main-imagen-producto{
+    width: 80%;
+    border: 1px solid black;
+}
+
+.main-texto-temporada{
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+.main-textoequipo-temporada{
+    display: none;
+}
+
+.main-recomendado{
+    display: none;
+}
+
+.main-categorias-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+.main-categorias-contenedor div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 6px;
+    margin: 10px;
+}
+
+.main-categorias-flecha{
+    width: 10%;
+}
+
+.main-descuento{
+    background-color: #ede734;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.main-descuento-texto{
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.main-descuento-contenedor{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 22px;
+    padding: 15px;
+    width: auto;
+    margin: 0px 20px 10px 20px;
+    text-align: center;
+}
+
+.main-volver-arriba{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.main-volver-arriba a{
+    text-decoration: none;
+    color: #000;
+}
+
+.main-volver-arriba div{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    width: 60%;
+    padding: 15px;
+    margin: 10px 0px;
+}
+
+.main-volver-arriba-flecha{
+    width: 10%;
+    padding-left: 5px;
+}
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+@media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
+
+    .header-logo{
+        width: 15%;
+    }
+    
+    .header-icono{
+        width: 30%;
+    }
+
+    .header-barra-busqueda{
+        display: block;
+        padding: 0px 15px;
+        position: relative;
+    }
+
+    .header-barra-busqueda input{
+        font-size: 1.3rem;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 3px;
+    }
+
+    .header-barra-busqueda-icono{
+        width: 16px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        cursor: pointer;
+    }
+
+    .header-barra-busqueda-boton{
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+
+    .header-categorias{
+        display: none;
+    }
+
+    .main-producto-destacado-nombre{
+        display: block;
+        width: auto;
+        top: 20%;
+        left: 12%;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .main-producto-destacado-descripcion{
+        display: block;
+        width: 60%;
+        position: absolute;
+        left: 12%;
+        bottom: 24%;
+        font-size: 1.5rem;
+    }
+    
+    .main-producto-destacado-boton{
+        font-size: 1.6rem;
+        left: 12%;
+        bottom: 9%;
+    }
+    
+    .main-producto-destacado-icono-flecha-derecha{
+        width: 2%;
+        right: 4%;
+    }
+    
+    .main-producto-destacado-icono-flecha-izquierda{
+        width: 2%;
+        left: 4%;
+    }
+
+    .main-temporada{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-temporada article{
+        width: 44%;
+    }
+
+    .main-texto-temporada{
+        display: none;
+    }
+
+    .main-textoequipo-temporada{
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+        position: absolute;
+        top: 5%;
+        width: 100%;
+    }
+
+    .main-recomendado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    .main-recomendado article{
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 10px 0px;
+        width: 50%;
+        position: relative;
+    }
+
+    .main-recomendado-nombre{
+        position: absolute;
+        bottom: 12%;
+        width: 100%;
+    }
+
+    .main-recomendado-imagen{
+        border: 1px solid #000;
+        width: 70%;
+    }
+
+    .main-categorias-contenedor{
+        display: none;
+    }
+
+    .main-descuento{
+        display: none;
+    }
+
+    .main-volver-arriba{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-mobile{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-tablet-pc{
+        display: flex;
+        background-color: #b0b0b0;
+        border: 1px solid #000;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        padding: 7px;
+        text-align: left;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        text-align: center;
+    }
+
+    .footer-contenedor-exterior-tablet-pc hr{
+        border-color: #000;
+        width: 90%;
+        margin: auto;
+        margin: 7px;
+    }
+
+    .footer-contenedor-newsletter-input{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+        margin: 3px 0px 5px 0px;
+    }
+
+    .footer-contenedor-newsletter-boton{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .footer-contenedor-newsletter-redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+
+    .footer-contenedor-redsocial{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 15%;
+    }
+
+}
+
+@media (min-width: 834px){                    /*Aca empieza la resolucion de PC*/
+
+    .main{
+        margin-top: 0px;
+    }
+
+    .header-hamburguesa{
+        display: none;
+    }
+
+    .header-contenedor{
+        padding: 0px 20px;
+    }
+
+    .header-logo{
+        width: 10%;
+    }
+
+    .header-categorias{
+        display: flex;
+        justify-content: space-around; /*para que no queden tan alejados*/
+        align-items: center;
+        margin: 10px;
+        font-size: 1.7rem;
+        width: 30%;
+    }
+
+    .header-categorias div{
+        padding: 10px;
+    }
+
+    .header-icono{
+        width: 13%;
+    }
+
+    .subtitulo{
+        /*border: 1px solid black;*/
+        padding-top: 160px;
+        text-align: center;
+        background-color: #31f0a0;
+        padding-bottom: 20px;
+    }
+
+    #fondo {
+        background-image: url("../images/Index/producto-placeholder.png");
+        background-size: 100%;
+        padding: 30px;
+        /*border: 1px solid black;*/
+    }
+
+    .bloque {
+        margin-bottom: 15px;
+    }
+
+    /*.main-temporada{
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: space-evenly;
+        border: 1px solid black;
+        
+    }*/
+
+    .imagen-producto{
+        width: 200px;
+        float: left;
+        border: 1px solid black;
+        margin: auto;
+    }     
+
+   .descripcion-producto{
+    width: 700px;
+    padding-top: 90px;
+    padding-bottom: 78px;
+    padding-left: 30px;
+    margin-right: 0px;
+    font-size: 24px;
+    float: left;
+    /*border: 1px solid black;*/
+    }
+
+    .botones {
+        /*border: 1px solid black;*/
+        width: 220px;
+        display: inline-block;
+        padding-bottom: 98px;
+        text-align: center;
+    }
+
+    .button-cantidad{
+        width: 50px;
+        background-color: white;
+        color: black;
+        /*border: 1px solid black;*/
+        border-radius: 4px;
+        margin: 0px;
+        margin-top: 80px;
+        margin-right: 0px;
+    }
+
+    .acumulador{
+        width: 100px;
+    }
+
+    .precio{
+        /*border: 1px solid black;*/
+        width: 240px;
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 98px;
+        padding-top: 78px;
+        margin-right: 0px;
+        font-size: 24px;
+    }
+
+    .button-eliminar{
+        width: 89px;
+        background-color: white;
+        color: black;
+        border: 2px solid red;
+        transition-duration: 0.4s;
+        border-radius: 6px;
+    }
+
+    .button-eliminar:hover {
+        background-color: red;
+        color: white;
+    }
+  
+    .main-producto-destacado-imagen{
+        max-height: 780px;
+    }
+
+
+    .main-temporada article{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 20%;
+    }
+
+    .main-temporada-contenedor-boton{
+        display: block;
+    }
+
+    .main-temporada-boton{
+        font-size: 0.7rem;
+        background-color: #f5f5f5;
+        color: #000;
+        border: 0px solid #000;
+        border-radius: 5px;
+        padding: 0px;
+        position: absolute;
+        bottom: 3%;
+        left: 67%;
+    }
+
+    .descripcion-producto article{
+        flex-direction: column;
+        display: block;
+        width: 100%;
+    }
+
+    .main-recomendado article{
+        width: 40%;
+    }
+
+    .main-recomendado-nombre{
+        font-size: 1.8rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        font-size: 1.5rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        font-size: 20px;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 8%;
+    }
+}
