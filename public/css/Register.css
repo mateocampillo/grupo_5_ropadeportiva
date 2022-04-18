@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
                                                              /* ACA EMPIEZA LA SECCION HEADER */
@@ -189,7 +190,7 @@ footer{
     display: none;
 }
 
-@media (min-width: 380px){
+@media (min-width: 380px){                                              /*MEDIA 380PX*/
 
     .header-logo{
         width: 18%;
@@ -253,7 +254,7 @@ footer{
 
 }
 
-@media (min-width: 834px){
+@media (min-width: 834px){                                                   /*MEDIA 834PX*/
     
     .header-logo{
         width: 7%;

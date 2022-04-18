@@ -1,3 +1,267 @@
-h1{
-    font-size: 100px;
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #ede734;
+    margin: 2px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo{
+    width: 30%;
+}
+
+                                                           /*Code MAIN*/
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 15px 0px;
+    padding: 10px 5px;
+}
+
+.contenedor hr{
+    width: 80%;
+    color: rgb(70, 70, 70);
+    margin: 10px 0px;
+}
+
+.formulario-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.chkRemember{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+}
+
+.formulario-contenedor input{
+    display: block;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.contenedor-submit{
+    width: 80%;
+}
+
+.contenedor-submit button{
+    background-color: #5c5cff;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 6px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.recuperar-contraseña{
+    margin: 10px 0px;
+}
+
+main h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 0px 10px 0px;
+}
+
+                                                           /*Termina Code MAIN*/
+
+footer{
+    margin: 0px 3px 3px;
+}
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+@media (min-width: 380px){
+
+    .header-logo{
+        width: 18%;
+    }
+
+    .formulario-contenedor div{
+    margin: 10px 0px;
+    }
+
+    .contenedor-submit button{
+        width: 50%;
+    }
+
+    .chkRemember{
+        width: 50%;
+    }
+
+    .form-div-texto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-div-texto input{
+        width: 50%;
+    }
+
+    .footer-contenedor-exterior-mobile{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-tablet-pc{
+        display: flex;
+        background-color: #b0b0b0;
+        border: 1px solid #000;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        padding: 7px;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        text-align: center;
+    }
+
+    .footer-contenedor-exterior-tablet-pc hr{
+        border-color: #000;
+        width: 90%;
+        margin: auto;
+        margin: 7px;
+    }
+
+}
+
+@media (min-width: 834px){
+
+    .header-logo{
+        width: 7%;
+    }
+
+    .contenedor{
+        width: 40%;
+    }
+
+    a{
+        margin: 15px 0px;
+    }
+
+    main{
+        margin: 20px 0px 20px 0px;
+    }
+
+    .contenedor-submit button{
+        width: 40%;
+    }
+
+    .chkRemember{
+        width: 50%;
+    }
+
+    .form-div-texto input{
+        width: 50%;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        font-size: 1.5rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        font-size: 20px;
+        flex-grow: 0.3;
+        text-align: center;
+    }
+
 }

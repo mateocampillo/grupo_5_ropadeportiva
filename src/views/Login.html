@@ -3,10 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e4f7b7266.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/Login.css">
     <title>Todo deportes</title>
 </head>
 <body>
-    <h1>Hola, soy el Login</h1>
+    <header>
+        <a href="/">
+            <div class="header-container">
+                <img class="header-logo" src="/images/logo-tododeportes.png" alt="logo">
+            </div>
+        </a>
+    </header>
+    <main>
+        <div class="contenedor">
+            <h2>Entrar</h2>
+            <hr>
+            <form class="formulario-contenedor" action="/login" method="post">
+                <div class="form-div-texto">
+                    <label for="txtUserEmail">Email o Usuario</label>
+                    <input type="text" name="txtUserEmail" id="txtUserEmail" required>
+                </div>
+                <div class="form-div-texto">
+                    <label for="txtPassword">Contraseña</label>
+                    <input type="password" name="txtPassword" id="txtPassword" required>
+                </div>
+                <div class="chkRemember">
+                    <label for="chkRemember">Recordarme</label>
+                    <input type="checkbox" name="chkRemember" id="chkRemember">
+                </div>
+                <div class="contenedor-submit">
+                    <button type="submit">Ingresar</button>
+                </div> 
+                <div class="recuperar-contraseña">
+                    <a href="/">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+            <hr>
+            <h4>¿Aún no te registraste?</h4>
+            <a href="/register">Registrarme</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-contenedor-exterior-mobile">
+            <div class="footer-contenedor">
+                <ul>
+                    <li>Terminos y condiciones</li>
+                    <li>Cambios y devoluciones</li>
+                    <li>Contacto</li>
+                    <li>Compañía</li>
+                </ul>
+                <div>Copyright 2022, all rights reserved.</div>
+            </div>
+        </div>
+        <div class="footer-contenedor-exterior-tablet-pc">
+            <div>
+                <h3>Ayuda</h3>
+                <hr>
+                <div>Cambios y devoluciones</div>
+                <div>Terminos y condiciones</div>
+                <div>Preguntas frecuentas</div>
+            </div>
+            <div>
+                <h3>Acerca de</h3>
+                <hr>
+                <div>Contacto</div>
+                <div>Compañia</div>
+                <div>Empleos</div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
