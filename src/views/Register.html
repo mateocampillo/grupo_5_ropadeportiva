@@ -32,12 +32,12 @@
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtUser">Nombre de usuario</label>
-                <input type="text" name="txtUser" id="txtUser" placeholder="Usuario" required>
+                <input type="text" name="txtUser" id="txtUser" placeholder="Usuario" required minlength="6">
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtPassword">Contraseña</label>
-                <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required>
-                <input type="password" name="txtRePassword" id="txtPassword" placeholder="Repetir contraseña" required>
+                <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required minlength="6">
+                <input type="password" name="txtRePassword" id="txtPassword" placeholder="Repetir contraseña" required minlength="6">
             </div>
             <div class="formulario-container-div-texto">
                 <label for="dateCumple">Fecha de nacimiento</label>
@@ -51,7 +51,7 @@
             </div>
             <div class="formulario-container-div-texto">
                 <label for="numberTel">Teléfono</label>
-                <input type="tel" name="numberTel" id="numberTel" placeholder="Teléfono" required>
+                <input type="tel" name="numberTel" id="numberTel" placeholder="Teléfono" required minlength="8">
             </div>
             <div class="formulario-container-div-texto">
                 <label for="optProvincias">Provincia de residencia</label>
@@ -90,7 +90,7 @@
             </div>
             <div class="formulario-container-div-checkbox-newsletter">
                 <label for="chkNewsletter">Desea suscribirse a nuestro Newsletter?</label>
-                <input type="checkbox" name="chkNewsletter" id="chkNewsletter" value="chkNewsSi">
+                <input type="checkbox" name="chkNewsletter" id="chkNewsletter" value="chkNewsSi" checked>
             </div>
             <div class="formulario-container-div-checkbox-terms">
                 <label for="chkTerms">
@@ -108,28 +108,28 @@
         <div class="footer-contenedor-exterior-mobile">
             <div class="footer-contenedor">
                 <ul>
-                    <li>Terminos y condiciones</li>
-                    <li>Cambios y devoluciones</li>
-                    <li>Contacto</li>
-                    <li>Compañía</li>
+                    <li><a href="/">Terminos y condiciones</a></li>
+                    <li><a href="/">Cambios y devoluciones</a></li>
+                    <li><a href="/">Contacto</a></li>
+                    <li><a href="/">Compañía</a></li>
                 </ul>
                 <div>Copyright 2022, all rights reserved.</div>
             </div>
         </div>
         <div class="footer-contenedor-exterior-tablet-pc">
-            <div>
+            <div class="footer-contenedor-enlaces">
                 <h3>Ayuda</h3>
                 <hr>
-                <div>Cambios y devoluciones</div>
-                <div>Terminos y condiciones</div>
-                <div>Preguntas frecuentas</div>
+                <div><a href="/">Cambios y devoluciones</a></div>
+                <div><a href="/">Terminos y condiciones</a></div>
+                <div><a href="/">Preguntas frecuentas</a></div>
             </div>
-            <div>
+            <div class="footer-contenedor-enlaces">
                 <h3>Acerca de</h3>
                 <hr>
-                <div>Contacto</div>
-                <div>Compañia</div>
-                <div>Empleos</div>
+                <div><a href="/">Contacto</a></div>
+                <div><a href="/">Compañia</a></div>
+                <div><a href="/">Empleos</a></div>
             </div>
         </div>
     </footer>

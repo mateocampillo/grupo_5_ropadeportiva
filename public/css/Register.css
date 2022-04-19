@@ -68,6 +68,14 @@ main h1{
     width: 80%;
 }
 
+.formulario-container-div-texto input:required{
+    border: 1px solid rgb(255, 65, 65);
+}
+
+.formulario-container-div-texto input:valid{
+    border: 1px solid #000;
+}
+
 .formulario-container-div-radio-sex{
     text-align: center;
     margin: 10px 0px;
@@ -181,6 +189,11 @@ footer{
     list-style-position: inside;
 }
 
+.footer-contenedor a{
+    text-decoration: none;
+    color: #000;
+}
+
 .footer-contenedor div{
     padding-top: 10px;
     font-size: 18px;
@@ -224,6 +237,17 @@ footer{
 
     .footer-contenedor-exterior-mobile{
         display: none;
+    }
+
+    .footer-contenedor-enlaces a{
+        color:#000;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms;
+    }
+
+    .footer-contenedor-enlaces a:hover{
+        border-bottom: 1px solid #000;
     }
 
     .footer-contenedor-exterior-tablet-pc{

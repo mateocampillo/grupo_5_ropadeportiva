@@ -55,6 +55,14 @@ main{
     font-weight: 500;
 }
 
+.form-div-texto input:required{
+    border: 1px solid rgb(255, 65, 65);
+}
+
+.form-div-texto input:valid{
+    border: 1px solid #000;
+}
+
 .chkRemember{
     display: flex;
     flex-direction: row;
@@ -153,6 +161,11 @@ footer{
     list-style-position: inside;
 }
 
+.footer-contenedor li a{
+    text-decoration: none;
+    color: #000;
+}
+
 .footer-contenedor div{
     padding-top: 10px;
     font-size: 18px;
@@ -162,7 +175,7 @@ footer{
     display: none;
 }
 
-@media (min-width: 380px){
+@media (min-width: 380px){                     /*380PX*/
 
     .header-logo{
         width: 18%;
@@ -195,6 +208,17 @@ footer{
     .footer-contenedor-exterior-mobile{
         display: none;
     }
+    
+    .footer-contenedor-enlaces a{
+        color:#000;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms;
+    }
+
+    .footer-contenedor-enlaces a:hover{
+        border-bottom: 1px solid #000;
+    }
 
     .footer-contenedor-exterior-tablet-pc{
         display: flex;
@@ -224,7 +248,7 @@ footer{
 
 }
 
-@media (min-width: 834px){
+@media (min-width: 834px){                      /*834PX*/
 
     .header-logo{
         width: 7%;
