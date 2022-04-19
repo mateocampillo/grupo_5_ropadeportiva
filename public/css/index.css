@@ -414,6 +414,17 @@ main h2{
         margin: 7px;
     }
 
+    .footer-contenedor-enlaces a{
+        color:#000;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms;
+    }
+
+    .footer-contenedor-enlaces a:hover{
+        border-bottom: 1px solid #000;
+    }
+
     .footer-contenedor-newsletter-input{
         font-size: 1.2rem;
         padding: 5px;
@@ -508,6 +519,14 @@ main h2{
         position: absolute;
         bottom: 5%;
         left: 5%;
+        width: 45%;
+        font-weight: 500;
+        transition: all 250ms;
+    }
+
+    .main-temporada-boton:hover{
+        width: 90%;
+        font-weight: 600;
     }
 
     .main-imagen-producto{
