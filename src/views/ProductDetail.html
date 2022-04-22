@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/ProductDetail.css">
-    <title>Todo deportes</title>
-</head>
-<body>
-    <header>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/ProductDetail.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
             <div class="header-contenedor">
                 <nav><img class="header-hamburguesa" src="/images/index/menu-hamburguesa.svg" alt="menu hamburguesa"></nav>
                 <img class="header-logo" src="/images/logo-tododeportes.png" alt="logo pagina">
@@ -28,8 +24,9 @@
                 </form>
                 <nav><a href="/carrito"><img class="header-icono" src="/images/index/carrito-de-compras.svg" alt="Carrito de compras"></a></nav>
                 <nav><a href="/login"><img class="header-icono" src="/images/index/user.svg" alt="Usuario"></a></nav>
-            </div>       
+            </div>
         </header>
+
         <main>
             <section>
                 <div class="resumen">
@@ -41,42 +38,57 @@
                 </div>
             </section>
             <section>
-                <div class="container-principal">
-                    <img class="imagen-principal" src="/images/ProductDetail/imagen1.jpg">
-                </div>
-                <div class="container-secundarias">
-                        <img class="imagen-secundaria1" src="/images/ProductDetail/imagen1.jpg">
-                        <img class="imagen-secundaria2" src="/images/ProductDetail/imagen2.jpg">
-                        <img class="imagen-secundaria3" src="/images/ProductDetail/imagen3.jpg">
-                </div>
-                <div class="colores">
-                    <p class="titulo"> Mas colores</p>
+                <div class="container-izq-der">
+                    <div class="container-izq">
+                        <div class="container-principal">
+                            <img class="imagen-principal" src="images/ProductDetail/imagen1.jpg">
+                        </div>
+                        <div class="container-secundarias">
+                            <img class="imagen-secundaria1" src="images/ProductDetail/imagen1.jpg">
+                            <img class="imagen-secundaria2" src="images/ProductDetail/imagen2.jpg">
+                            <img class="imagen-secundaria3" src="images/ProductDetail/imagen3.jpg">
+                        </div>
+                    </div>
+                    <div class="container-der">
+                        <div class="colores">
+                            <p class="titulo"> Mas colores</p>
+                        <div>
+                            <img class="imagen-secundaria4" src="images/ProductDetail/imagen1.jpg">
+                            <img class="imagen-secundaria5" src="images/ProductDetail/imagen4.jpg">
+                        </div>
+                        <p class="color">Azul/Amarillo</p>
+                    </div>
+                    <hr class="hr1">
                     <div>
-                        <img class="imagen-secundaria4" src="/images/ProductDetail/imagen1.jpg">
-                        <img class="imagen-secundaria5" src="/images/ProductDetail/imagen4.jpg">
-
+                        <p class="nombre"> Camiseta titular 2022 - Rosario Central</p>
                     </div>
-                    <p class="color">Azul/Amarillo</p>
-                </div>
-                <hr>
-                <div>
-                    <p class="nombre"> Camiseta titular 2022 - Rosario Central</p>
-                </div>
-                <div class="talles">
-                    <p class="titulo-talle">Talles disponibles</p>
-                    <div class="talles-disp">
-                        <div class="talle-S"><p>S</p></div>
-                        <div class="talle-M"><p>M</p></div>
-                        <div class="talle-X"><p>X</p></div>
-                        <div class="talle-XL"><p>XL</p></div>
+                    <div>
+                        <p class="precio">$10.000</p>
                     </div>
-                    <div class="guia">
-                        <p class="guia-talles">Guia de talles</p>
+                    <div class="talles">
+                        <p class="titulo-talle">Talles disponibles</p>
+                        <div class="talles-disp">
+                            <div class="talle-S"><p class="letra">S</p></div>
+                            <div class="talle-M"><p class="letra">M</p></div>
+                            <div class="talle-X"><p class="letra">X</p></div>
+                            <div class="talle-XL"><p class="letra">XL</p></div>
+                        </div>
+                        <div class="guia">
+                            <p class="guia-talles">Guia de talles</p>
+                        </div>
+                    </div>
+                    <div class="añadir-carrito">
+                        <button>AÑADIR A CARRITO</button>
+                    </div>
+                    <div class="colores1">
+                        <p class="titulo"> Mas colores</p>
+                    <div>
+                        <img class="imagen-secundaria4" src="images/ProductDetail/imagen1.jpg">
+                        <img class="imagen-secundaria5" src="images/ProductDetail/imagen4.jpg">
                     </div>
                 </div>
-                <div class="añadir-carrito">
-                    <button>AÑADIR A CARRITO</button>
-                </div>
+            </div>
+        </div>
                 <hr>
                 <div class="detalles">
                     <p class="titulo-detalle">DETALLES DEL PRODUCTO</p>
@@ -87,6 +99,7 @@
                             <div class="sub-detalles"><div class="width"><p>Altura</p></div>	<p>179 cm</p></div>
                         </div>
                     </div>
+                </div>
                     <div class="detalles2">
                         <p class="sub-titulo">INFORMACION</p>
                         <div class="detalles1">
@@ -102,49 +115,51 @@
                 </div>
             </section>
         </main>
+
         <footer>
-            <div class="footer-contenedor-exterior-mobile">
-                <div class="footer-contenedor">
-                    <ul>
-                        <li>Terminos y condiciones</li>
-                        <li>Cambios y devoluciones</li>
-                        <li>Contacto</li>
-                        <li>Compañía</li>
-                    </ul>
-                    <div>Copyright 2022, all rights reserved.</div>
+        <div class="footer-contenedor-exterior-mobile">
+            <div class="footer-contenedor">
+                <ul>
+                    <li><a href="/">Terminos y condiciones</a></li>
+                    <li><a href="/">Cambios y devoluciones</a></li>
+                    <li><a href="/">Contacto</a></li>
+                    <li><a href="/">Compañía</a></li>
+                </ul>
+                <div>Copyright 2022, all rights reserved.</div>
+            </div>
+        </div>
+        <div class="footer-contenedor-exterior-tablet-pc">
+            <div class="footer-contenedor-enlaces">
+                <h3>Ayuda</h3>
+                <hr>
+                <div><a href="/">Cambios y devoluciones</a></div>
+                <div><a href="/">Terminos y condiciones</a></div>
+                <div><a href="/">Preguntas frecuentas</a></div>
+            </div>
+            <div class="footer-contenedor-enlaces">
+                <h3>Acerca de</h3>
+                <hr>
+                <div><a href="/">Contacto</a></div>
+                <div><a href="/">Compañia</a></div>
+                <div><a href="/">Empleos</a></div>
+            </div>
+            <div class="footer-contenedor-newsletter-redes">
+                <h3>Nuestro newsletter</h3>
+                <form action="/" method="post">
+                    <label for="mailNewsletter"></label>
+                    <input class="footer-contenedor-newsletter-input" type="email" name="mailNewsletter" id="mailNewsletter" placeholder="Email">
+                    <button class="footer-contenedor-newsletter-boton" type="submit">Enviar</button>
+                </form>
+                <h3>Redes sociales</h3>
+                <div class="footer-contenedor-redsocial">
+                    <img class="footer-contenedor-redsocial-icono" src="/images/index/facebook.svg" alt="Icono red social">
+                    <img class="footer-contenedor-redsocial-icono" src="/images/index/instagram.svg" alt="Icono red social">
+                    <img class="footer-contenedor-redsocial-icono" src="/images/index/twitter.svg" alt="Icono red social">
+                    <img class="footer-contenedor-redsocial-icono" src="/images/index/tiktok.svg" alt="Icono red social">
                 </div>
             </div>
-            <div class="footer-contenedor-exterior-tablet-pc">
-                <div>
-                    <h3>Ayuda</h3>
-                    <hr>
-                    <div>Cambios y devoluciones</div>
-                    <div>Terminos y condiciones</div>
-                    <div>Preguntas frecuentas</div>
-                </div>
-                <div>
-                    <h3>Acerca de</h3>
-                    <hr>
-                    <div>Contacto</div>
-                    <div>Compañia</div>
-                    <div>Empleos</div>
-                </div>
-                <div class="footer-contenedor-newsletter-redes">
-                    <h3>Nuestro newsletter</h3>
-                    <form action="/" method="post">
-                        <label for="mailNewsletter"></label>
-                        <input class="footer-contenedor-newsletter-input" type="email" name="mailNewsletter" id="mailNewsletter" placeholder="Email">
-                        <button class="footer-contenedor-newsletter-boton" type="submit">Enviar</button>
-                    </form>
-                    <h3>Redes sociales</h3>
-                    <div class="footer-contenedor-redsocial">
-                        <img class="footer-contenedor-redsocial-icono" src="/images/index/facebook.svg" alt="Icono red social">
-                        <img class="footer-contenedor-redsocial-icono" src="/images/index/instagram.svg" alt="Icono red social">
-                        <img class="footer-contenedor-redsocial-icono" src="/images/index/twitter.svg" alt="Icono red social">
-                        <img class="footer-contenedor-redsocial-icono" src="/images/index/tiktok.svg" alt="Icono red social">
-                    </div>
-                </div>
-            </div>
-        </footer>
-</body>
+        </div>
+    </footer>
+    
+    </body>
 </html>
