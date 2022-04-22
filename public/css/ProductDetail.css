@@ -1,18 +1,21 @@
 *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 /* Main*/ 
 main{
-    width: 95%;
-    text-align: left;
     padding-left: 2.5%;
+    padding-right: 2.5%;
 }
 
 /* Resumen*/
 .resumen{
     display:flex;
-    font-size: 22px;
-    margin-top: 100px;
+    font-size: 10px;
+    margin-top: 40%;
     margin-bottom: 10px;
 }
 .separadores{
@@ -44,49 +47,60 @@ main{
     margin-bottom: 15%;
 }
 .imagen-secundaria1{
-    width: 150px;
+    width: 25%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin-right: 5%;
-    box-sizing: border-box;
 }
 .imagen-secundaria2{
-    width: 150px;
-    box-sizing: border-box;
+    width: 25%;
 }
 .imagen-secundaria3{
-    width: 150px;
+    width: 25%;
     margin-left: 5%;
-    box-sizing: border-box;
 }
 
 /* Data */
 /* Colores*/
+.titulo{
+    padding-bottom: 1%;
+    font-size: 20px;
+}
 .colores{
     font-size: 20px;
-
 }
 .imagen-secundaria4{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    width: 150px;
+    width: 25%;
     margin-right: 1%;
 }
 .imagen-secundaria5{
-    width: 150px;
+    width: 25%;
 }
 .color{
-    font-size: 14px;
+    font-size: 12px;
     position: relative;
-    top: -10px;
+    top: -1px;
 }
-/* Nombre*/
+.colores1{
+    display: none;
+}
+
+/* Nombre y precio*/
 .nombre{
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
+    padding-bottom: 1%;
+}
+.precio{
+    font-size: 22px;
+    padding-bottom: 5%;
+    font-style: italic;
 }
 
 /* Talles*/
 .titulo-talle{
     font-size: 20px;
+    padding-bottom: 2%;
 }
 .talles-disp{
     list-style: none;
@@ -94,68 +108,83 @@ main{
     font-size: 20px;
 }
 .talle-S{
-    width: 18%;
+    width: 20%;
     color: white;
     background-color: black;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    height: 50px;
 }
 .talle-M{
-    width: 18%;
+    width: 20%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     border: groove 0.5px #ebebeb;
+    height: 50px;
 }
 .talle-X{
-    width: 18%;
+    width: 20%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     border: groove 0.5px #ebebeb;
+    height: 50px;
 }
 .talle-XL{
-    width: 18%;
+    width: 20%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     border: groove 0.5px #ebebeb;
+    height: 50px;
+}
+.letra{
+    position: relative;
+    bottom: -25%;
 }
 .guia-talles{
-    font-size: 13px;
+    font-size: 11px;
     text-decoration: underline;
     color: #3cbdaf; 
+    padding-top: 0.5%;
 }
 
 /* Añadir a carrito*/
 .añadir-carrito{
     text-align: center;
+    margin-top: 7.5%;
 }
-button{
+main button{
     width: 65%;
-    height: 75px;
-    font-size: 30px;
+    height: 40px;
+    font-size: 15px;
     color: white;
-    background-color: black;
+    background-color: #3cbdaf;
     border-radius: 50px;
+    border: none;
 }
 /* Detalles producto*/
 .detalles{
     margin-top: 15%;
 }
 .titulo-detalle{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 900;
+    padding-bottom: 3%;
 }
 .sub-titulo{
     font-size: 20px;
+    padding-bottom: 1.5%;
+    padding-top: 2.5%;
 }
 .sub-detalles{
     display: flex;
-    font-size: 26px;
+    font-size:12px;
+    padding-bottom: 0.5%;
 }
 .width{
-    width: 10%;
+    width: 15%;
 }
 .width2{
-    width: 25%;
+    width: 35%;
 }
 
 /* Agregaciones*/
@@ -164,7 +193,8 @@ hr{
     margin-bottom: 5%;
 }
 
-/* Header*/
+/* Header y footer*/
+
 .header-contenedor{
     display: flex;
     padding: 10px;
@@ -207,9 +237,6 @@ hr{
 .header-logo{
     width: 30%;
 }
-
-/* Footer*/
-
 .footer-contenedor-exterior-mobile{
     display: flex;
     justify-content: center;
@@ -230,6 +257,11 @@ hr{
     list-style-position: inside;
 }
 
+.footer-contenedor li a{
+    text-decoration: none;
+    color: #000;
+}
+
 .footer-contenedor div{
     padding-top: 10px;
     font-size: 18px;
@@ -237,4 +269,366 @@ hr{
 
 .footer-contenedor-exterior-tablet-pc{
     display: none;
+}
+
+
+/* Tablet*/
+@media (min-width: 380px){
+    .resumen {
+        display: flex;
+        font-size: 14px;
+        margin-top: 25%;
+        margin-bottom: 10px;
+    }
+    .colores1{
+        display: none;
+    }
+
+    /* Header y Footer*/
+    .header-logo{
+        width: 15%;
+    }
+    
+    .header-icono{
+        width: 30%;
+    }
+
+    .header-barra-busqueda{
+        display: block;
+        padding: 0px 15px;
+        position: relative;
+    }
+
+    .header-barra-busqueda input{
+        font-size: 1.3rem;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 3px;
+    }
+
+    .header-barra-busqueda-icono{
+        width: 16px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        cursor: pointer;
+    }
+
+    .header-barra-busqueda-boton{
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+
+    .header-categorias{
+        display: none;
+    }
+    footer{
+        margin-top: 2%;
+    }
+    .footer-contenedor-exterior-mobile{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-tablet-pc{
+        display: flex;
+        background-color: #b0b0b0;
+        border: 1px solid #000;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        padding: 7px;
+        text-align: left;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        text-align: center;
+    }
+
+    .footer-contenedor-exterior-tablet-pc hr{
+        border-color: #000;
+        width: 90%;
+        margin: auto;
+        margin: 7px;
+    }
+
+    .footer-contenedor-enlaces a{
+        color:#000;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms;
+    }
+
+    .footer-contenedor-enlaces a:hover{
+        border-bottom: 1px solid #000;
+    }
+
+    .footer-contenedor-newsletter-input{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+        margin: 3px 0px 5px 0px;
+    }
+
+    .footer-contenedor-newsletter-boton{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .footer-contenedor-newsletter-redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+
+    .footer-contenedor-redsocial{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 15%;
+    }
+
+    
+}
+
+@media (min-width: 834px){
+   /* Resumen*/
+   .resumen{
+    display:flex;
+    font-size: 22px;
+    margin-top: 12%;
+    margin-bottom: 2%;
+}
+.container-izq-der{
+    display: flex;
+    width: 100%;
+}
+.container-izq{
+    width: 60%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container-principal{
+    text-align: center;
+    width: 100%;
+}
+.container-secundarias{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 0%;
+    width: 20%;
+}
+.imagen-principal{
+    width: 95%;
+}
+.imagen-secundaria1{
+    margin-right: 0%;
+    width: 100%;
+    margin-bottom: 3%;
+
+}
+.imagen-secundaria2{
+    width: 100%;
+
+}
+.imagen-secundaria3{
+    margin-left: 0%;
+    width: 100%;
+    margin-top: 3%;
+}
+.container-der{
+    width: 40%;
+}
+.hr1{
+    display: none;
+}
+.nombre{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 1%;
+}
+.precio{
+    padding-bottom: 15%;
+    font-size: 28px;
+}
+/* Talles*/
+.titulo-talle{
+font-size: 26px;
+padding-bottom: 2%;
+}
+.talles-disp{
+list-style: none;
+display: flex;
+font-size: 20px;
+}
+.talle-S{
+    width: 20%;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 20px;
+    height: 44px;
+}
+.talle-M{
+width: 20%;
+text-align: center;
+font-size: 20px;
+border: groove 0.5px #ebebeb;
+height: 44px;
+}
+.talle-X{
+width: 20%;
+text-align: center;
+font-size: 20px;
+border: groove 0.5px #ebebeb;
+height: 44px;
+}
+.talle-XL{
+width: 20%;
+text-align: center;
+font-size: 20px;
+border: groove 0.5px #ebebeb;
+height: 44px;
+}
+.letra{
+position: relative;
+bottom: -25%;
+}
+.guia-talles{
+font-size: 16px;
+text-decoration: underline;
+color: #3cbdaf; 
+padding-top: 0.5%;
+}
+/* Añadir a carrito*/
+.añadir-carrito{
+text-align: center;
+margin-top: 3%;
+}
+main button{
+    width: 80%;
+    height: 46px;
+    font-size: 18px;
+    color: white;
+    background-color: #3cbdaf;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 15%;
+    margin-top: 5%;
+}
+/* Colores*/
+.titulo{
+padding-bottom: 1%;
+font-size: 24px;
+}
+.colores1{
+font-size: 20px;
+
+}
+.imagen-secundaria4{
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+width: 25%;
+margin-right: 1%;
+}
+.imagen-secundaria5{
+width: 25%;
+}
+.color{
+font-size: 12px;
+position: relative;
+top: -1px;
+}
+.colores{
+display: none;
+}
+.colores1{
+    display: block;
+}
+
+/* Detalles producto*/
+.detalles{
+margin-top: 0%;
+}
+.titulo-detalle{
+font-size: 28px;
+font-weight: 900;
+padding-bottom: 0%;
+}
+.sub-titulo{
+font-size: 24px;
+padding-bottom: 1.5%;
+padding-top: 2.5%;
+}
+.sub-detalles{
+display: flex;
+font-size:20px;
+padding-bottom: 0.5%;
+}
+.width{
+width: 20%;
+}
+.width2{
+width: 20%;
+}
+
+/* Agregaciones*/
+hr{
+margin-top: 5%;
+}
+
+    /*Header y Footer*/
+    .header-hamburguesa{
+        display: none;
+    }
+
+    .header-contenedor{
+        padding: 0px 20px;
+    }
+
+    .header-logo{
+        width: 10%;
+    }
+
+    .header-categorias{
+        display: flex;
+        justify-content: space-around; /*para que no queden tan alejados*/
+        align-items: center;
+        margin: 10px;
+        font-size: 1.7rem;
+        width: 30%;
+    }
+
+    .header-categorias div{
+        padding: 10px;
+    }
+
+    .header-icono{
+        width: 13%;
+    }
+    .footer-contenedor-exterior-tablet-pc h3{
+        font-size: 1.5rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        font-size: 20px;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 8%;
+    }
 }
