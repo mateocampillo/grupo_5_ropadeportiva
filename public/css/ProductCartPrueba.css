@@ -32,10 +32,6 @@
     display: none;
 }
 
-.header-categorias{
-    display: none;
-}
-
 .header-icono{
     width: 30%;
 }
@@ -250,18 +246,41 @@ main h2{
 
 @media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
 
+    .header-contenedor{
+        width: 100%;
+    }
+    
+    .header-hamburguesa{
+        width: 40%;
+        margin-right: 50%;
+        margin-left: 10%;
+    }
+    
     .header-logo{
         width: 15%;
+        margin-right: 5%;
     }
     
     .header-icono{
-        width: 30%;
+        width: 60%;
+    }
+
+    .header-categorias{
+        width: 20%;
+        padding-left: 0px;
     }
 
     .header-barra-busqueda{
         display: block;
         padding: 0px 15px;
         position: relative;
+        margin-top: 7%;
+    }
+
+    .header-contenedor nav a{
+        display: flex;
+        justify-content: flex-start;
+        margin: auto
     }
 
     .header-barra-busqueda input{
@@ -285,9 +304,150 @@ main h2{
         padding: 0px;
     }
 
-    .header-categorias{
-        display: none;
+    
+
+    .subtitulo{
+        /*border: 1px solid black;*/
+        padding-top: 20%;
+        text-align: center;
+        background-color: #31f0a0;
+        padding-bottom: 2%;
+        font-size: 1em;
     }
+
+    #fondo {
+        background-image: url("../images/Index/producto-placeholder.png");
+        background-size: 100%;
+        padding: 30px;
+        /*border: 1px solid black;*/
+    }
+
+    .bloque {
+        margin-bottom: 0%;
+        height: 530px;
+    }
+
+    .imagen-producto{
+        width: 90%;
+        border: 1px solid black;
+        margin: 0% 0% 0% 3%;
+    }     
+
+    .descripcion-producto{
+        width: 95%;
+        padding-left: 10px;
+        font-size: 24px;
+        text-align: center;
+        /*border: 1px solid black;*/
+        }
+
+    .botones {
+        /*border: 1px solid black;*/
+        width: 50%;
+        display: inline-block;
+        text-align: center;
+        margin: 0px;
+        margin-right: 0px;
+    }
+
+    .button-cantidad{
+        width: 25%;
+        background-color: white;
+        color: black;
+        /*border: 1px solid black;*/
+        border-radius: 4px;
+        margin: 0px;
+        margin-right: 0px;
+    }
+
+    .acumulador{
+        width: 40%;
+    }
+
+    .precio{
+        /*border: 1px solid black;*/
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 98px;
+        padding-top: 10px;
+        margin-right: 0px;
+        font-size: 21px;
+    }
+
+    .button-eliminar{
+        width: 15%;
+        background-color: white;
+        color: black;
+        border: 2px solid red;
+        transition-duration: 0.4s;
+        border-radius: 6px;
+    }
+
+    .button-eliminar:hover {
+        background-color: red;
+        color: white;
+    }
+
+    .codigo{
+        padding-bottom: 10px;
+    }
+
+    #codigo{
+
+        padding-left: 6px;
+    }
+
+    .aplicar{
+        padding-left: 3px;
+        padding-right: 3px;
+        border-radius: 6px;
+        margin-left: 3%;
+    }    
+
+    .forma-de-pago{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .forma-de-pago a{
+        font-size: 1.5rem;
+        color: #018850;
+        font-weight: bold;
+        margin-left: 15%;
+    }
+
+    .tarjeta{
+        width: 50px;
+        border: 1px solid black;
+        margin: auto;
+        margin-right: 0%;
+        margin-left: 16%;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+
+
+
+    .finalizar{
+        padding-left: 3px;
+        padding-right: 3px;
+        border-radius: 6px;
+    }
+
+    .monto{
+        width: 45%;
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        margin-right: 5px;
+        font-size: 21px;
+    }
+
+
+
 
     .main-producto-destacado-nombre{
         display: block;
@@ -296,6 +456,21 @@ main h2{
         left: 12%;
         font-size: 2rem;
         font-weight: 600;
+    }
+
+    .main-recomendado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main-temporada{
+        width: 95%;
+    }
+
+    .main-texto-temporada{
+        display: none;
     }
 
     .main-producto-destacado-descripcion{
@@ -332,10 +507,6 @@ main h2{
         width: 44%;
     }
 
-    .main-texto-temporada{
-        display: none;
-    }
-
     .main-textoequipo-temporada{
         display: block;
         font-size: 20px;
@@ -343,15 +514,7 @@ main h2{
         position: absolute;
         top: 5%;
         width: 100%;
-    }
-
-    .main-recomendado{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin: 10px 0px;
-    }
+    }    
 
     .main-recomendado article{
         text-align: center;
@@ -371,18 +534,6 @@ main h2{
     .main-recomendado-imagen{
         border: 1px solid #000;
         width: 70%;
-    }
-
-    .main-categorias-contenedor{
-        display: none;
-    }
-
-    .main-descuento{
-        display: none;
-    }
-
-    .main-volver-arriba{
-        display: none;
     }
 
     .footer-contenedor-exterior-mobile{
@@ -415,20 +566,21 @@ main h2{
     }
 
     .footer-contenedor-newsletter-input{
-        font-size: 1.2rem;
-        padding: 5px;
+        font-size: 1rem;
+        padding: 8px;
         border: 1px solid #000;
         border-radius: 5px;
         background-color: #fff;
-        margin: 3px 0px 5px 0px;
+        margin: 3px 0px 5px 15px;
     }
 
     .footer-contenedor-newsletter-boton{
-        font-size: 1.2rem;
-        padding: 5px;
+        font-size: 1rem;
+        padding: 8px;
         border: 1px solid #000;
         border-radius: 5px;
         background-color: #fff;
+        margin: 3px 0px 5px 15px;
     }
 
     .footer-contenedor-newsletter-redes{
@@ -457,12 +609,15 @@ main h2{
         margin-top: 0px;
     }
 
-    .header-hamburguesa{
-        display: none;
+    .header-contenedor{
+        width: 100%;
+        
     }
 
-    .header-contenedor{
-        padding: 0px 20px;
+    .header-hamburguesa{
+        width: 30%;
+        margin-right: 50%;
+        margin-left: 10%;
     }
 
     .header-logo{
@@ -480,15 +635,22 @@ main h2{
 
     .header-categorias div{
         padding: 10px;
+        justify-content: center;
     }
 
     .header-icono{
         width: 13%;
     }
 
+    .header-contenedor nav a{
+        display: flex;
+        justify-content: center;
+        margin: auto
+    }
+
     .subtitulo{
         /*border: 1px solid black;*/
-        padding-top: 160px;
+        padding-top: 12%;
         text-align: center;
         background-color: #31f0a0;
         padding-bottom: 20px;
@@ -502,17 +664,9 @@ main h2{
     }
 
     .bloque {
-        margin-bottom: 15px;
+        margin-bottom: 0%;
+        height: 220px;
     }
-
-    /*.main-temporada{
-        display: flex;
-        flex-direction: column;
-        align-content: flex-start;
-        justify-content: space-evenly;
-        border: 1px solid black;
-        
-    }*/
 
     .imagen-producto{
         width: 200px;
@@ -578,6 +732,33 @@ main h2{
     .button-eliminar:hover {
         background-color: red;
         color: white;
+    }
+
+    .codigo {
+        margin-left: 68%;
+    }
+
+    .tarjeta{
+        width: 40px;
+        border: 1px solid black;
+        margin: auto;
+        margin-left: 5px;
+        margin-bottom: -5px;
+    }
+
+    .forma-de-pago{
+        margin-left: 68%;
+        padding-top: 20px;
+    }
+
+    .forma-de-pago a{
+        font-size: 1rem;
+        color: #018850;
+        font-weight: bold;
+    }
+
+    .total {
+        margin-left: 71%;
     }
   
     .main-producto-destacado-imagen{
