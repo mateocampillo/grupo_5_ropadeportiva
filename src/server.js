@@ -2,26 +2,21 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
+// Carpeta pública para archivos estáticos.
 app.use(express.static("./public"));
+
+// Seteo para utilizar el template engine EJS
+app.set("view engine", "ejs");
+app.set('views', __dirname + '/views');
 
 app.listen(3000, () => { console.log("Servidor abierto en el puerto 3000") });
 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "./views/Index.html"));
-});
+//imports
+const main = require("./routes/main");
+const productos = require("./routes/productos");
+const users = require("./routes/users");
 
-app.get("/login", function (req, res) {
-    res.sendFile(path.join(__dirname, "./views/Login.html"));
-});
-
-app.get("/register", function (req, res) {
-    res.sendFile(path.join(__dirname, "./views/Register.html"));
-});
-
-app.get("/detalle-producto", function (req, res) {
-    res.sendFile(path.join(__dirname, "./views/ProductDetail.html"));
-});
-
-app.get("/carrito", function (req, res) {
-    res.sendFile(path.join(__dirname, "./views/ProductCart.html"));
-});
+// Index de rutas
+app.use("/", main);
+app.use("/productos", productos)
+app.use("/users", users);
