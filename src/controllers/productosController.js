@@ -4,6 +4,9 @@ const controller = {
     },
     cart: (req, res) => {
         res.status(200).render("./products/ProductCart");
+    },
+    edit: (req, res) => {
+        res.status(200).render("./products/ProductEdit");
     }
 }
 
