@@ -1,6 +1,6 @@
 const controller = {
     index: (req, res) => {
-        res.status(200).render("index")
+        res.status(200).render("./main/index")
     }
 }
 

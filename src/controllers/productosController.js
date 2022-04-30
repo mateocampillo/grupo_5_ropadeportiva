@@ -1,9 +1,9 @@
 const controller = {
     detalle: (req, res) => {
-        res.status(200).render("ProductDetail");
+        res.status(200).render("./products/ProductDetail");
     },
     cart: (req, res) => {
-        res.status(200).render("ProductCart");
+        res.status(200).render("./products/ProductCart");
     }
 }
 
