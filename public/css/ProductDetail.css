@@ -85,6 +85,10 @@ main{
     display: none;
 }
 
+.descripcion-producto h3{
+    margin: 15px 0px;
+}
+
 /* Nombre y precio*/
 .nombre{
     font-size: 30px;
@@ -165,6 +169,11 @@ main button{
 .detalles{
     margin-top: 15%;
 }
+
+.detalles div{
+    margin: 10px 0px;
+}
+
 .titulo-detalle{
     font-size: 24px;
     font-weight: 900;
@@ -282,6 +291,14 @@ hr{
     }
     .colores1{
         display: none;
+    }
+
+    .descripcion-producto{
+        font-size: 1.3rem;
+    }
+
+    .sub-detalles{
+        font-size: 1rem;
     }
 
     /* Header y Footer*/

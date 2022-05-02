@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Nombre1",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "category": "Hombre",
+        "size": "S",
+        "price": 1500,
+        "type": "Camiseta",
+        "waist": "Cintura 60cm",
+        "chest": "Pecho 40cm",
+        "back": "Espalda 25cm",
+        "height": "180cm",
+        "cloth": "Lycra",
+        "color": "Rojo",
+        "code": "A7DH123S9AN2"
+    },
+    {
+        "name": "Nombre2",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "category": "Mujer",
+        "size": "M",
+        "price": 2500,
+        "type": "Pantalon",
+        "waist": "Cintura 60cm",
+        "chest": "Pecho 40cm",
+        "back": "Espalda 25cm",
+        "height": "180cm",
+        "cloth": "Neoprene",
+        "color": "Azul",
+        "code": "A7DH123S9AN2"
+    },
+    {
+        "name": "Nombre3",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "category": "Infantil",
+        "size": "L",
+        "price": 2000,
+        "type": "Zapatillas",
+        "waist": "Cintura 60cm",
+        "chest": "Pecho 40cm",
+        "back": "Espalda 25cm",
+        "height": "180cm",
+        "cloth": "Algodón",
+        "color": "Blanco",
+        "code": "A7DH123S9AN2"
+    },
+    {
+        "name": "Nombre4",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+        "category": "Infantil",
+        "size": "S",
+        "price": 4000,
+        "type": "Buzo",
+        "waist": "Cintura 60cm",
+        "chest": "Pecho 40cm",
+        "back": "Espalda 25cm",
+        "height": "180cm",
+        "cloth": "Jersey Poliéster",
+        "color": "Negro",
+        "code": "A7DH123S9AN2"
+    }
+]
