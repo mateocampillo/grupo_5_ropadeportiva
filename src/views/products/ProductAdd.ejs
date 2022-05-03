@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ProductAdd.css">
+    <title>Crear Producto</title>
+</head>
+<body>
+    <%- include("../partials/headerUsers") %>
+    <main>
+
+            <!-- Formulario para agregar productos nuevos a la base de datos -->
+
+        <div class="container-prod-nuevo">
+            <form method="POST" action="/productos/agregado/">
+                <div>
+                    <label for="numAddId">Id de producto: (Completar con el id sugerido)</label><br>
+                    <input type="number" name="numAddId" id="numAddId" placeholder="<%= idDeProximo %>">
+                </div>
+                <div>
+                    <label for="txtAddName">Nombre de producto:</label>
+                    <input type="text" name="txtAddName" id="txtAddName">
+                </div>
+                <div>
+                    <label for="txtAddDesc">Descripcion de producto:</label><br>
+                    <textarea name="txtAddDesc" id="txtAddDesc" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <label for="radioAddCat">Categoria del producto:</label><br>
+                    <input type="radio" id="radioAddCat" name="radioAddCat" value="Hombre">Hombre
+                    <input type="radio" id="radioAddCat" name="radioAddCat" value="Mujer">Mujer
+                    <input type="radio" id="radioAddCat" name="radioAddCat" value="Infantil">Infantil
+                </div>
+                <div>
+                    <label for="numAddPrice">Precio del producto:</label><br>
+                    <input type="number" id="numAddPrice" name="numAddPrice">
+                </div>
+                <div>
+                    <label for="radioAddType">Tipo del producto:</label><br>
+                    <input type="radio" id="radioAddType" name="radioAddType" value="Camiseta">Camiseta
+                    <input type="radio" id="radioAddType" name="radioAddType" value="Pantalon">Pantalon
+                    <input type="radio" id="radioAddType" name="radioAddType" value="Zapatillas">Zapatillas
+                    <input type="radio" id="radioAddType" name="radioAddType" value="Buzo">Buzo
+                </div>
+                <div>
+                    <label for="radioAddSize">Talle del producto:</label><br>
+                    <input type="radio" id="radioAddSize" name="radioAddSize" value="S">S
+                    <input type="radio" id="radioAddSize" name="radioAddSize" value="M">M
+                    <input type="radio" id="radioAddSize" name="radioAddSize" value="L">L
+                </div>
+                <div>
+                    <label for="txtAddWaist">Cm de cintura:</label><br>
+                    <input type="text" id="txtAddWaist" name="txtAddWaist">
+                </div>
+                <div>
+                    <label for="txtAddChest">Cm de Pecho:</label><br>
+                    <input type="text" id="txtAddChest" name="txtAddChest">
+                </div>
+                <div>
+                    <label for="txtAddBack">Cm de Espalda:</label><br>
+                    <input type="text" id="txtAddBack" name="txtAddBack">
+                </div>
+                <div>
+                    <label for="txtAddHeight">Altura:</label><br>
+                    <input type="text" id="txtAddHeight" name="txtAddHeight">
+                </div>
+                <div>
+                    <label for="radioAddCloth">Tela del producto:</label><br>
+                    <input type="radio" id="radioAddCloth" name="radioAddCloth" value="Algodon">Algodon
+                    <input type="radio" id="radioAddCloth" name="radioAddCloth" value="Lycra">Lycra
+                    <input type="radio" id="radioAddCloth" name="radioAddCloth" value="Neoprene">Neoprene
+                    <input type="radio" id="radioAddCloth" name="radioAddCloth" value="Jersey">Jersey
+                </div>
+                <div>
+                    <label for="radioAddColor">Color del producto:</label><br>
+                    <input type="radio" id="radioAddColor" name="radioAddColor" value="Negro">Negro
+                    <input type="radio" id="radioAddColor" name="radioAddColor" value="Blanco">Blanco
+                    <input type="radio" id="radioAddColor" name="radioAddColor" value="Rojo">Rojo
+                    <input type="radio" id="radioAddColor" name="radioAddColor" value="Azul">Azul
+                </div>
+                <div>
+                    <label for="txtAddCode">Codigo de producto:</label><br>
+                    <input type="text" id="txtAddCode" name="txtAddCode">
+                </div>
+                <div>
+                    <button type="submit">Añadir Producto</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include("../partials/footerUsers") %>
+</body>
+</html>
