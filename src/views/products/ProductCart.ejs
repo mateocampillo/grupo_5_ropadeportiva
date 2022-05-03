@@ -13,28 +13,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-contenedor">
-            <nav><img class="header-hamburguesa" src="/images/index/menu-hamburguesa.svg" alt="menu hamburguesa"></nav>
-            <img class="header-logo" src="/images/logo-tododeportes.png" alt="logo pagina">
-            <div class="header-categorias">
-                <div>Hombres</div>
-                <div>Mujeres</div>
-                <div>Infantil</div>
-            </div>
-            <form action="/" method="get">
-                <div class="header-barra-busqueda">
-                    <label for="busqueda"></label>
-                    <input type="text" name="busqueda" id="busqueda" placeholder="Busqueda">
-                    <button class="header-barra-busqueda-boton" type="submit"><img class="header-barra-busqueda-icono"
-                            src="/images/index/lupa-busqueda.svg" alt="icono lupa"></button>
-                </div>
-            </form>
-            <nav><a href="/productos/carrito"><img class="header-icono" src="/images/index/carrito-de-compras.svg"
-                        alt="Carrito de compras"></a></nav>
-            <nav><a href="/users/login"><img class="header-icono" src="/images/index/user.svg" alt="Usuario"></a></nav>
-        </div>
-    </header>
+    <%- include("../partials/header") %> 
     <div><h2 class="subtitulo">Envio Gratis y 12 Cuotas Sin Interes</h2></div>
     <main>
         <div id="fondo">
@@ -105,55 +84,7 @@
                 </article>
             </section>
     </main>
-    <footer>
-        <div class="footer-contenedor-exterior-mobile">
-            <div class="footer-contenedor">
-                <ul>
-                    <li>Terminos y condiciones</li>
-                    <li>Cambios y devoluciones</li>
-                    <li>Contacto</li>
-                    <li>Compañía</li>
-                </ul>
-                <div>Copyright 2022, all rights reserved.</div>
-            </div>
-        </div>
-        <div class="footer-contenedor-exterior-tablet-pc">
-            <div>
-                <h3>Ayuda</h3>
-                <hr>
-                <div>Cambios y devoluciones</div>
-                <div>Terminos y condiciones</div>
-                <div>Preguntas frecuentas</div>
-            </div>
-            <div>
-                <h3>Acerca de</h3>
-                <hr>
-                <div>Contacto</div>
-                <div>Compañia</div>
-                <div>Empleos</div>
-            </div>
-            <div class="footer-contenedor-newsletter-redes">
-                <h3>Nuestro newsletter</h3>
-                <form action="/" method="post">
-                    <label for="mailNewsletter"></label>
-                    <input class="footer-contenedor-newsletter-input" type="email" name="mailNewsletter"
-                        id="mailNewsletter" placeholder="Email">
-                    <button class="footer-contenedor-newsletter-boton" type="submit">Enviar</button>
-                </form>
-                <h3>Redes sociales</h3>
-                <div class="footer-contenedor-redsocial">
-                    <img class="footer-contenedor-redsocial-icono" src="/images/index/facebook.svg"
-                        alt="Icono red social">
-                    <img class="footer-contenedor-redsocial-icono" src="/images/index/instagram.svg"
-                        alt="Icono red social">
-                    <img class="footer-contenedor-redsocial-icono" src="/images/index/twitter.svg"
-                        alt="Icono red social">
-                    <img class="footer-contenedor-redsocial-icono" src="/images/index/tiktok.svg"
-                        alt="Icono red social">
-                </div>
-            </div>
-        </div>
-    </footer>
+    <%- include("../partials/footer") %> 
 </body>
 
 </html>

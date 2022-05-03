@@ -32,6 +32,10 @@
     display: none;
 }
 
+.header-categorias{
+    display: none;
+}
+
 .header-icono{
     width: 30%;
 }
@@ -235,6 +239,11 @@ main h2{
     list-style-position: inside;
 }
 
+.footer-contenedor li a{
+    text-decoration: none;
+    color: #000;
+}
+
 .footer-contenedor div{
     padding-top: 10px;
     font-size: 18px;
@@ -246,41 +255,18 @@ main h2{
 
 @media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
 
-    .header-contenedor{
-        width: 100%;
-    }
-    
-    .header-hamburguesa{
-        width: 40%;
-        margin-right: 50%;
-        margin-left: 10%;
-    }
-    
     .header-logo{
         width: 15%;
-        margin-right: 5%;
     }
     
     .header-icono{
-        width: 60%;
-    }
-
-    .header-categorias{
-        width: 20%;
-        padding-left: 0px;
+        width: 30%;
     }
 
     .header-barra-busqueda{
         display: block;
         padding: 0px 15px;
         position: relative;
-        margin-top: 7%;
-    }
-
-    .header-contenedor nav a{
-        display: flex;
-        justify-content: flex-start;
-        margin: auto
     }
 
     .header-barra-busqueda input{
@@ -302,6 +288,10 @@ main h2{
         margin: 0px;
         border: 0px;
         padding: 0px;
+    }
+
+    .header-categorias{
+        display: none;
     }
 
     
@@ -565,22 +555,32 @@ main h2{
         margin: 7px;
     }
 
+    .footer-contenedor-enlaces a{
+        color:#000;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms;
+    }
+
+    .footer-contenedor-enlaces a:hover{
+        border-bottom: 1px solid #000;
+    }
+
     .footer-contenedor-newsletter-input{
-        font-size: 1rem;
-        padding: 8px;
+        font-size: 1.2rem;
+        padding: 5px;
         border: 1px solid #000;
         border-radius: 5px;
         background-color: #fff;
-        margin: 3px 0px 5px 15px;
+        margin: 3px 0px 5px 0px;
     }
 
     .footer-contenedor-newsletter-boton{
-        font-size: 1rem;
-        padding: 8px;
+        font-size: 1.2rem;
+        padding: 5px;
         border: 1px solid #000;
         border-radius: 5px;
         background-color: #fff;
-        margin: 3px 0px 5px 15px;
     }
 
     .footer-contenedor-newsletter-redes{
@@ -609,24 +609,21 @@ main h2{
         margin-top: 0px;
     }
 
-    .header-contenedor{
-        width: 100%;
-        
+    .header-hamburguesa{
+        display: none;
     }
 
-    .header-hamburguesa{
-        width: 30%;
-        margin-right: 50%;
-        margin-left: 10%;
+    .header-contenedor{
+        padding: 0px 20px;
     }
 
     .header-logo{
-        width: 10%;
+        width: 7%;
     }
 
     .header-categorias{
         display: flex;
-        justify-content: space-around; /*para que no queden tan alejados*/
+        justify-content: space-between;
         align-items: center;
         margin: 10px;
         font-size: 1.7rem;
@@ -635,18 +632,12 @@ main h2{
 
     .header-categorias div{
         padding: 10px;
-        justify-content: center;
     }
 
     .header-icono{
         width: 13%;
     }
 
-    .header-contenedor nav a{
-        display: flex;
-        justify-content: center;
-        margin: auto
-    }
 
     .subtitulo{
         /*border: 1px solid black;*/
