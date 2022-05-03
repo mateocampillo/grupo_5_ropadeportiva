@@ -5,7 +5,8 @@ const productosController = require("../controllers/productosController");
 // Dentro de localhost:3000/productos
 router.get("/detalle/:id", productosController.detalle);
 router.get("/carrito", productosController.cart);
-router.get("/editar", productosController.edit);
+router.get("/editar/:id", productosController.edit);
+router.post("/guardar", productosController.save);
 
 
 module.exports = router;

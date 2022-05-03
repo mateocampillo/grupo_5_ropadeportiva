@@ -24,6 +24,53 @@ footer{
     margin: 0px 3px 3px;
 }
 
+h2{
+margin: 15px 0px;
+text-align: center;
+}
+
+.container-prod-viejo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-prod-viejo li{
+    margin: 10px 0px;
+}
+
+.container-prod-nuevo{
+    text-align: center;
+}
+
+.container-prod-nuevo div{
+    margin: 15px 0px;
+}
+
+.container-prod-nuevo label{
+    font-weight: 600;
+}
+
+.container-prod-nuevo input{
+    text-align: center;
+    padding: 5px;
+    margin: 7px 4px 0px 4px;
+}
+
+.container-prod-nuevo textarea{
+    padding: 5px;
+}
+
+.container-prod-nuevo button{
+    margin: 15px 0px;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #5c5cff;
+    color: #fff;
+    border-radius: 5px;
+}
+
 .footer-contenedor-exterior-mobile{
     display: flex;
     justify-content: center;
