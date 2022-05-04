@@ -8,7 +8,7 @@ router.get("/detalle/:id", productosController.detalle);    //ruta que muestra e
 router.get("/carrito", productosController.cart);           //ruta que muestra el carrito.
 
 router.get("/editar/:id", productosController.edit);        //ruta del form para editar productos en la base de datos.
-router.post("/guardar", productosController.save);          //endpoint donde pega el form de editar productos.
+router.put("/guardar", productosController.save);          //endpoint donde pega el form de editar productos.
 
 router.get("/agregar", productosController.add);            //ruta del form para agregar productos a la base de datos.
 router.post("/agregado", productosController.added);        //endpoint donde pega el form de agregar productos.

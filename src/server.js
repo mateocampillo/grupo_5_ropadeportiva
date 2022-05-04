@@ -1,12 +1,14 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 
 
 // Carpeta pública para archivos estáticos.
 app.use(express.static("./public"));
 app.use("/static", express.static('./static/'));
 app.use(express.urlencoded());
+app.use(methodOverride("_method"));
 
 
 // Seteo para utilizar el template engine EJS

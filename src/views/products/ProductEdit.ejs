@@ -34,18 +34,18 @@
 
             <!-- Formulario para editar productos existentes en la base de datos -->
 
-            <form method="POST" action="/productos/guardar/">
+            <form method="POST" action="/productos/guardar?_method=PUT">
                 <div>
-                    <label for="numNuevoId">ID del producto:</label><br>
-                    <input type="number" id="numNuevoId" name="numNuevoId" placeholder="<%= productos.id %>">
+                    <label for="numNuevoId">ID del producto: (En lo posible no modificar)</label><br>
+                    <input type="number" id="numNuevoId" name="numNuevoId" value="<%= productos.id %>">
                 </div>
                 <div>
                     <label for="txtNuevoName">Nombre del producto:</label><br>
-                    <input type="text" id="txtNuevoName" name="txtNuevoName" placeholder="<%= productos.name %>">
+                    <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= productos.name %>">
                 </div>
                 <div>
                     <label for="txtNuevoDesc">Descripción del producto:</label><br>
-                    <textarea name="txtNuevoDesc" id="txtNuevoDesc" cols="30" rows="5" placeholder="<%= productos.description %>"></textarea>
+                    <textarea name="txtNuevoDesc" id="txtNuevoDesc" cols="30" rows="5"></textarea>
                 </div>
                 <div>
                     <label for="radioNuevoCat">Categoria del producto:</label><br>
@@ -55,7 +55,7 @@
                 </div>
                 <div>
                     <label for="numNuevoPrice">Precio del producto:</label><br>
-                    <input type="number" id="numNuevoPrice" name="numNuevoPrice" placeholder="<%= productos.price %>">
+                    <input type="number" id="numNuevoPrice" name="numNuevoPrice" value="<%= productos.price %>">
                 </div>
                 <div>
                     <label for="radioNuevoType">Tipo del producto:</label><br>
@@ -80,19 +80,19 @@
                 </div>
                 <div>
                     <label for="txtNuevoWaist">Cm de cintura:</label><br>
-                    <input type="text" id="txtNuevoWaist" name="txtNuevoWaist" placeholder="<%= productos.waist %>">
+                    <input type="text" id="txtNuevoWaist" name="txtNuevoWaist" value="<%= productos.waist %>">
                 </div>
                 <div>
                     <label for="txtNuevoChest">Cm de Pecho:</label><br>
-                    <input type="text" id="txtNuevoChest" name="txtNuevoChest" placeholder="<%= productos.chest %>">
+                    <input type="text" id="txtNuevoChest" name="txtNuevoChest" value="<%= productos.chest %>">
                 </div>
                 <div>
                     <label for="txtNuevoBack">Cm de Espalda:</label><br>
-                    <input type="text" id="txtNuevoBack" name="txtNuevoBack" placeholder="<%= productos.back %>">
+                    <input type="text" id="txtNuevoBack" name="txtNuevoBack" value="<%= productos.back %>">
                 </div>
                 <div>
                     <label for="txtNuevoHeight">Altura:</label><br>
-                    <input type="text" id="txtNuevoHeight" name="txtNuevoHeight" placeholder="<%= productos.height %>">
+                    <input type="text" id="txtNuevoHeight" name="txtNuevoHeight" value="<%= productos.height %>">
                 </div>
                 <div>
                     <label for="radioNuevoCloth">Tela del producto:</label><br>
@@ -112,7 +112,7 @@
                 </div>
                 <div>
                     <label for="txtNuevoCode">Codigo de producto:</label><br>
-                    <input type="text" id="txtNuevoCode" name="txtNuevoCode" placeholder="<%= productos.code %>">
+                    <input type="text" id="txtNuevoCode" name="txtNuevoCode" value="<%= productos.code %>">
                 </div>
                 <button type="submit">Editar</button>
             </form>

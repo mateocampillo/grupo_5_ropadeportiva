@@ -42,11 +42,11 @@ const controller = {
             color: body.radioAddColor,
             code: body.txtAddCode
         }
-        res.status(200).render("./products/ProductAdded");
         let arrProductos = JSON.parse(productosEnJSON);
         arrProductos.push(prodAdded);
         let prodEnJson = JSON.stringify(arrProductos);
         fs.writeFileSync(__dirname + "/../models/Productos.json", prodEnJson);
+        res.redirect("/");
     },
 
         //Controladores para la seccion de edicion de productos
@@ -73,11 +73,11 @@ const controller = {
             color: body.radioNuevoColor,
             code: body.txtNuevoCode
         }
-        res.status(200).render("./products/ProductSave");
         let productos = JSON.parse(productosEnJSON);
         productos.splice(prodNuevo.id-1, 1, prodNuevo);
         let productosEditados = JSON.stringify(productos);
         fs.writeFileSync(__dirname + "/../models/Productos.json", productosEditados);
+        res.redirect("/");
     }
 }
 
