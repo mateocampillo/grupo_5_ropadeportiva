@@ -1,0 +1,14 @@
+[{
+    "name": "Mateo",
+    "surname": "Campillo",
+    "email": "mateocampillo1@gmail.com",
+    "username": "mateocampillo",
+    "password": "123456",
+    "birthday": "2001-01-04",
+    "sex": "Man",
+    "phone": "1123456789",
+    "provincia": "baires",
+    "address": "Calle Falsa 123",
+    "postal": "1884",
+    "newsletter": "true"
+}]

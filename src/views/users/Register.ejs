@@ -15,10 +15,14 @@
     <%- include("../partials/headerUsers") %>
     <main>
         <h1>Unite a nosotros!</h1>
-        <form action="/" method="post" class="formulario-container">
+        <form action="/users/register" method="post" class="formulario-container">
             <div class="formulario-container-div-texto">
-                <label for="txtName">Nombre y apellido</label>
+                <label for="txtName">Nombre</label>
                 <input type="text" name="txtName" id="txtName" placeholder="Nombre completo" required>
+            </div>
+            <div class="formulario-container-div-texto">
+                <label for="txtSurname">Apellido</label>
+                <input type="text" name="txtSurname" id="txtSurname" placeholder="Apellido" required>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtMail">Email</label>
@@ -39,9 +43,9 @@
             </div>
             <div class="formulario-container-div-radio-sex">
                 <label for="radioSex">Sexo</label>
-                <div>Hombre<input type="radio" name="radioSex" id="radioSex" value="chkSexMan"></div>
-                <div>Mujer<input type="radio" name="radioSex" id="radioSex" value="chkSexWoman"></div>
-                <div>Otro<input type="radio" name="radioSex" id="radioSex" value="chkSexOther"></div>
+                <div>Hombre<input type="radio" name="radioSex" id="radioSex" value="Man"></div>
+                <div>Mujer<input type="radio" name="radioSex" id="radioSex" value="Woman"></div>
+                <div>Otro<input type="radio" name="radioSex" id="radioSex" value="Other"></div>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="numberTel">Teléfono</label>
@@ -84,7 +88,7 @@
             </div>
             <div class="formulario-container-div-checkbox-newsletter">
                 <label for="chkNewsletter">Desea suscribirse a nuestro Newsletter?</label>
-                <input type="checkbox" name="chkNewsletter" id="chkNewsletter" value="chkNewsSi" checked>
+                <input type="checkbox" name="chkNewsletter" id="chkNewsletter" value="true" checked>
             </div>
             <div class="formulario-container-div-checkbox-terms">
                 <label for="chkTerms">

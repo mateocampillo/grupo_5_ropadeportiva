@@ -1,3 +1,7 @@
+const req = require("express/lib/request");
+const fs = require("fs");
+let usersEnJSON = fs.readFileSync(__dirname + "/../models/Users.json","utf-8");
+
 const controller = {
 
     //Controlador del login de usuarios
@@ -10,6 +14,30 @@ const controller = {
 
     register: (req, res) => {
         res.status(200).render("./users/Register");
+    },
+
+    add: (req, res) => {
+        const body = req.body;
+        let userNuevo = {
+            name: body.txtName,
+            surname: body.txtSurname,
+            email: body.txtMail,
+            username: body.txtUser,
+            password: body.txtPassword,
+            birthday: body.dateCumple,
+            sex: body.radioSex,
+            phone: body.numberTel,
+            provincia: body.optProvincias,
+            address: body.txtStreet,
+            floor: body.txtMailFloor,
+            postal: body.txtPostal,
+            newsletter: body.chkNewsletter
+        }
+        let usersArray = JSON.parse(usersEnJSON);
+        usersArray.push(userNuevo);
+        let usersAgregado = JSON.stringify(usersArray);
+        fs.writeFileSync(__dirname + "/../models/Users.json", usersAgregado);
+        res.redirect("/");
     }
 }
 
