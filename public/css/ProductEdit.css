@@ -39,6 +39,18 @@ text-align: center;
     margin: 10px 0px;
 }
 
+.container-fotos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.container-fotos img{
+    width: 20%;
+    margin: 0px 30px;
+}
+
 .container-prod-nuevo{
     text-align: center;
 }
