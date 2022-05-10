@@ -96,7 +96,7 @@
 }, {
     "id": "6",
     "name": "Producto increible",
-    "description": "Este es un producto de prueba para chequear que las imagenes con multer funcionen bien",
+    "description": "",
     "category": "Mujer",
     "price": "10500",
     "type": "Camiseta",
@@ -108,8 +108,27 @@
     "cloth": "Nylon",
     "color": "Rojo",
     "code": "B12K3V1XS",
-    "img1": "1652144481645_img_.jpg",
-    "img2": "1652144481649_img_.jpg",
-    "img3": "1652144481653_img_.jpg",
-    "img4": "1652144481656_img_.jpg"
+    "img1": "1652192584485_img_.jpg",
+    "img2": "1652192584490_img_.jpg",
+    "img3": "1652192584495_img_.jpg",
+    "img4": "1652192584502_img_.jpg"
+}, {
+    "id": "7",
+    "name": "Camiseta increible del rojo",
+    "description": "Camiseta actual del Club Atletico Independiente, por favor comprala que es excelente.",
+    "category": "Hombre",
+    "price": "12500",
+    "type": "Camiseta",
+    "size": "M",
+    "waist": "70cm",
+    "chest": "60cm",
+    "back": "70cm",
+    "height": "190cm",
+    "cloth": "Poliester",
+    "color": "Rojo",
+    "code": "KHVQ2KH3V",
+    "img1": "1652195369069_img_.jpg",
+    "img2": "1652195369085_img_.jpg",
+    "img3": "1652195369088_img_.jpg",
+    "img4": "1652195369092_img_.jpg"
 }]

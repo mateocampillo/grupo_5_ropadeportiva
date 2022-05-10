@@ -70,8 +70,15 @@ main h2{
     position: absolute;
     top: 4%;
     width: 100%;
-    font-size: 1.5rem;
-    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 4px;
+    left: 25%;
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .main-producto-destacado-descripcion{
@@ -95,6 +102,7 @@ main h2{
     position: absolute;
     right: 8%;
     top: 45%;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(134deg) brightness(110%) contrast(100%);
 }
 
 .main-producto-destacado-icono-flecha-izquierda{
@@ -102,6 +110,7 @@ main h2{
     position: absolute;
     left: 8%;
     top: 45%;
+    filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(134deg) brightness(110%) contrast(100%);
 }
 
 .main-temporada{
@@ -138,11 +147,17 @@ main h2{
 }
 
 .main-texto-temporada{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     position: absolute;
     bottom: 5%;
-    width: 100%;
+    left: 25%;
+    width: 50%;
+    z-index: 9;
+    background-color: #fff;
+    padding: 3px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 .main-textoequipo-temporada{
@@ -334,6 +349,7 @@ main h2{
         display: block;
         width: 60%;
         position: absolute;
+        color: #fff;
         left: 12%;
         bottom: 24%;
         font-size: 1.5rem;
@@ -373,8 +389,13 @@ main h2{
         font-size: 20px;
         font-weight: 600;
         position: absolute;
-        top: 5%;
-        width: 100%;
+        padding: 3px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+        bottom: 5%;
+        left: 25%;
+        width: 50%;
     }
 
     .main-recomendado{
@@ -397,10 +418,16 @@ main h2{
     .main-recomendado-nombre{
         position: absolute;
         bottom: 12%;
-        width: 100%;
+        width: 50%;
+        left: 25%;
+        padding: 3px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
         text-decoration: none;
         color: #000;
-        cursor: none;
+        cursor: pointer;
+
     }
 
     .main-recomendado-imagen{
@@ -557,6 +584,11 @@ main h2{
         width: 45%;
         font-weight: 500;
         transition: all 250ms;
+        cursor: pointer;
+    }
+
+    .main-textoequipo-temporada{
+        display: none;
     }
 
     .main-temporada-boton:hover{
@@ -573,7 +605,7 @@ main h2{
     }
 
     .main-recomendado-nombre{
-        font-size: 1.8rem;
+        font-size: 1.2rem;
     }
 
     .footer-contenedor-exterior-tablet-pc h3{

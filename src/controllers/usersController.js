@@ -1,6 +1,8 @@
 const req = require("express/lib/request");
 const fs = require("fs");
+
 let usersEnJSON = fs.readFileSync(__dirname + "/../data/Users.json","utf-8");
+let usersArray = JSON.parse(usersEnJSON);
 
 const controller = {
 
@@ -33,7 +35,6 @@ const controller = {
             postal: body.txtPostal,
             newsletter: body.chkNewsletter
         }
-        let usersArray = JSON.parse(usersEnJSON);
         usersArray.push(userNuevo);
         let usersAgregado = JSON.stringify(usersArray);
         fs.writeFileSync(__dirname + "/../data/Users.json", usersAgregado);
