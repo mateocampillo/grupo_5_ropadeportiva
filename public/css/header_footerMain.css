@@ -1,0 +1,243 @@
+.header-contenedor{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background-color: #ede734;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.header-contenedor nav{
+    display: flex;
+    justify-content: center;
+}
+
+.header-contenedor nav a{
+    display: flex;
+    justify-content: center;
+}
+
+.header-barra-busqueda{
+    display: none;
+}
+
+.header-categorias{
+    display: none;
+}
+
+.header-icono{
+    width: 30%;
+}
+
+.header-hamburguesa{
+    width: 30%;
+}
+
+.header-logo{
+    width: 30%;
+}
+
+.footer-contenedor-exterior-mobile{
+    display: flex;
+    justify-content: center;
+    background-color: #b0b0b0;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.footer-contenedor{
+    border: 1px solid #000;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footer-contenedor li{
+    list-style-position: inside;
+}
+
+.footer-contenedor li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-contenedor div{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.footer-contenedor-exterior-tablet-pc{
+    display: none;
+}
+
+@media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
+
+    .header-logo{
+        width: 15%;
+    }
+    
+    .header-icono{
+        width: 30%;
+    }
+
+    .header-barra-busqueda{
+        display: block;
+        padding: 0px 15px;
+        position: relative;
+    }
+
+    .header-barra-busqueda input{
+        font-size: 1.3rem;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 3px;
+    }
+
+    .header-barra-busqueda-icono{
+        width: 16px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        cursor: pointer;
+    }
+
+    .header-barra-busqueda-boton{
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+
+    .header-categorias{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-mobile{
+        display: none;
+    }
+
+    .footer-contenedor-exterior-tablet-pc{
+        display: flex;
+        background-color: #b0b0b0;
+        border: 1px solid #000;
+        text-align: center;
+        justify-content: space-around;
+        padding: 5px 0px;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        padding: 7px;
+        text-align: left;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        text-align: center;
+    }
+
+    .footer-contenedor-exterior-tablet-pc hr{
+        border-color: #000;
+        width: 90%;
+        margin: auto;
+        margin: 7px;
+    }
+
+    .footer-contenedor-enlaces a{
+        color:#000;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 200ms;
+    }
+
+    .footer-contenedor-enlaces a:hover{
+        border-bottom: 1px solid #000;
+    }
+
+    .footer-contenedor-newsletter-input{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+        margin: 3px 0px 5px 0px;
+    }
+
+    .footer-contenedor-newsletter-boton{
+        font-size: 1.2rem;
+        padding: 5px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .footer-contenedor-newsletter-redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+
+    .footer-contenedor-redsocial{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 15%;
+    }
+
+}
+
+@media (min-width: 834px){                    /*Aca empieza la resolucion de PC*/
+
+    .header-hamburguesa{
+        display: none;
+    }
+
+    .header-contenedor{
+        padding: 0px 20px;
+    }
+
+    .header-logo{
+        width: 7%;
+    }
+
+    .header-categorias{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 30px;
+        font-size: 1.7rem;
+        width: 30%;
+    }
+
+    .header-categorias div{
+        padding: 10px;
+    }
+
+    .header-categorias a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .header-icono{
+        width: 13%;
+    }
+
+    .footer-contenedor-exterior-tablet-pc h3{
+        font-size: 1.5rem;
+    }
+
+    .footer-contenedor-exterior-tablet-pc div{
+        font-size: 20px;
+    }
+
+    .footer-contenedor-redsocial-icono{
+        width: 8%;
+    }
+}
