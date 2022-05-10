@@ -33,7 +33,12 @@ const controller = {
             address: body.txtStreet,
             floor: body.txtMailFloor,
             postal: body.txtPostal,
-            newsletter: body.chkNewsletter
+            newsletter: null
+        }
+        if(body.chkNewsletter == undefined){
+            userNuevo.newsletter = false;
+        } else {
+            userNuevo.newsletter = true;
         }
         usersArray.push(userNuevo);
         let usersAgregado = JSON.stringify(usersArray);

@@ -11,4 +11,17 @@
     "address": "Calle Falsa 123",
     "postal": "1884",
     "newsletter": "true"
+}, {
+    "name": "Manolito",
+    "surname": "Perez",
+    "email": "manolitoperez@hotmail.com",
+    "username": "manoperez",
+    "password": "abcd123",
+    "birthday": "1997-05-13",
+    "sex": "Man",
+    "phone": "1129281023",
+    "provincia": "baires",
+    "address": "333 1923",
+    "postal": "1823",
+    "newsletter": false
 }]
