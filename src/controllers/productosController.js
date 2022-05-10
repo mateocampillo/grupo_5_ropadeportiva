@@ -1,6 +1,6 @@
 const req = require("express/lib/request");
 const fs = require("fs");
-let productosEnJSON = fs.readFileSync(__dirname + "/../models/Productos.json","utf-8");
+let productosEnJSON = fs.readFileSync(__dirname + "/../data/Productos.json","utf-8");
 
 const controller = {
 
@@ -40,12 +40,16 @@ const controller = {
             height: body.txtAddHeight,
             cloth: body.radioAddCloth,
             color: body.radioAddColor,
-            code: body.txtAddCode
+            code: body.txtAddCode,
+            img1: req.files[0].filename,
+            img2: req.files[1].filename,
+            img3: req.files[2].filename,
+            img4: req.files[3].filename
         }
         let arrProductos = JSON.parse(productosEnJSON);
         arrProductos.push(prodAdded);
         let prodEnJson = JSON.stringify(arrProductos);
-        fs.writeFileSync(__dirname + "/../models/Productos.json", prodEnJson);
+        fs.writeFileSync(__dirname + "/../data/Productos.json", prodEnJson);
         res.redirect("/");
     },
 
@@ -71,13 +75,23 @@ const controller = {
             height: body.txtNuevoHeight,
             cloth: body.radioNuevoCloth,
             color: body.radioNuevoColor,
-            code: body.txtNuevoCode
+            code: body.txtNuevoCode,
+            img1: req.files[0].filename,
+            img2: req.files[1].filename,
+            img3: req.files[2].filename,
+            img4: req.files[3].filename
         }
         let productos = JSON.parse(productosEnJSON);
         productos.splice(prodNuevo.id-1, 1, prodNuevo);
         let productosEditados = JSON.stringify(productos);
-        fs.writeFileSync(__dirname + "/../models/Productos.json", productosEditados);
+        fs.writeFileSync(__dirname + "/../data/Productos.json", productosEditados);
         res.redirect("/");
+    },
+
+        //Controladores para borrar productos
+
+    delete: (req, res) => {
+        res.send ("acordate de borrarlos")
     }
 }
 

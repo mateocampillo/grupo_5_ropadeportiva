@@ -14,7 +14,7 @@
             <!-- Formulario para agregar productos nuevos a la base de datos -->
 
         <div class="container-prod-nuevo">
-            <form method="POST" action="/productos/agregado/">
+            <form method="POST" action="/productos/agregado/" enctype="multipart/form-data">
                 <div>
                     <label for="numAddId">Id de producto:</label><br>
                     <input type="number" name="numAddId" id="numAddId" value="<%= idDeProximo %>">
@@ -93,6 +93,10 @@
                 <div>
                     <label for="txtAddCode">Codigo de producto:</label><br>
                     <input type="text" id="txtAddCode" name="txtAddCode">
+                </div>
+                <div>
+                    <label for="imgAddimage">Fotos de producto:</label><br>
+                    <input type="file" id="imgAddimage" name="imgAddimage" accept=".jpg, .jpeg, .png, .svg" multiple>
                 </div>
                 <div>
                     <button type="submit">Añadir Producto</button>

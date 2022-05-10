@@ -13,10 +13,10 @@
     "cloth": "Jersey",
     "color": "Blanco",
     "code": "H2V1BK3V4H",
-    "image1": "imagen1.jpg",
-    "image2": "imagen2.jpg",
-    "image3": "imagen3.jpg",
-    "image4": "imagen4.jpg"
+    "img1": "1652144875317_img_.jpg",
+    "img2": "1652144875318_img_.jpg",
+    "img3": "1652144875322_img_.jpg",
+    "img4": "1652144875323_img_.jpg"
 }, {
     "id": "2",
     "name": "Pantalon Boca Juniors",
@@ -32,10 +32,10 @@
     "cloth": "Jersey",
     "color": "Azul",
     "code": "512B3KV1H2",
-    "image1": "imagen1.jpg",
-    "image2": "imagen2.jpg",
-    "image3": "imagen3.jpg",
-    "image4": "imagen4.jpg"
+    "img1": "1652144987445_img_.jpg",
+    "img2": "1652144987446_img_.jpg",
+    "img3": "1652144987447_img_.jpg",
+    "img4": "1652144987450_img_.jpg"
 }, {
     "id": "3",
     "name": "Zapatillas Forum Low",
@@ -51,10 +51,10 @@
     "cloth": "Nylon",
     "color": "Blanco",
     "code": "H12B3HV312",
-    "image1": "imagen1.jpg",
-    "image2": "imagen2.jpg",
-    "image3": "imagen3.jpg",
-    "image4": "imagen4.jpg"
+    "img1": "1652143977454_img_.jpg",
+    "img2": "1652143977458_img_.jpg",
+    "img3": "1652143977462_img_.jpg",
+    "img4": "1652143977464_img_.jpg"
 }, {
     "id": "4",
     "name": "Camiseta Rosario Central",
@@ -70,14 +70,14 @@
     "cloth": "Poliester",
     "color": "Azul",
     "code": "B21KB31B12",
-    "image1": "imagen1.jpg",
-    "image2": "imagen2.jpg",
-    "image3": "imagen3.jpg",
-    "image4": "imagen4.jpg"
+    "img1": "1652144044984_img_.jpg",
+    "img2": "1652144044988_img_.jpg",
+    "img3": "1652144044993_img_.jpg",
+    "img4": "1652144044996_img_.jpg"
 }, {
     "id": "5",
     "name": "Zapatillas X9000L4",
-    "description": "Nuevo modelo de zapatillas deportivas, apuntadas a los atletas de alto rendimiento",
+    "description": "Descripcion de zapas que estan super buenas por favor compranos",
     "category": "Mujer",
     "price": "18600",
     "type": "Zapatillas",
@@ -89,8 +89,27 @@
     "cloth": "Jersey",
     "color": "Negro",
     "code": "LN2LB31L2",
-    "image1": "imagen1.jpg",
-    "image2": "imagen2.jpg",
-    "image3": "imagen3.jpg",
-    "image4": "imagen4.jpg"
+    "img1": "1652143693910_img_.jpg",
+    "img2": "1652143693916_img_.jpg",
+    "img3": "1652143693922_img_.jpg",
+    "img4": "1652143693925_img_.jpg"
+}, {
+    "id": "6",
+    "name": "Producto increible",
+    "description": "Este es un producto de prueba para chequear que las imagenes con multer funcionen bien",
+    "category": "Mujer",
+    "price": "10500",
+    "type": "Camiseta",
+    "size": "M",
+    "waist": "50cm",
+    "chest": "60cm",
+    "back": "70cm",
+    "height": "175cm",
+    "cloth": "Nylon",
+    "color": "Rojo",
+    "code": "B12K3V1XS",
+    "img1": "1652144481645_img_.jpg",
+    "img2": "1652144481649_img_.jpg",
+    "img3": "1652144481653_img_.jpg",
+    "img4": "1652144481656_img_.jpg"
 }]

@@ -29,10 +29,10 @@
                 <li>Codigo: <%= productos.code %></li>
             </ul>
             <div class="container-fotos">
-                <img src="/images/ProductDetail/Product<%= productos.id %>/<%= productos.image1 %>" alt="Imagen">
-                <img src="/images/ProductDetail/Product<%= productos.id %>/<%= productos.image2 %>" alt="Imagen">
-                <img src="/images/ProductDetail/Product<%= productos.id %>/<%= productos.image3 %>" alt="Imagen">
-                <img src="/images/ProductDetail/Product<%= productos.id %>/<%= productos.image4 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= productos.img1 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= productos.img2 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= productos.img3 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= productos.img4 %>" alt="Imagen">
             </div>
         </div>
         <h2>Producto Editado</h2>
@@ -40,7 +40,7 @@
 
             <!-- Formulario para editar productos existentes en la base de datos -->
 
-            <form method="POST" action="/productos/guardar?_method=PUT">
+            <form method="POST" action="/productos/guardar?_method=PUT" enctype="multipart/form-data">
                 <div>
                     <label for="numNuevoId">ID del producto: (En lo posible no modificar)</label><br>
                     <input type="number" id="numNuevoId" name="numNuevoId" value="<%= productos.id %>">
@@ -119,6 +119,10 @@
                 <div>
                     <label for="txtNuevoCode">Codigo de producto:</label><br>
                     <input type="text" id="txtNuevoCode" name="txtNuevoCode" value="<%= productos.code %>">
+                </div>
+                <div>
+                    <label for="imgNuevoImages">Fotos de producto:</label><br>
+                    <input type="file" id="imgNuevoImages" name="imgNuevoImages" accept=".jpg, .jpeg, .png, .svg" multiple>
                 </div>
                 <button type="submit">Editar</button>
             </form>

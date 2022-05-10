@@ -1,6 +1,6 @@
 const req = require("express/lib/request");
 const fs = require("fs");
-let usersEnJSON = fs.readFileSync(__dirname + "/../models/Users.json","utf-8");
+let usersEnJSON = fs.readFileSync(__dirname + "/../data/Users.json","utf-8");
 
 const controller = {
 
@@ -36,7 +36,7 @@ const controller = {
         let usersArray = JSON.parse(usersEnJSON);
         usersArray.push(userNuevo);
         let usersAgregado = JSON.stringify(usersArray);
-        fs.writeFileSync(__dirname + "/../models/Users.json", usersAgregado);
+        fs.writeFileSync(__dirname + "/../data/Users.json", usersAgregado);
         res.redirect("/");
     }
 }
