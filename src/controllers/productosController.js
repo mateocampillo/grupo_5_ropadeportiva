@@ -49,7 +49,7 @@ const controller = {
         productos.push(prodAdded);
         let prodEnJson = JSON.stringify(productos);
         fs.writeFileSync(__dirname + "/../data/Productos.json", prodEnJson);
-        res.redirect("/");
+        res.status(201).redirect("/");
     },
 
         //Controladores para la seccion de edicion de productos
@@ -82,7 +82,7 @@ const controller = {
         productos.splice(prodNuevo.id-1, 1, prodNuevo);
         let productosEditados = JSON.stringify(productos);
         fs.writeFileSync(__dirname + "/../data/Productos.json", productosEditados);
-        res.redirect("/");
+        res.status(201).redirect("/");
     },
 
         //Controladores para borrar productos

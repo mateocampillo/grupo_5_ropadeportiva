@@ -43,7 +43,8 @@ const controller = {
         usersArray.push(userNuevo);
         let usersAgregado = JSON.stringify(usersArray);
         fs.writeFileSync(__dirname + "/../data/Users.json", usersAgregado);
-        res.redirect("/");
+        res.status(201).redirect("/");
+        
     }
 }
 
