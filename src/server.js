@@ -11,7 +11,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-
 // Seteo para utilizar el template engine EJS
 app.set("view engine", "ejs");
 app.set('views', __dirname + '/views');
