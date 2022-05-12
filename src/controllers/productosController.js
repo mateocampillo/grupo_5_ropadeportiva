@@ -6,25 +6,28 @@ let productos = JSON.parse(productosEnJSON);
 
 const controller = {
 
-        //Controlador para desplegar pregunto segun el id pasado en la ruta
+//Controladores para desplegar los productos
 
-    detalle: (req, res) => {
+    list: function(req, res){
+        res.status(200).render("./products/ProductList", {productos: productos})
+    },
+    detalle: function(req, res){
         res.status(200).render("./products/ProductDetail", {productos: productos[req.params.id-1]});
     },
 
-        //Controladores para el carrito
+//Controladores para el carrito
 
-    cart: (req, res) => {
+    cart: function(req, res){
         res.status(200).render("./products/ProductCart");
     },
 
-        //Controladores para la seccion de agregar productos
+//Controladores para la seccion de agregar productos
 
-    add: (req, res) => {
+    add: function(req, res){
         let lengthArr = productos.length;
         res.status(200).render("./products/ProductAdd", {idDeProximo: lengthArr+1});
     },
-    added: (req, res) => {
+    added: function(req, res){
         const body = req.body;
         let prodAdded = {
             id: body.numAddId,
@@ -52,12 +55,12 @@ const controller = {
         res.status(201).redirect("/");
     },
 
-        //Controladores para la seccion de edicion de productos
+//Controladores para la seccion de edicion de productos
 
-    edit: (req, res) => {
+    edit: function(req, res){
         res.status(200).render("./products/ProductEdit", {productos: productos[req.params.id-1]});
     },
-    save: (req, res) => {
+    save: function(req, res){
         const body = req.body
         let prodNuevo = {
             id: body.numNuevoId,
@@ -85,9 +88,9 @@ const controller = {
         res.status(201).redirect("/");
     },
 
-        //Controladores para borrar productos
+//Controladores para borrar productos
 
-    delete: (req, res) => {
+    delete: function(req, res){
         res.send ("acordate de borrarlos")
     }
 }

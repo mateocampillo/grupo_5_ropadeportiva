@@ -16,6 +16,7 @@ let storage = multer.diskStorage({
 let uploadFile = multer({storage: storage});
 
 // Dentro de localhost:3000/productos
+router.get("/", productosController.list);                  //ruta que muestra el listado total de productos.
 router.get("/detalle/:id", productosController.detalle);    //ruta que muestra en detalle cada producto segun el id que se la pasa en la ruta.
 
 router.get("/carrito", productosController.cart);           //ruta que muestra el carrito.
