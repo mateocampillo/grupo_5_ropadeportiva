@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header_footerMin.css">
+    <link rel="stylesheet" href="/css/Recover.css">
+    <title>Recuperar contraseña</title>
+</head>
+<body>
+    <%- include("../partials/headerUsers") %>
+    <main>
+        <h2>Recuperar contraseña</h2>
+        <div>
+            <form action="/users/recover?_method=PATCH" method="POST">
+                <div class="container">
+                    <label for="txtRecEmail">Correo electronico asociado a tu cuenta:</label><br>
+                    <input type="text" name="txtRecEmail" id="txtRecEmail" placeholder="Email">
+                </div>
+                <div class="container">
+                    <label for="txtRecPass">Nueva contraseña:</label><br>
+                    <input type="text" name="txtRecPass" id="txtRecPass" placeholder="Contraseña"><br>
+                    <input type="text" name="txtRecPassConfirm" id="txtRecPassConfirm" placeholder="Confirmar contraseña">
+                </div>
+                <div class="container">
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include("../partials/footerUsers") %>
+</body>
+</html>

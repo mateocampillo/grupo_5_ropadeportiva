@@ -26,4 +26,7 @@ router.get("/login", usersController.login);            //ruta para el login de 
 router.get("/register", usersController.register);      //ruta para el registro de nuevos usuarios
 router.post("/register", uploadFile.single("imgUser"), usersController.add)
 
+router.get("/recover", usersController.recoverGet);
+router.patch("/recover", usersController.recoverPatch);
+
 module.exports = router;
