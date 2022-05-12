@@ -96,7 +96,7 @@
 }, {
     "id": 6,
     "name": "Producto increible",
-    "description": "",
+    "description": "Descripcion editada",
     "category": "Mujer",
     "price": "10500",
     "type": "Camiseta",
@@ -108,10 +108,10 @@
     "cloth": "Nylon",
     "color": "Rojo",
     "code": "B12K3V1XS",
-    "img1": "1652192584485_img_.jpg",
-    "img2": "1652192584490_img_.jpg",
-    "img3": "1652192584495_img_.jpg",
-    "img4": "1652192584502_img_.jpg"
+    "img1": "1652378070865_img_.jpg",
+    "img2": "1652378070870_img_.jpg",
+    "img3": "1652378070873_img_.jpg",
+    "img4": "1652378070879_img_.jpg"
 }, {
     "id": 7,
     "name": "Camiseta increible del rojo",

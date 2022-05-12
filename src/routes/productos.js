@@ -22,7 +22,7 @@ router.get("/detalle/:id", productosController.detalle);    //ruta que muestra e
 router.get("/carrito", productosController.cart);           //ruta que muestra el carrito.
 
 router.get("/:id/edit", productosController.edit);        //ruta del form para editar productos en la base de datos.
-router.put("/guardar", uploadFile.array("imgNuevoImages"), productosController.save);          //endpoint donde pega el form de editar productos.
+router.put("/:id", uploadFile.array("imgNuevoImages"), productosController.save);          //endpoint donde pega el form de editar productos.
 
 router.get("/agregar", productosController.add);            //ruta del form para agregar productos a la base de datos.
 router.post("/", uploadFile.array("imgAddimage"), productosController.added);        //endpoint donde pega el form de agregar productos.
