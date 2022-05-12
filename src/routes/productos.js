@@ -25,7 +25,7 @@ router.get("/editar/:id", productosController.edit);        //ruta del form para
 router.put("/guardar", uploadFile.array("imgNuevoImages"), productosController.save);          //endpoint donde pega el form de editar productos.
 
 router.get("/agregar", productosController.add);            //ruta del form para agregar productos a la base de datos.
-router.post("/agregado", uploadFile.array("imgAddimage"), productosController.added);        //endpoint donde pega el form de agregar productos.
+router.post("/", uploadFile.array("imgAddimage"), productosController.added);        //endpoint donde pega el form de agregar productos.
 
 
 module.exports = router;
