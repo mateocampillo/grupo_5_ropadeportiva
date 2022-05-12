@@ -43,10 +43,6 @@
 
             <form method="POST" action="/productos/<%= productos.id %>?_method=PUT" enctype="multipart/form-data">
                 <div>
-                    <label for="numNuevoId">ID del producto: (En lo posible no modificar)</label><br>
-                    <input type="number" id="numNuevoId" name="numNuevoId" value="<%= productos.id %>">
-                </div>
-                <div>
                     <label for="txtNuevoName">Nombre del producto:</label><br>
                     <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= productos.name %>">
                 </div>

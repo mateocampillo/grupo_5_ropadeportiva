@@ -68,7 +68,7 @@ const controller = {
     save: function(req, res){
         const body = req.body
         let prodNuevo = {
-            id: body.numNuevoId,
+            id: parseInt(req.params.id),
             name: body.txtNuevoName,
             description: body.txtNuevoDesc,
             category: body.radioNuevoCat,
