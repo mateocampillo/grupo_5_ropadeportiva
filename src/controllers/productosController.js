@@ -30,7 +30,7 @@ const controller = {
     added: function(req, res){
         const body = req.body;
         let prodAdded = {
-            id: body.numAddId,
+            id: 1,
             name: body.txtAddName,
             description: body.txtAddDesc,
             category: body.radioAddCat,
@@ -49,6 +49,11 @@ const controller = {
             img3: req.files[2].filename,
             img4: req.files[3].filename
         }
+        //
+        if(productos.length > 0){
+            prodAdded.id = productos.length + 1;
+        }
+        //
         productos.push(prodAdded);
         let prodEnJson = JSON.stringify(productos);
         fs.writeFileSync(__dirname + "/../data/Productos.json", prodEnJson);

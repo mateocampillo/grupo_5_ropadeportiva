@@ -1,5 +1,5 @@
 [{
-    "id": "1",
+    "id": 1,
     "name": "Camiseta River",
     "description": "Camiseta temporada 2021/22 del club River Plate",
     "category": "Hombre",
@@ -18,7 +18,7 @@
     "img3": "1652144875322_img_.jpg",
     "img4": "1652144875323_img_.jpg"
 }, {
-    "id": "2",
+    "id": 2,
     "name": "Pantalon Boca Juniors",
     "description": "Pantalon deportivo del club Boca Juniors, temporada 2021/22",
     "category": "Mujer",
@@ -37,7 +37,7 @@
     "img3": "1652144987447_img_.jpg",
     "img4": "1652144987450_img_.jpg"
 }, {
-    "id": "3",
+    "id": 3,
     "name": "Zapatillas Forum Low",
     "description": "Zapatillas deportivas, muy comodas y resistentes para las mas pequeñas de la casa",
     "category": "Infantil",
@@ -56,7 +56,7 @@
     "img3": "1652143977462_img_.jpg",
     "img4": "1652143977464_img_.jpg"
 }, {
-    "id": "4",
+    "id": 4,
     "name": "Camiseta Rosario Central",
     "description": "Camiseta del club Rosario Central, temporada 2021/22.",
     "category": "Hombre",
@@ -75,7 +75,7 @@
     "img3": "1652144044993_img_.jpg",
     "img4": "1652144044996_img_.jpg"
 }, {
-    "id": "5",
+    "id": 5,
     "name": "Zapatillas X9000L4",
     "description": "Descripcion de zapas que estan super buenas por favor compranos",
     "category": "Mujer",
@@ -94,7 +94,7 @@
     "img3": "1652143693922_img_.jpg",
     "img4": "1652143693925_img_.jpg"
 }, {
-    "id": "6",
+    "id": 6,
     "name": "Producto increible",
     "description": "",
     "category": "Mujer",
@@ -113,7 +113,7 @@
     "img3": "1652192584495_img_.jpg",
     "img4": "1652192584502_img_.jpg"
 }, {
-    "id": "7",
+    "id": 7,
     "name": "Camiseta increible del rojo",
     "description": "Camiseta actual del Club Atletico Independiente, por favor comprala que es excelente.",
     "category": "Hombre",
