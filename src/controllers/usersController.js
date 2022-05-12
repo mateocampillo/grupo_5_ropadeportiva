@@ -21,11 +21,13 @@ const controller = {
     add: (req, res) => {
         const body = req.body;
         let userNuevo = {
+            id: 1,
             name: body.txtName,
             surname: body.txtSurname,
             email: body.txtMail,
             username: body.txtUser,
             password: body.txtPassword,
+            img: req.file.filename,
             birthday: body.dateCumple,
             sex: body.radioSex,
             phone: body.numberTel,
@@ -35,16 +37,26 @@ const controller = {
             postal: body.txtPostal,
             newsletter: null
         }
+        //
+        if(usersArray.length > 0){
+            userNuevo.id = usersArray.length + 1;
+        }
+        //
+        let imgVerification = userNuevo.img.includes(".jpg");
+        if(imgVerification == false){
+            userNuevo.img = "imgUserDefault.jpg"
+        }
+        //
         if(body.chkNewsletter == undefined){
             userNuevo.newsletter = false;
         } else {
             userNuevo.newsletter = true;
         }
+        //
         usersArray.push(userNuevo);
         let usersAgregado = JSON.stringify(usersArray);
         fs.writeFileSync(__dirname + "/../data/Users.json", usersAgregado);
         res.status(201).redirect("/");
-        
     }
 }
 
