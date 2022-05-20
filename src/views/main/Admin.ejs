@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header_footerMin.css">
+    <link rel="stylesheet" href="/css/Admin.css">
+    <title>Vista de admin</title>
+</head>
+<body>
+    <%- include("../partials/headerUsers") %>
+    <main>
+        <h1>Vista de admin</h1>
+        <div class="container">
+            <section>
+                <h2>Listado de productos</h2>
+                <% for (let i = 0; i < productos.length; i++) { %>
+                    <div>
+                        <ul>
+                            <li><h4>ID de producto: <%= productos[i].id %></h3></li>
+                            <li><h4>Nombre de producto: <%= productos[i].name %></h3></li>
+                            <li><h4>Precio de producto: <%= productos[i].price %></h4></li>
+                        </ul>
+                        <div><a href="/productos/<%= productos[i].id %>/edit">Editar el producto <%= productos[i].id %></a></div>
+                    </div>
+                <% } %>
+            </section>
+            <section>
+                <h2>Listado de usuarios registrados</h2>
+                <% for (let i = 0; i < users.length; i++) { %>
+                    <div>
+                        <ul>
+                            <li><h4>ID del user: <%= users[i].id %></h4></li>
+                            <li><h4>Nombre del user: <%= users[i].name %></h4></li>
+                            <li><h4>Email del user: <%= users[i].email %></h4></li>
+                        </ul>
+                    </div>
+                <% } %>
+            </section>
+        </div>
+        
+    </main>
+    <%- include("../partials/footerUsers") %>
+</body>
+</html>
