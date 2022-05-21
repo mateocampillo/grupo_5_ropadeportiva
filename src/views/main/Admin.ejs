@@ -15,6 +15,7 @@
         <div class="container">
             <section>
                 <h2>Listado de productos</h2>
+                <div><a class="enlace" href="/productos/agregar">Agregar producto nuevo</a></div>
                 <% for (let i = 0; i < productos.length; i++) { %>
                     <div>
                         <ul>
@@ -23,6 +24,9 @@
                             <li><h4>Precio de producto: <%= productos[i].price %></h4></li>
                         </ul>
                         <div><a href="/productos/<%= productos[i].id %>/edit">Editar el producto <%= productos[i].id %></a></div>
+                        <form action="/productos/<%= productos[i].id %>?_method=DELETE" method="POST">
+                            <button>Borrar producto <%= productos[i].id %></button>
+                        </form>
                     </div>
                 <% } %>
             </section>

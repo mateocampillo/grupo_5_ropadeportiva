@@ -96,7 +96,19 @@ const controller = {
 //Controladores para borrar productos
 
     delete: function(req, res){
-        res.send ("acordate de borrarlos")
+
+        //Encontrar el item y borrarlo del array
+        let id = req.params.id;
+        productos.splice(id-1, 1);
+
+        //Recorrer el array y arreglar los id 
+        for (let i = 0; i < productos.length; i++){
+            productos[i].id = i+1;
+        }
+
+        let productosEditados = JSON.stringify(productos);
+        fs.writeFileSync(__dirname + "/../data/Productos.json", productosEditados);
+        res.status(202).redirect("/admin");
     }
 }
 
