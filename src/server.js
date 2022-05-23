@@ -21,7 +21,6 @@ app.listen(3000, () => { console.log("Servidor abierto en el puerto 3000") });
 const main = require("./routes/main");
 const productos = require("./routes/productos");
 const users = require("./routes/users");
-const exp = require("constants");
 
 // Index de rutas
 app.use("/", main);

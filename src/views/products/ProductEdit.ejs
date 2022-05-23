@@ -41,7 +41,7 @@
 
             <!-- Formulario para editar productos existentes en la base de datos -->
 
-            <form method="POST" action="/productos/<%= productos.id %>?_method=PUT" enctype="multipart/form-data">
+            <form method="POST" action="/productos/edit/<%= productos.id %>?_method=PUT" enctype="multipart/form-data">
                 <div>
                     <label for="txtNuevoName">Nombre del producto:</label><br>
                     <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= productos.name %>">

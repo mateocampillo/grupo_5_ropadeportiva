@@ -22,7 +22,7 @@
     "name": "Pantalon Boca Juniors",
     "description": "Pantalon deportivo del club Boca Juniors, temporada 2021/22",
     "category": "Mujer",
-    "price": "7500",
+    "price": "15000",
     "type": "Pantalon",
     "size": "S",
     "waist": "35cm",
@@ -32,10 +32,10 @@
     "cloth": "Jersey",
     "color": "Azul",
     "code": "512B3KV1H2",
-    "img1": "1652379652297_img_.jpg",
-    "img2": "1652379652298_img_.jpg",
-    "img3": "1652379652299_img_.jpg",
-    "img4": "1652379652305_img_.jpg"
+    "img1": "1653346782474_img_.jpg",
+    "img2": "1653346782475_img_.jpg",
+    "img3": "1653346782476_img_.jpg",
+    "img4": "1653346782480_img_.jpg"
 }, {
     "id": 3,
     "name": "Zapatillas Forum Low",

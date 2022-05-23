@@ -24,8 +24,7 @@ const controller = {
 //Controladores para la seccion de agregar productos
 
     add: function(req, res){
-        let lengthArr = productos.length;
-        res.status(200).render("./products/ProductAdd", {idDeProximo: lengthArr+1});
+        res.status(200).render("./products/ProductAdd");
     },
     added: function(req, res){
         const body = req.body;
