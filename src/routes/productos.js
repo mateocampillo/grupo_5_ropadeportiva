@@ -9,7 +9,11 @@ let storage = multer.diskStorage({
         cb(null, path.join(__dirname + "../../../public/images/ProductDetail"));
     },
     filename: (req, file, cb) => {
-        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
+        if(file.originalname.includes(".jpg")){
+            cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
+        } else {
+            cb("error: No se ha ingresado una imagen .jpg", "");
+        }
     }
 });
 
