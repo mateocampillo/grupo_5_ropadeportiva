@@ -27,7 +27,7 @@ const controller = {
             email: body.txtMail,
             username: body.txtUser,
             password: body.txtPassword,
-            img: req.file.filename,
+            img: "imgUserDefault.jpg",
             birthday: body.dateCumple,
             sex: body.radioSex,
             phone: body.numberTel,
@@ -40,11 +40,6 @@ const controller = {
         //
         if(usersArray.length > 0){
             userNuevo.id = usersArray.length + 1;
-        }
-        //
-        let imgVerification = userNuevo.img.includes(".jpg");
-        if(imgVerification == false){
-            userNuevo.img = "imgUserDefault.jpg"
         }
         //
         if(body.chkNewsletter == undefined){

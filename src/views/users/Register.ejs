@@ -16,7 +16,7 @@
     <%- include("../partials/headerUsers") %>
     <main>
         <h1>Unite a nosotros!</h1>
-        <form action="/users/register" method="post" class="formulario-container" enctype="multipart/form-data">
+        <form action="/users/register" method="post" class="formulario-container">
             <div class="formulario-container-div-texto">
                 <label for="txtName">Nombre</label>
                 <input type="text" name="txtName" id="txtName" placeholder="Nombre completo" required>
@@ -37,10 +37,6 @@
                 <label for="txtPassword">Contraseña</label>
                 <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required minlength="6" maxlength="24">
                 <input type="password" name="txtRePassword" id="txtPassword" placeholder="Repetir contraseña" required minlength="6" maxlength="24">
-            </div>
-            <div class="formulario-container-div-texto">
-                <label for="imgUser">Foto de usuario</label>
-                <input type="file" name="imgUser" id="imgUser" required accept=".jpg">
             </div>
             <div class="formulario-container-div-texto">
                 <label for="dateCumple">Fecha de nacimiento</label>
