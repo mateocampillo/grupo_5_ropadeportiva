@@ -1,6 +1,5 @@
-const bcrypt = require("bcryptjs/dist/bcrypt");
-const req = require("express/lib/request");
 const fs = require("fs");
+const bcrypt = require("bcryptjs")
 
 let usersEnJSON = fs.readFileSync(__dirname + "/../data/Users.json","utf-8");
 let usersArray = JSON.parse(usersEnJSON);
@@ -9,8 +8,26 @@ const controller = {
 
     //Controlador del login de usuarios
 
-    login: function(req, res){
-        res.status(200).render("./users/Login");
+    loginGet: function(req, res){
+        res.status(200).render("./users/Login", {err: undefined});
+    },
+    loginPost: function(req, res){
+        const body = req.body;
+        usersArray.forEach(user => {
+            if(body.emailUserEmail == user.email && bcrypt.compareSync(body.txtPassword, user.password)){
+                req.session.userLogeado = {
+                    user: user.username,
+                    img: user.img
+                }
+            }
+        });
+        if(req.session.userLogeado != undefined){
+            let productosEnJSON = fs.readFileSync(__dirname + "/../data/Productos.json","utf-8");
+            let productos = JSON.parse(productosEnJSON);
+            res.status(200).render("./main/Index", {user: req.session.userLogeado, productos: productos});          //Cuando existe la pagina de usuario esto se cambia
+        } else {
+            res.status(200).render("./users/Login", {err: "Credenciales invalidas"});
+        }
     },
 
     //Controlador del registro de usuarios

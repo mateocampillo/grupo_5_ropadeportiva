@@ -17,10 +17,11 @@
         <div class="contenedor">
             <h2>Entrar</h2>
             <hr>
-            <form class="formulario-contenedor" action="/login" method="post">
+            <h2 class="err-credenciales"><%= err %></h2>
+            <form class="formulario-contenedor" action="/users/login" method="post">
                 <div class="form-div-texto">
-                    <label for="txtUserEmail">Email o Usuario</label>
-                    <input type="text" name="txtUserEmail" id="txtUserEmail" required minlength="6">
+                    <label for="emailUserEmail">Email</label>
+                    <input type="email" name="emailUserEmail" id="emailUserEmail" required minlength="6">
                 </div>
                 <div class="form-div-texto">
                     <label for="txtPassword">Contraseña</label>
