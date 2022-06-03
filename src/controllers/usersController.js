@@ -9,7 +9,11 @@ const controller = {
     //Controlador del login de usuarios
 
     loginGet: function(req, res){
-        res.status(200).render("./users/Login", {err: undefined});
+        if(req.session.userLogeado){
+            res.redirect("/users/perfil");
+        } else {
+            res.status(200).render("./users/Login", {err: undefined});
+        }
     },
     loginPost: function(req, res){
         const body = req.body;
@@ -22,9 +26,7 @@ const controller = {
             }
         });
         if(req.session.userLogeado != undefined){
-            let productosEnJSON = fs.readFileSync(__dirname + "/../data/Productos.json","utf-8");
-            let productos = JSON.parse(productosEnJSON);
-            res.status(200).render("./main/Index", {user: req.session.userLogeado, productos: productos});          //Cuando existe la pagina de usuario esto se cambia
+            res.status(200).redirect("/users/perfil");
         } else {
             res.status(200).render("./users/Login", {err: "Credenciales invalidas"});
         }
