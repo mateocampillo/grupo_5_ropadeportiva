@@ -16,12 +16,16 @@
             <form action="/users/recover?_method=PATCH" method="POST">
                 <div class="container">
                     <label for="txtRecEmail">Correo electronico asociado a tu cuenta:</label><br>
-                    <input type="text" name="txtRecEmail" id="txtRecEmail" placeholder="Email">
+                    <input type="text" name="txtRecEmail" id="txtRecEmail" placeholder="Email" required>
+                </div>
+                <div class="container">
+                    <label for="txtRecTel">Telefono asociado a tu cuenta:</label><br>
+                    <input type="number" name="txtRecTel" id="txtRecTel" minlength="8" maxlength="14" required>
                 </div>
                 <div class="container">
                     <label for="txtRecPass">Nueva contraseña:</label><br>
-                    <input type="text" name="txtRecPass" id="txtRecPass" placeholder="Contraseña"><br>
-                    <input type="text" name="txtRecPassConfirm" id="txtRecPassConfirm" placeholder="Confirmar contraseña">
+                    <input type="password" name="txtRecPass" id="txtRecPass" placeholder="Contraseña" required><br>
+                    <input type="password" name="txtRecPassConfirm" id="txtRecPassConfirm" placeholder="Confirmar contraseña" required>
                 </div>
                 <div class="container">
                     <button>Enviar</button>

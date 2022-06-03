@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const session = require("express-session");
 const methodOverride = require("method-override");
 
 
@@ -10,6 +11,7 @@ app.use("/static", express.static('./static/'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
+app.use(session({secret: "tododeportes"}));                                // despues encriptar
 
 // Seteo para utilizar el template engine EJS
 app.set("view engine", "ejs");

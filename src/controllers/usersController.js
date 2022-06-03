@@ -1,3 +1,4 @@
+const bcrypt = require("bcryptjs/dist/bcrypt");
 const req = require("express/lib/request");
 const fs = require("fs");
 
@@ -26,7 +27,7 @@ const controller = {
             surname: body.txtSurname,
             email: body.txtMail,
             username: body.txtUser,
-            password: body.txtPassword,
+            password: bcrypt.hashSync(body.txtPassword, 10),
             img: "imgUserDefault.jpg",
             birthday: body.dateCumple,
             sex: body.radioSex,
@@ -62,8 +63,8 @@ const controller = {
     recoverPatch: function(req, res){
         const body = req.body;
         usersArray.forEach(user => {
-            if(user.email == body.txtRecEmail){
-                user.password = body.txtRecPass;
+            if(user.email == body.txtRecEmail && user.phone == body.txtRecTel){
+                user.password = bcrypt.hashSync(body.txtRecPass, 10);
             }
         });
         let passCambiada = JSON.stringify(usersArray);
