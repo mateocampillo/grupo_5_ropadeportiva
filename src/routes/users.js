@@ -1,6 +1,25 @@
 const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/usersController");
+const authLogin = require("../middlewares/authLogin")
+const multer = require("multer");
+const path = require("path");
+
+let storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname + "../../../public/images/Users"));
+    },
+    filename: (req, file, cb) => {
+        if(file.originalname.includes(".jpg")){
+            cb(null, `${Date.now()}_UserImg_${path.extname(file.originalname)}`);
+        } else {
+            cb("error: No se ha ingresado una imagen .jpg", "");
+        }
+    }
+});
+
+let uploadFile = multer({storage: storage});
+
 
 // Dentro de localhost:3000/users
 
@@ -12,5 +31,8 @@ router.post("/register", usersController.add)
 
 router.get("/recover", usersController.recoverGet);         //ruta para el recover de la contraseña
 router.patch("/recover", usersController.recoverPatch);
+
+router.get("/perfil", authLogin, usersController.perfil);          //ruta para el perfil de cada usuario
+router.patch("/perfil", uploadFile.single("imgUser"), usersController.perfilImg)
 
 module.exports = router;

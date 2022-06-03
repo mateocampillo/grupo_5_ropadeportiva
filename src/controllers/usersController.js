@@ -87,6 +87,26 @@ const controller = {
         let passCambiada = JSON.stringify(usersArray);
         fs.writeFileSync(__dirname + "/../data/Users.json", passCambiada);
         res.status(201).redirect("/");
+    },
+
+    //Controlador para el despliege de la info del usuario
+
+    perfil: function (req, res){
+        usersArray.forEach(user => {
+            if(user.username == req.session.userLogeado.user){
+                res.status(200).render("./users/Profile", {user: user});
+            }
+        });
+    },
+    perfilImg: function(req, res){
+        usersArray.forEach(user => {
+            if(user.username == req.session.userLogeado.user){
+                user.img = req.file.filename;
+                let imgActualizada = JSON.stringify(usersArray);
+                fs.writeFileSync(__dirname + "/../data/Users.json", imgActualizada);
+            }
+        });
+    res.status(201).redirect("/users/perfil");
     }
 }
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header_footerMin.css">
+    <link rel="stylesheet" href="/css/Profile.css">
+    <title>Perfil de usuario</title>
+</head>
+<body>
+    <%- include("../partials/headerUsers") %>
+    <main>
+        <h2>Bienvenido <%= user.name %> <%= user.surname %></h2>
+        <div class="container-img"><img class="img-user" src="/images/Users/<%= user.img %>" alt="Imagen de usuario"></div>
+        <div class="form-img">
+            <form method="POST" action="/users/perfil?_method=PATCH" enctype="multipart/form-data">
+                <div>
+                    <label for="imgUser">Cambiar imagen de usuario</label><br>
+                    <input type="file" name="imgUser" id="imgUser" accept=".jpg">
+                </div>
+                <button>Subir</button>
+            </form>
+        </div>
+        <h3>Informacion del usuario</h3>
+        <section class="container-info">
+            <div>
+                Nombre: <%= user.name %>
+            </div>
+            <div>
+                Apellido: <%= user.surname %>
+            </div>
+            <div>
+                Email: <%= user.email %>
+            </div>
+            <div>
+                Nombre de usuario: <%= user.username %>
+            </div>
+            <div>
+                Fecha de nacimiento: <%= user.birthday %>
+            </div>
+            <div>
+                Teléfono: <%= user.phone %>
+            </div>
+            <div>
+                Provincia: <%= user.provincia %>
+            </div>
+            <div>
+                Calle: <%= user.address %>
+            </div>
+            <div>
+                Codigo Postal: <%= user.postal %>
+            </div>
+        </section>
+    </main>
+    <%- include("../partials/footerUsers") %>
+</body>
+</html>
