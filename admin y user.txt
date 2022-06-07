@@ -1,0 +1,10 @@
+Cuenta admin:
+
+email: admin@gmail.com
+password: 123456
+
+Cuenta user: 
+
+email: cliente@gmail.com
+password: 123456
+telefono: 121234567 (para recuperar contraseña)

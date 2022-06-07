@@ -21,7 +21,8 @@ const controller = {
             if(body.emailUserEmail == user.email && bcrypt.compareSync(body.txtPassword, user.password)){
                 req.session.userLogeado = {
                     user: user.username,
-                    img: user.img
+                    img: user.img,
+                    cat: user.category
                 }
             }
         });
@@ -47,6 +48,7 @@ const controller = {
             email: body.txtMail,
             username: body.txtUser,
             password: bcrypt.hashSync(body.txtPassword, 10),
+            category: 2,
             img: "imgUserDefault.jpg",
             birthday: body.dateCumple,
             sex: body.radioSex,
@@ -88,7 +90,7 @@ const controller = {
         });
         let passCambiada = JSON.stringify(usersArray);
         fs.writeFileSync(__dirname + "/../data/Users.json", passCambiada);
-        res.status(201).redirect("/");
+        res.status(201).redirect("/users/login");
     },
 
     //Controlador para el despliege de la info del usuario

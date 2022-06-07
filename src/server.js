@@ -32,5 +32,5 @@ app.use("/productos", productos)
 app.use("/users", users);
 //Error 404
 app.use((req, res, next) => {
-    res.status(404).render("./main/not-found");
+    res.status(404).render("./error/not-found");
 });
