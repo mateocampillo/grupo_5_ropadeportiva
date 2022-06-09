@@ -3,6 +3,8 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 const productosController = require("../controllers/productosController");
+const authLogin = require('../middlewares/authLogin');
+const authAdmin = require('../middlewares/authAdmin');
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -23,12 +25,12 @@ let uploadFile = multer({storage: storage});
 router.get("/", productosController.list);                  //ruta que muestra el listado total de productos.
 router.get("/detalle/:id", productosController.detalle);    //ruta que muestra en detalle cada producto segun el id que se la pasa en la ruta.
 
-router.get("/carrito", productosController.cart);           //ruta que muestra el carrito.
+router.get("/carrito", authLogin, productosController.cart);           //ruta que muestra el carrito.
 
-router.get("/edit/:id", productosController.edit);        //ruta del form para editar productos en la base de datos.
+router.get("/edit/:id", authAdmin, productosController.edit);        //ruta del form para editar productos en la base de datos.
 router.put("/edit/:id", uploadFile.array("imgNuevoImages"), productosController.save);          //endpoint donde pega el form de editar productos.
 
-router.get("/agregar", productosController.add);            //ruta del form para agregar productos a la base de datos.
+router.get("/agregar", authAdmin, productosController.add);            //ruta del form para agregar productos a la base de datos.
 router.post("/agregar", uploadFile.array("imgAddimage"), productosController.added);        //endpoint donde pega el form de agregar productos.
 
 router.delete("/:id", productosController.delete);          //ruta donde pega el formulario de borrar productos, se accede mediante la vista de admin
