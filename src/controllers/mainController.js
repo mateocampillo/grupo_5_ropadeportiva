@@ -10,12 +10,17 @@ const controller = {
 
     //Controlador que muestra el index de localhost:3000
 
-    index: (req, res) => {
+    index: function(req, res){
         res.status(200).render("./main/index", {productos: productos});
     },
 
-    admin: (req, res) => {
+    admin: function(req, res){
         res.status(200).render("./main/admin", {productos: productos, users: usersArray});
+    },
+
+    cookies: function(req, res){
+        res.clearCookie('connect.sid');
+        res.redirect('/');
     }
 }
 

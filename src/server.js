@@ -12,7 +12,7 @@ app.use("/static", express.static('./static/'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
-app.use(session({secret: "tododeportes"}));                                // despues encriptar
+app.use(session({secret: "tododeportes"}));                 // despues encriptar
 app.use(cookieParser());
 
 // Seteo para utilizar el template engine EJS
