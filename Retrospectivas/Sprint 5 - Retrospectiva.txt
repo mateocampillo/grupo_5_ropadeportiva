@@ -6,3 +6,10 @@ Mateo:
 -Deberiamos empezar a realizar de forma mas estricta la division de las tareas, ya que aunque usemos el trello, a veces es confuso seguir el progreso.
 -Por mi parte deberia hacer menos cambios en el codigo sin comentarios, ya que a veces lo que para uno parece evidente para otro es mejor una breve explicacion
 -Deberia parar por completo de trabarme mas de 1 hora en algo que no me sale y pedir ayuda ya sea a mis compañeros o a los profesores asi no pierdo tiempo
+
+Matias:
+1. Comenzar a hacer: asignar tareas puntuales de los sprint para dividir las cargas del trabajo.
+2. Hacer más: comunicar a los compañeros los inconvenientes del trabajo asignado para resolverlos entre todos
+3. Continuar haciendo: comunicacion de los avances del sprint y las tareas pendientes.
+4. Hacer menos: intentar resolver una tarea durante mucho tiempo porque no sale y "cederla" a un compañero.
+5. Dejar de hacer: dejar tareas pendientes hasta la fecha limite de entrega.

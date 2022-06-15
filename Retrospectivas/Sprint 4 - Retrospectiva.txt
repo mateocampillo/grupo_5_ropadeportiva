@@ -7,8 +7,9 @@ Mateo:
 -Debo agrupar menos las tareas, es decir, deberia seguir trabajando constante y no hacer mucho trabajo de forma pausada.
 -Deberia parar por completo de esquivar algunas tareas hasta el mismo dia de la clase ya que no me permite consultar bien mis dudas
 
--Estaria bueno seguir preguntando en clase como vengo haciendo las ultimas semanas.
--Yo creo que la comunicaion del grupo va por buen camino, siempre estamos en contacto
--Deberiamos empezar a realizar de forma mas estricta la division de las tareas, ya que aunque usemos el trello, a veces es confuso seguir el progreso.
--Por mi parte deberia hacer menos cambios en el codigo sin comentarios, ya que a veces lo que para uno parece evidente para otro es mejor una breve explicacion
--Deberia parar por completo de trabarme mas de 1 hora en algo que no me sale y pedir ayuda ya sea a mis compañeros o a los profesores asi no pierdo tiempo
+Matias:
+1. Comenzar a hacer: division de las cargas del sprint para hacer parejo el trabajo.
+2. Hacer más: profundizar en temas pendientes e ir dando cierres a ideas de sprint anteriores que por la dinamica del curso no se pudo concretar.
+3. Continuar haciendo: comunicacion constante de los avances de tareas.
+4. Hacer menos: empezar a coordinar las tareas que realiza cada uno y no esperar a que un compañero tome la "posta"
+5. Dejar de hacer: aprovechar las clases en vivo para trabajar dudas con los profes y no intentar resolverlas por nuestra cuenta.
