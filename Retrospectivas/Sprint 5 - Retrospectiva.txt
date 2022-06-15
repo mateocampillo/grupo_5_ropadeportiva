@@ -1,0 +1,8 @@
+Retrospectiva del sprint 5, fecha 15/06/2022:
+
+Mateo:
+-Estaria bueno seguir preguntando en clase como vengo haciendo las ultimas semanas.
+-Yo creo que la comunicaion del grupo va por buen camino, siempre estamos en contacto
+-Deberiamos empezar a realizar de forma mas estricta la division de las tareas, ya que aunque usemos el trello, a veces es confuso seguir el progreso.
+-Por mi parte deberia hacer menos cambios en el codigo sin comentarios, ya que a veces lo que para uno parece evidente para otro es mejor una breve explicacion
+-Deberia parar por completo de trabarme mas de 1 hora en algo que no me sale y pedir ayuda ya sea a mis compañeros o a los profesores asi no pierdo tiempo
