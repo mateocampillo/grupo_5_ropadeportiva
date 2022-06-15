@@ -24,6 +24,9 @@ const controller = {
                     img: user.img,
                     cat: user.category
                 }
+                if(req.session.userLogeado != undefined && req.body.chkRemember != undefined){
+                    res.cookie('cookieRecordar', bcrypt.hashSync(user.id.toString(), 10), {maxAge: 1000 * 60 * 60 * 24 * 3}) // 3 dias
+                }
             }
         });
         if(req.session.userLogeado != undefined){

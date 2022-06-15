@@ -20,6 +20,7 @@ const controller = {
 
     cookies: function(req, res){
         res.clearCookie('connect.sid');
+        res.clearCookie('cookieRecordar');
         res.redirect('/');
     }
 }
