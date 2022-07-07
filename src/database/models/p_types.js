@@ -18,5 +18,16 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const p_types = sequelize.define(alias, cols, config); 
+
+    p_types.associate = function (models) {
+
+        //Relacion 1 tipo / muchos productos
+        p_types.hasMany(models.products, {
+            foreignKey: 'type',
+            as: 'p_type'
+        })
+
+    }
+
     return p_types
 };

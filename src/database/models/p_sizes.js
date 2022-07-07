@@ -18,5 +18,16 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const p_sizes = sequelize.define(alias, cols, config); 
+
+    p_sizes.associate = function (models) {
+
+        //Relacion 1 talla / muchos productos
+        p_sizes.hasMany(models.products, {
+            foreignKey: 'size',
+            as: 'p_size'
+        })
+
+    }
+
     return p_sizes
 };
