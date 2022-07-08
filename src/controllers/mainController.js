@@ -17,7 +17,7 @@ const controller = {
             })
             .catch(function(err){
                 console.log(err);
-                res.render('./error/error-general')
+                res.status(500).render('./error/error-general')
             })
     },
 
@@ -31,7 +31,8 @@ const controller = {
                 res.status(200).render("./main/admin", {productos: resultados[0], users: resultados[1]});
             })
             .catch(function(err){
-                console.log(err)
+                console.log(err);
+                res.status(401).render('./error/permisos');
             })
     },
 
