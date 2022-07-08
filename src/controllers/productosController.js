@@ -167,18 +167,33 @@ const controller = {
 
     delete: function(req, res){
 
-        //Encontrar el item y borrarlo del array
-        let id = req.params.id;
-        productos.splice(id-1, 1);
+        db.products.update({
+            active: 2
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(function() {
+                res.status(202).redirect("/admin");
+            })
+            .catch(function(err) {
+                console.log(err);
+            })
 
-        //Recorrer el array y arreglar los id 
-        for (let i = 0; i < productos.length; i++){
-            productos[i].id = i+1;
-        }
+        // ESTE CODIGO LO BORRA DE LA DB, PERO PREFIERO USAR EL DEL ARRIBA QUE SIMPLEMENTE LO DESACTIVA, PERO NO SE BORRA
+        // db.products.destroy({
+        //     where: {
+        //         id: req.params.id
+        //     }
+        // })
+        //     .then(function() {
+        //         res.status(202).redirect("/admin");
+        //     })
+        //     .catch(function(err) {
+        //         console.log(err);
+        //     })
 
-        let productosEditados = JSON.stringify(productos);
-        fs.writeFileSync(__dirname + "/../data/Productos.json", productosEditados);
-        res.status(202).redirect("/admin");
     }
 }
 
