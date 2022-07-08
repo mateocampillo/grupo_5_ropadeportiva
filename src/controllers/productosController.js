@@ -77,40 +77,90 @@ const controller = {
             img4: req.files[3].filename,
             active: 1
         })
+            .catch(function(err) {
+                console.log(err);
+            })
             res.status(201).redirect("/");
     },
 
 //Controladores para la seccion de edicion de productos
 
     edit: function(req, res){
-        res.status(200).render("./products/ProductEdit", {productos: productos[req.params.id-1]});
+        db.products.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: ['p_category', 'p_cloth', 'p_color', 'p_size', 'p_type']
+        })
+            .then(function(producto) {
+                res.status(200).render("./products/ProductEdit", {producto: producto});
+            })
+            .catch(function(err) {
+                console.log(err);
+                res.status(500).render('./error/error-general');
+            })
     },
     save: function(req, res){
-        const body = req.body
-        let prodNuevo = {
-            id: parseInt(req.params.id),
-            name: body.txtNuevoName,
-            description: body.txtNuevoDesc,
-            category: body.radioNuevoCat,
-            price: body.numNuevoPrice,
-            type: body.radioNuevoType,
-            size: body.radioNuevoSize,
-            waist: body.txtNuevoWaist,
-            chest: body.txtNuevoChest,
-            back: body.txtNuevoBack,
-            height: body.txtNuevoHeight,
-            cloth: body.radioNuevoCloth,
-            color: body.radioNuevoColor,
-            code: body.txtNuevoCode,
-            img1: req.files[0].filename,
-            img2: req.files[1].filename,
-            img3: req.files[2].filename,
-            img4: req.files[3].filename
+
+        if(req.files != ''){
+            db.products.update({
+                name: req.body.txtNuevoName,
+                description: req.body.txtNuevoDesc,
+                category: req.body.radioNuevoCat,
+                price: req.body.numNuevoPrice,
+                type: req.body.radioNuevoType,
+                size: req.body.radioNuevoSize,
+                waist: req.body.txtNuevoWaist,
+                chest: req.body.txtNuevoChest,
+                back: req.body.txtNuevoBack,
+                height: req.body.txtNuevoHeight,
+                cloth: req.body.radioNuevoCloth,
+                color: req.body.radioNuevoColor,
+                code: req.body.txtNuevoCode,
+                img1: req.files[0].filename,
+                img2: req.files[1].filename,
+                img3: req.files[2].filename,
+                img4: req.files[3].filename,
+                active: req.body.radioNuevoActive
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+                .catch(function(err) {
+                    console.log(err);
+                    res.status(500).render('./error/error-general')
+                })
+            
+            res.status(201).redirect("/");
+        } else if (req.files == '') {
+            db.products.update({
+                name: req.body.txtNuevoName,
+                description: req.body.txtNuevoDesc,
+                category: req.body.radioNuevoCat,
+                price: req.body.numNuevoPrice,
+                type: req.body.radioNuevoType,
+                size: req.body.radioNuevoSize,
+                waist: req.body.txtNuevoWaist,
+                chest: req.body.txtNuevoChest,
+                back: req.body.txtNuevoBack,
+                height: req.body.txtNuevoHeight,
+                cloth: req.body.radioNuevoCloth,
+                color: req.body.radioNuevoColor,
+                code: req.body.txtNuevoCode,
+                active: req.body.radioNuevoActive
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+                .catch(function(err) {
+                    console.log(err);
+                    res.status(500).render('./error/error-general')
+                })
+    
+            res.status(201).redirect("/");
         }
-        productos.splice(prodNuevo.id-1, 1, prodNuevo);
-        let productosEditados = JSON.stringify(productos);
-        fs.writeFileSync(__dirname + "/../data/Productos.json", productosEditados);
-        res.status(201).redirect("/");
     },
 
 //Controladores para borrar productos

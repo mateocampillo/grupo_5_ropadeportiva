@@ -6,45 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header_footerMin.css">
     <link rel="stylesheet" href="/css/ProductEdit.css">
-    <title>Edicion de productos</title>
+    <title>Edicion de producto</title>
 </head>
 <body>
     <%- include("../partials/headerUsers") %>
     <main>
         <div class="container-prod-viejo">
-            <h2>Producto: <%= productos.name %></h2>
+            <h2>Producto: <%= producto.dataValues.name %></h2>
             <ul>
-                <li>ID: <%= productos.id %></li>
-                <li>Nombre: <%= productos.name %></li>
-                <li>Descripcion: <%= productos.description %></li>
-                <li>Categoria: <%= productos.category %></li>
-                <li>Talle: <%= productos.size %></li>
-                <li>Precio: <%= productos.price %></li>
-                <li>Tipo: <%= productos.type %></li>
-                <li>Cintura: <%= productos.waist %></li>
-                <li>Pecho: <%= productos.chest %></li>
-                <li>Espalda: <%= productos.back %></li>
-                <li>Altura: <%= productos.height %></li>
-                <li>Tela: <%= productos.cloth %></li>
-                <li>Color: <%= productos.color %></li>
-                <li>Codigo: <%= productos.code %></li>
+                <li>ID: <%= producto.dataValues.id %></li>
+                <li>Nombre: <%= producto.dataValues.name %></li>
+                <li>Descripcion: <%= producto.dataValues.descripcion %></li>
+                <li>Categoria: <%= producto.dataValues.p_category.name %></li>
+                <li>Talle: <%= producto.dataValues.p_size.name %></li>
+                <li>Precio: <%= producto.dataValues.price %></li>
+                <li>Tipo: <%= producto.dataValues.p_type.name %></li>
+                <li>Cintura: <%= producto.dataValues.waist %></li>
+                <li>Pecho: <%= producto.dataValues.chest %></li>
+                <li>Espalda: <%= producto.dataValues.back %></li>
+                <li>Altura: <%= producto.dataValues.height %></li>
+                <li>Tela: <%= producto.dataValues.p_cloth.name %></li>
+                <li>Color: <%= producto.dataValues.p_color.name %></li>
+                <li>Codigo: <%= producto.dataValues.code %></li>
             </ul>
             <div class="container-fotos">
-                <img src="/images/ProductDetail/<%= productos.img1 %>" alt="Imagen">
-                <img src="/images/ProductDetail/<%= productos.img2 %>" alt="Imagen">
-                <img src="/images/ProductDetail/<%= productos.img3 %>" alt="Imagen">
-                <img src="/images/ProductDetail/<%= productos.img4 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= producto.dataValues.img1 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= producto.dataValues.img2 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= producto.dataValues.img3 %>" alt="Imagen">
+                <img src="/images/ProductDetail/<%= producto.dataValues.img4 %>" alt="Imagen">
             </div>
         </div>
         <h2>Producto Editado</h2>
         <div class="container-prod-nuevo">
 
-            <!-- Formulario para editar productos existentes en la base de datos -->
+            <!-- Formulario para editar producto existentes en la base de datos -->
 
-            <form method="POST" action="/productos/edit/<%= productos.id %>?_method=PUT" enctype="multipart/form-data">
+            <form method="POST" action="/productos/edit/<%= producto.dataValues.id %>?_method=PUT" enctype="multipart/form-data">
                 <div>
                     <label for="txtNuevoName">Nombre del producto:</label><br>
-                    <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= productos.name %>">
+                    <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= producto.dataValues.name %>">
                 </div>
                 <div>
                     <label for="txtNuevoDesc">Descripción del producto:</label><br>
@@ -52,74 +52,79 @@
                 </div>
                 <div>
                     <label for="radioNuevoCat">Categoria del producto:</label><br>
-                    <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value="Hombre" <% if (productos.category == "Hombre") { %> checked <% } %> >Hombre
-                    <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value="Mujer" <% if (productos.category == "Mujer") { %> checked <% } %> >Mujer
-                    <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value="Infantil" <% if (productos.category == "Infantil") { %> checked <% } %> >Infantil
+                    <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value='1' <% if (producto.dataValues.category == 1) { %> checked <% } %> >Hombre
+                    <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value='2' <% if (producto.dataValues.category == 2) { %> checked <% } %> >Mujer
+                    <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value='3' <% if (producto.dataValues.category == 3) { %> checked <% } %> >Infantil
                 </div>
                 <div>
                     <label for="numNuevoPrice">Precio del producto:</label><br>
-                    <input type="number" id="numNuevoPrice" name="numNuevoPrice" value="<%= productos.price %>">
+                    <input type="number" id="numNuevoPrice" name="numNuevoPrice" value="<%= producto.dataValues.price %>">
                 </div>
                 <div>
                     <label for="radioNuevoType">Tipo del producto:</label><br>
-                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value="Camiseta" <% if (productos.type == "Camiseta") { %> checked <% } %> >Camiseta
-                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value="Pantalon" <% if (productos.type == "Pantalon") { %> checked <% } %> >Pantalon
-                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value="Zapatillas" <% if (productos.type == "Zapatillas") { %> checked <% } %> >Zapatillas
-                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value="Buzo" <% if (productos.type == "Buzo") { %> checked <% } %> >Buzo
+                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value='1' <% if (producto.dataValues.type == 1) { %> checked <% } %> >Camiseta
+                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value='2' <% if (producto.dataValues.type == 2) { %> checked <% } %> >Pantalon
+                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value='3' <% if (producto.dataValues.type == 3) { %> checked <% } %> >Zapatillas
+                    <input type="radio" id="radioNuevoType" name="radioNuevoType" value='4' <% if (producto.dataValues.type == 4) { %> checked <% } %> >Buzo
                 </div>
                 <div>
                     <label for="radioNuevoSize">Talle del producto:</label><br>
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="S" <% if (productos.size == "S") { %> checked <% } %> >S
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="M" <% if (productos.size == "M") { %> checked <% } %> >M
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="L" <% if (productos.size == "L") { %> checked <% } %> >L
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="1" <% if (producto.dataValues.size == 1) { %> checked <% } %> >S
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="2" <% if (producto.dataValues.size == 2) { %> checked <% } %> >M
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="3" <% if (producto.dataValues.size == 3) { %> checked <% } %> >L
                     <br>
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="37" <% if (productos.size == "37") { %> checked <% } %> >37
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="38" <% if (productos.size == "38") { %> checked <% } %> >38
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="39" <% if (productos.size == "39") { %> checked <% } %> >39
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="40" <% if (productos.size == "40") { %> checked <% } %> >40
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="41" <% if (productos.size == "41") { %> checked <% } %> >41
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="42" <% if (productos.size == "42") { %> checked <% } %> >42
-                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="43" <% if (productos.size == "43") { %> checked <% } %> >43
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="4" <% if (producto.dataValues.size == 4) { %> checked <% } %> >37
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="5" <% if (producto.dataValues.size == 5) { %> checked <% } %> >38
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="6" <% if (producto.dataValues.size == 6) { %> checked <% } %> >39
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="7" <% if (producto.dataValues.size == 7) { %> checked <% } %> >40
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="8" <% if (producto.dataValues.size == 8) { %> checked <% } %> >41
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="9" <% if (producto.dataValues.size == 9) { %> checked <% } %> >42
+                    <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="10" <% if (producto.dataValues.size == 10) { %> checked <% } %> >43
                 </div>
                 <div>
                     <label for="txtNuevoWaist">Cm de cintura:</label><br>
-                    <input type="text" id="txtNuevoWaist" name="txtNuevoWaist" value="<%= productos.waist %>">
+                    <input type="text" id="txtNuevoWaist" name="txtNuevoWaist" value="<%= producto.dataValues.waist %>">
                 </div>
                 <div>
                     <label for="txtNuevoChest">Cm de Pecho:</label><br>
-                    <input type="text" id="txtNuevoChest" name="txtNuevoChest" value="<%= productos.chest %>">
+                    <input type="text" id="txtNuevoChest" name="txtNuevoChest" value="<%= producto.dataValues.chest %>">
                 </div>
                 <div>
                     <label for="txtNuevoBack">Cm de Espalda:</label><br>
-                    <input type="text" id="txtNuevoBack" name="txtNuevoBack" value="<%= productos.back %>">
+                    <input type="text" id="txtNuevoBack" name="txtNuevoBack" value="<%= producto.dataValues.back %>">
                 </div>
                 <div>
                     <label for="txtNuevoHeight">Altura:</label><br>
-                    <input type="text" id="txtNuevoHeight" name="txtNuevoHeight" value="<%= productos.height %>">
+                    <input type="text" id="txtNuevoHeight" name="txtNuevoHeight" value="<%= producto.dataValues.height %>">
                 </div>
                 <div>
                     <label for="radioNuevoCloth">Tela del producto:</label><br>
-                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="Algodon" <% if (productos.cloth == "Algodon") { %> checked <% } %> >Algodon
-                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="Lycra" <% if (productos.cloth == "Lycra") { %> checked <% } %> >Lycra
-                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="Neoprene" <% if (productos.cloth == "Neoprene") { %> checked <% } %> >Neoprene
-                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="Jersey" <% if (productos.cloth == "Jersey") { %> checked <% } %> >Jersey
-                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="Nylon" <% if (productos.cloth == "Nylon") { %> checked <% } %> >Nylon
-                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="Poliester" <% if (productos.cloth == "Poliester") { %> checked <% } %> >Poliéster
+                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="1" <% if (producto.dataValues.cloth == 1) { %> checked <% } %> >Algodon
+                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="2" <% if (producto.dataValues.cloth == 2) { %> checked <% } %> >Lycra
+                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="3" <% if (producto.dataValues.cloth == 3) { %> checked <% } %> >Neoprene
+                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="4" <% if (producto.dataValues.cloth == 4) { %> checked <% } %> >Jersey
+                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="5" <% if (producto.dataValues.cloth == 5) { %> checked <% } %> >Nylon
+                    <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="6" <% if (producto.dataValues.cloth == 6) { %> checked <% } %> >Poliéster
                 </div>
                 <div>
                     <label for="radioNuevoColor">Color del producto:</label><br>
-                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="Negro" <% if (productos.color == "Negro") { %> checked <% } %> >Negro
-                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="Blanco" <% if (productos.color == "Blanco") { %> checked <% } %> >Blanco
-                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="Rojo" <% if (productos.color == "Rojo") { %> checked <% } %> >Rojo
-                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="Azul" <% if (productos.color == "Azul") { %> checked <% } %> >Azul
+                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="1" <% if (producto.dataValues.color == 1) { %> checked <% } %> >Negro
+                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="2" <% if (producto.dataValues.color == 2) { %> checked <% } %> >Blanco
+                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="3" <% if (producto.dataValues.color == 3) { %> checked <% } %> >Rojo
+                    <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="4" <% if (producto.dataValues.color == 4) { %> checked <% } %> >Azul
                 </div>
                 <div>
                     <label for="txtNuevoCode">Codigo de producto:</label><br>
-                    <input type="text" id="txtNuevoCode" name="txtNuevoCode" value="<%= productos.code %>">
+                    <input type="text" id="txtNuevoCode" name="txtNuevoCode" value="<%= producto.dataValues.code %>">
                 </div>
                 <div>
                     <label for="imgNuevoImages">Fotos de producto:</label><br>
                     <input type="file" id="imgNuevoImages" name="imgNuevoImages" accept=".jpg, .jpeg, .png, .svg" multiple>
+                </div>
+                <div>
+                    <label for="radioNuevoActive">Active:</label><br>
+                    <input type="radio" id="radioNuevoActive" name="radioNuevoActive" value="1" <% if (producto.dataValues.active == '1') { %> checked <% } %> >1
+                    <input type="radio" id="radioNuevoActive" name="radioNuevoActive" value="2" <% if (producto.dataValues.active == '2') { %> checked <% } %> >2
                 </div>
                 <button type="submit">Editar</button>
             </form>

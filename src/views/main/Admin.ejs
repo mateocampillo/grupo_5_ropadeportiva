@@ -23,7 +23,7 @@
                             <li><h4>Nombre de producto: <%= productos[i].name %></h3></li>
                             <li><h4>Precio de producto: <%= productos[i].price %></h4></li>
                         </ul>
-                        <div><a href="/productos/<%= productos[i].id %>/edit">Editar el producto <%= productos[i].id %></a></div>
+                        <div><a href="/productos/edit/<%= productos[i].id %>">Editar el producto <%= productos[i].id %></a></div>
                         <form action="/productos/<%= productos[i].id %>?_method=DELETE" method="POST">
                             <button>Borrar producto <%= productos[i].id %></button>
                         </form>
