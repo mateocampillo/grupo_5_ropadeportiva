@@ -4,15 +4,44 @@ const fs = require("fs");
 let productosEnJSON = fs.readFileSync(__dirname + "/../data/Productos.json","utf-8");
 let productos = JSON.parse(productosEnJSON);
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 const controller = {
 
 //Controladores para desplegar los productos
 
     list: function(req, res){
-        res.status(200).render("./products/ProductList", {productos: productos})
+        db.products.findAll({
+            where: {
+                active: 1
+            }
+        })
+            .then(function(products) {
+                res.status(200).render("./products/ProductList", {productos: products})
+                console.log(products);
+            })
+            .catch(function(err) {
+                console.log(err);
+                res.status(500).render('./error/error-general')
+            })
+
     },
     detalle: function(req, res){
-        res.status(200).render("./products/ProductDetail", {productos: productos[req.params.id-1]});
+        db.products.findOne({
+            where: {
+                id: req.params.id
+            },
+            include: ['p_category', 'p_cloth', 'p_color', 'p_size', 'p_type']
+        })
+            .then(function(producto) {
+                res.status(200).render("./products/ProductDetail", {producto: producto});
+            })
+            .catch(function(err) {
+                console.log(err);
+                res.status(500).render('./error/error-general');
+            })
     },
 
 //Controladores para el carrito

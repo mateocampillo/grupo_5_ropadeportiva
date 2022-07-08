@@ -15,10 +15,10 @@
         <div class="container-general">
             <% for(let i = 0; i < productos.length; i++){ %> 
             <div class="container-productos">
-                <a href="/productos/detalle/<%= productos[i].id %>">
-                    <div class="container-imagen"><img src="/images/ProductDetail/<%= productos[i].img1 %>" alt="Imagen"></div>
-                    <div><p>$ <%= productos[i].price %></p></div>
-                    <div><h3><%= productos[i].name %></h3></div>
+                <a href="/productos/detalle/<%= productos[i].dataValues.id %>">
+                    <div class="container-imagen"><img src="/images/ProductDetail/<%= productos[i].dataValues.img1 %>" alt="Imagen"></div>
+                    <div><p>$ <%= productos[i].dataValues.price %></p></div>
+                    <div><h3><%= productos[i].dataValues.name %></h3></div>
                 </a>
             </div>
             <% } %> 

@@ -11,11 +11,11 @@
         <main>
             <section>
                 <div class="resumen">
-                    <p> <%= productos.category %> </p>
+                    <p> <%= producto.dataValues.p_category.name %> </p>
                     <p class="separadores">></p>
-                    <p> <%= productos.type %> </p>
+                    <p> <%= producto.dataValues.p_type.name %> </p>
                     <p class="separadores">></p>
-                    <p class="producto"> <%= productos.name %> </p>
+                    <p class="producto"> <%= producto.dataValues.name %> </p>
                 </div>
             </section>
             <section>
@@ -23,29 +23,29 @@
                     <div class="container-izq">
                         <div class="container-principal">
                             <!-- <img class="imagen-principal" src="/images/ProductDetail/imagen1.jpg"> -->
-                            <img class="imagen-principal" src="/images/ProductDetail/<%= productos.img1 %>">
+                            <img class="imagen-principal" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
                         </div>
                         <div class="container-secundarias">
-                            <img class="imagen-secundaria1" src="/images/ProductDetail/<%= productos.img1 %>">
-                            <img class="imagen-secundaria2" src="/images/ProductDetail/<%= productos.img2 %>">
-                            <img class="imagen-secundaria3" src="/images/ProductDetail/<%= productos.img3 %>">
+                            <img class="imagen-secundaria1" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
+                            <img class="imagen-secundaria2" src="/images/ProductDetail/<%= producto.dataValues.img2 %>">
+                            <img class="imagen-secundaria3" src="/images/ProductDetail/<%= producto.dataValues.img3 %>">
                         </div>
                     </div>
                     <div class="container-der">
                         <div class="colores">
                             <p class="titulo"> Mas colores</p>
                         <div>
-                            <img class="imagen-secundaria4" src="/images/ProductDetail/<%= productos.img3 %>">
-                            <img class="imagen-secundaria5" src="/images/ProductDetail/<%= productos.img4 %>">
+                            <img class="imagen-secundaria4" src="/images/ProductDetail/<%= producto.dataValues.img3 %>">
+                            <img class="imagen-secundaria5" src="/images/ProductDetail/<%= producto.dataValues.img4 %>">
                         </div>
                         <p class="color">Azul/Amarillo</p>
                     </div>
                     <hr class="hr1">
                     <div>
-                        <p class="nombre"> <%= productos.name %> </p>
+                        <p class="nombre"> <%= producto.dataValues.name %> </p>
                     </div>
                     <div>
-                        <p class="precio"> <%= productos.price %> </p>
+                        <p class="precio"> <%= producto.dataValues.price %> </p>
                     </div>
                     <div class="talles">
                         <p class="titulo-talle">Talles disponibles</p>
@@ -65,8 +65,8 @@
                     <div class="colores1">
                         <p class="titulo"> Mas colores</p>
                     <div>
-                        <img class="imagen-secundaria4" src="/images/ProductDetail/<%= productos.img1 %>">
-                        <img class="imagen-secundaria5" src="/images/ProductDetail/<%= productos.img4 %>">
+                        <img class="imagen-secundaria4" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
+                        <img class="imagen-secundaria5" src="/images/ProductDetail/<%= producto.dataValues.img4 %>">
                     </div>
                 </div>
             </div>
@@ -76,22 +76,22 @@
                     <p class="titulo-detalle">DETALLES DEL PRODUCTO</p>
                     <div class="descripcion-producto">
                         <h3>Descripcion</h3>
-                        <%= productos.description %> 
+                        <%= producto.dataValues.descripcion %> 
                     </div>
                     <div class="detalles1">
-                        <p class="sub-titulo">Nuestro modelo viste talle <%= productos.size %> </p>
+                        <p class="sub-titulo">La publicación se muestra en talle <%= producto.dataValues.p_size.name %> </p>
                         <div class="detalles1">
-                            <div class="sub-detalles"><div class="width"><p>Talles</p></div>	<p>Cintura: <%= productos.waist %>; Pecho: <%= productos.chest %>; Espalda: <%= productos.back %></p></div>
-                            <div class="sub-detalles"><div class="width"><p>Altura</p></div>	<p><%= productos.height %> </p></div>
+                            <div class="sub-detalles"><div class="width"><p>Talles</p></div>	<p>Cintura: <%= producto.dataValues.waist %>; Pecho: <%= producto.dataValues.chest %>; Espalda: <%= producto.dataValues.back %></p></div>
+                            <div class="sub-detalles"><div class="width"><p>Altura</p></div>	<p><%= producto.dataValues.height %> </p></div>
                         </div>
                     </div>
                 </div>
                     <div class="detalles2">
                         <p class="sub-titulo">INFORMACION</p>
                         <div class="detalles1">
-                            <div class="sub-detalles"><div class="width2"><p>Tela</p></div> <p><%= productos.cloth %></p></div>
-                            <div class="sub-detalles"><div class="width2"><p>Color</p></div> <p><%= productos.color %></p></div>
-                            <div class="sub-detalles"><div class="width2"><p>Código Artículo</p></div> <p><%= productos.code %></p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Tela</p></div> <p><%= producto.dataValues.p_cloth.name %></p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Color</p></div> <p><%= producto.dataValues.p_color.name %></p></div>
+                            <div class="sub-detalles"><div class="width2"><p>Código Artículo</p></div> <p><%= producto.dataValues.code %></p></div>
                         </div>
                     </div>
 
