@@ -20,7 +20,6 @@ const controller = {
         })
             .then(function(products) {
                 res.status(200).render("./products/ProductList", {productos: products})
-                console.log(products);
             })
             .catch(function(err) {
                 console.log(err);
@@ -56,36 +55,29 @@ const controller = {
         res.status(200).render("./products/ProductAdd");
     },
     added: function(req, res){
-        const body = req.body;
-        let prodAdded = {
-            id: 1,
-            name: body.txtAddName,
-            description: body.txtAddDesc,
-            category: body.radioAddCat,
-            price: body.numAddPrice,
-            type: body.radioAddType,
-            size: body.radioAddSize,
-            waist: body.txtAddWaist,
-            chest: body.txtAddChest,
-            back: body.txtAddBack,
-            height: body.txtAddHeight,
-            cloth: body.radioAddCloth,
-            color: body.radioAddColor,
-            code: body.txtAddCode,
+
+        db.products.create({
+            name: req.body.txtAddName,
+            descripcion: req.body.txtAddDesc,
+            category: req.body.radioAddCat,
+            price: req.body.numAddPrice,
+            type: req.body.radioAddType,
+            size: req.body.radioAddSize,
+            waist: req.body.txtAddWaist,
+            waist: req.body.txtAddWaist,
+            chest: req.body.txtAddChest,
+            back: req.body.txtAddBack,
+            height: req.body.txtAddHeight,
+            cloth: req.body.radioAddCloth,
+            color: req.body.radioAddColor,
+            code: req.body.txtAddCode,
             img1: req.files[0].filename,
             img2: req.files[1].filename,
             img3: req.files[2].filename,
-            img4: req.files[3].filename
-        }
-        //
-        if(productos.length > 0){
-            prodAdded.id = productos.length + 1;
-        }
-        //
-        productos.push(prodAdded);
-        let prodEnJson = JSON.stringify(productos);
-        fs.writeFileSync(__dirname + "/../data/Productos.json", prodEnJson);
-        res.status(201).redirect("/");
+            img4: req.files[3].filename,
+            active: 1
+        })
+            res.status(201).redirect("/");
     },
 
 //Controladores para la seccion de edicion de productos
