@@ -1,9 +1,3 @@
-const req = require("express/lib/request");
-const fs = require("fs");
-
-let productosEnJSON = fs.readFileSync(__dirname + "/../data/Productos.json","utf-8");
-let productos = JSON.parse(productosEnJSON);
-
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
