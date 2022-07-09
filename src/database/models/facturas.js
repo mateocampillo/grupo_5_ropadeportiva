@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         fecha_compra: {
-            type: dataTypes.DATETIME,
+            type: dataTypes.DATE,
             allowNull: false
         },
         total: {
@@ -25,16 +25,17 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    users.associate = function(models) {
+    const facturas = sequelize.define(alias, cols, config); 
+
+    facturas.associate = function(models) {
 
         //Relacion 1 cart/ 1 factura
         facturas.belongsTo(models.cart, {
-            foreignKey: 'cart',
+            foreignKey: 'id',
             as: 'cart'
         })
 
     }
 
-    const facturas = sequelize.define(alias, cols, config); 
     return facturas
 };

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'users';
+    let alias = 'cart';
     let cols = {
         id: {
             type: dataTypes.INTEGER(11),
@@ -21,11 +21,11 @@ module.exports = (sequelize, dataTypes) => {
             defaultValue: 1
         },
         fecha: {
-            type: dataTypes.DATETIME,
+            type: dataTypes.DATE,
             allowNull: false
         },
         activo: {
-            type: dataTypes.TINYINT(1),
+            type: dataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: 1
         },
@@ -41,23 +41,23 @@ module.exports = (sequelize, dataTypes) => {
 
     const cart = sequelize.define(alias, cols, config); 
 
-    users.associate = function(models) {
+    cart.associate = function(models) {
 
         //Relacion 1 cart/ 1 factura
         cart.belongsTo(models.facturas, {
-            foreignKey: 'facturas',
+            foreignKey: 'id',
             as: 'facturas'
         })
         
         //Relacion 1 cart/ +1 products
         cart.hasMany(models.products, {
-            foreignKey: 'products',
+            foreignKey: 'id',
             as: 'products'
         })
 
         //Relacion 1 cart/ 1 usuario
         cart.belongsTo(models.users, {
-            foreignKey: 'users',
+            foreignKey: 'id',
             as: 'users'
         })
 
