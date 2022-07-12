@@ -4,7 +4,7 @@ const path = require("path");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
-// const cookieCheckLogin = require('./middlewares/cookieCheckLogin')
+const cookieCheckLogin = require('./middlewares/cookieCheckLogin')
 
 
 // Carpeta pública para archivos estáticos.
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(session({secret: "tododeportes"}));                 // despues encriptar
 app.use(cookieParser());
-// app.use(cookieCheckLogin);
+app.use(cookieCheckLogin);
 
 // Seteo para utilizar el template engine EJS
 app.set("view engine", "ejs");
