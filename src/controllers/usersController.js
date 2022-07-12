@@ -1,3 +1,5 @@
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr('myTotallySecretKey');                //cambiar
 const bcrypt = require("bcryptjs")
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -30,7 +32,8 @@ const controller = {
                     cat: user.category
                 }
                 if(req.session.userLogeado != undefined && req.body.chkRemember != undefined){
-                    res.cookie('cookieRecordar', bcrypt.hashSync(user.id.toString(), 10), {maxAge: 1000 * 60 * 60 * 24 * 3}) // 3 dias
+                    let idEncriptada = cryptr.encrypt(user.id);
+                    res.cookie('cookieRecordar', idEncriptada, {maxAge: 1000 * 60 * 60 * 24 * 3}) // 3 dias
                 }
                 res.status(200).render("./users/Profile", {user: user});
             } else {

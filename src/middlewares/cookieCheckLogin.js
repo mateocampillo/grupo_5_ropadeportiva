@@ -1,42 +1,30 @@
-// const bcrypt = require('bcryptjs');
-// const db = require('../database/models');
-// const sequelize = db.sequelize;
-// const { Op } = require("sequelize");
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr('myTotallySecretKey');                //cambiar
+const bcrypt = require('bcryptjs');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 
-// function cookieCheckLogin (req, res, next){
+async function cookieCheckLogin (req, res, next){
 
-//     if(req.cookies.cookieRecordar){
-        
+    if(req.cookies.cookieRecordar){
 
+        let id = cryptr.decrypt(req.cookies.cookieRecordar);
+        db.users.findOne({
+            where: {
+                id: id
+            }
+        })
+            .then(function(user) {
+                req.session.userLogeado = {
+                    user: user.username,
+                    img: user.img,
+                    cat: user.category
+                }
+            })
+        }
+    next();
+}
 
-//         db.users.findOne({
-//             where: {
-//                 id: 
-//             }
-//         })
-//             .then(function(user) {
-//                 req.session.userLogeado = {
-//                     user: user.username,
-//                     img: user.img,
-//                     cat: user.category
-//                 }
-//             })
-//     }
-//     next();
-
-//     if(req.cookies.cookieRecordar){
-//         usersArray.forEach(user => {
-//             if(bcrypt.compareSync(user.id.toString(), req.cookies.cookieRecordar)){
-//                 req.session.userLogeado = {
-//                     user: user.username,
-//                     img: user.img,
-//                     cat: user.category
-//                 }
-//             }
-//         });
-//     }
-//     next();
-// }
-
-// module.exports = cookieCheckLogin;
+module.exports = cookieCheckLogin;
