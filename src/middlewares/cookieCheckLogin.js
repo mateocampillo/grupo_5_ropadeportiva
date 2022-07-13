@@ -6,7 +6,7 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 
-async function cookieCheckLogin (req, res, next){
+function cookieCheckLogin (req, res, next){
 
     if(req.cookies.cookieRecordar){
 
