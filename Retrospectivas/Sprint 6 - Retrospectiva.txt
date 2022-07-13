@@ -1,0 +1,6 @@
+Mateo: 
+-Comenzar a hacer: Este sprint pasado me di cuenta que debo comenzar a profundizar ciertos aspectos tecnicos del DOM y de la base de datos, siento que me desenvuelvo bien pero en aspectos veo que me faltan conceptos.
+-Hacer mas: Cuando se presenta algun inconveniente entre mi idea de como afrontar un objetivo, siento que debo indagar mas a fondo para solucionarlo, aunque a veces me fruste
+-Continuar haciendo: Estuve trabajando bastante constante en el proyecto, siento que es un ritmo comodo y donde progreso bastante por lo tanto intentare mantenerlo
+-Hacer menos: A veces me encuentro en una posicion donde si me encuentro trabado con algun ejercicio durante varias horas me frustro y lo abandono por otro. Si bien mas tarde vuelvo al mismo, lo ideal seria consultar con mi grupo o con los profes para poder salir adelante
+-Dejar de hacer: Debo dejar de posponer los colearnings y los videos de youtube donde se profundizan conceptos. Estos son una gran fuente para aprender buenas practicas y entender por completo un concepto y muchas veces me veo posponiendolos debido a su longitud o a que le doy prioridad a otras tareas.
