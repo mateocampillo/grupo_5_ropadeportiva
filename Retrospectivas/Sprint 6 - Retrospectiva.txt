@@ -12,7 +12,7 @@ Felipe:
 4. Dejar de esperar para realizar los sprints, y dejar de que el resto de integrantes asuma mas responsabilidad de la que deberia. Ademas de no ponerme a resolver problemas con con contenido fuera del curso
 5. Redundo en que debo dejar de esperar tanto tiempo para empezar a realizar los sprints.
 
-Mateo:
+Matias:
 1. Comenzar a hacer: en lo personal reforzar contenidos de base de datos. Entiendo la logica y la teoria pero tengo que desenvolverme mas en la parte practica.
 2. Hacer más: involucrarme mas activamente en el proyecto y aportar soluciones o puntos de vistas a los inconvenientes que se presentan. Puntualmente, en este sprint, no estuve al ritmo ni respondi como requeria el grupo.
 3. Continuar haciendo: mantener contacto con los compañeros en el dia a dia e ir avanzando a la par para hablar todos "el mismo idioma" a la hora de resolver el trabajo integral.
