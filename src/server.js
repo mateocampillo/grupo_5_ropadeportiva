@@ -27,11 +27,13 @@ app.listen(3000, () => { console.log("Servidor abierto en el puerto 3000") });
 const main = require("./routes/main");
 const productos = require("./routes/productos");
 const users = require("./routes/users");
+const apiProductos = require('./routes/api/productos');
 
 // Index de rutas
 app.use("/", main);
 app.use("/productos", productos)
 app.use("/users", users);
+app.use('/api/productos', apiProductos);
 //Error 404
 app.use((req, res, next) => {
     res.status(404).render("./error/not-found");
