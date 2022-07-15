@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
-main h2{
+.h2-listado{
     margin-top: 140px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#categorias-busqueda{
+    margin-top: 10px;
     text-align: center;
     font-size: 1.3rem;
 }
@@ -54,9 +60,9 @@ main h3{
 
 @media (min-width: 380px) {
 
-    main h2{
+    .h2-listado{
         font-size: 1.4rem;
-        margin-top: 170px;
+        margin-top: 180px;
     }
 
     .container-productos{
@@ -73,7 +79,7 @@ main h3{
 
 @media (min-width: 834px) {
 
-    main h2{
+    .h2-listado{
         font-size: 1.6rem;
         margin-top: 170px;
         margin-bottom: 25px;
