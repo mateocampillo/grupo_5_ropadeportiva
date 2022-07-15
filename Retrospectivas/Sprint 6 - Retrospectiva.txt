@@ -1,3 +1,5 @@
+Retrospectiva del sprint 6, fecha 13/07/2022:
+
 Mateo: 
 -Comenzar a hacer: Este sprint pasado me di cuenta que debo comenzar a profundizar ciertos aspectos tecnicos del DOM y de la base de datos, siento que me desenvuelvo bien pero en aspectos veo que me faltan conceptos.
 -Hacer mas: Cuando se presenta algun inconveniente entre mi idea de como afrontar un objetivo, siento que debo indagar mas a fondo para solucionarlo, aunque a veces me fruste
