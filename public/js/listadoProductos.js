@@ -1,12 +1,26 @@
 window.addEventListener('load', function() {
 
-    let ulProd = document.querySelector('.container-productos')
+    let ulProd = document.querySelector('.container-productos');
+    let barraBusqueda = document.querySelector('#busqueda');
+    let h2 = document.querySelector('h2');
+    let products = [];
+
+    barraBusqueda.addEventListener('keypress', function(event) {
+
+        let userSearch = event.target.value.toLowerCase();
+        let productsFiltered = products.data.filter( product => {
+            return product.name.toLowerCase().includes(userSearch);
+        });
+        console.log(productsFiltered);
+        displayProducts(productsFiltered);
+    });
 
     let loadProducts = async function() {
         try{
             const resPromise = await fetch('http://localhost:3000/api/productos/');
-            let products = await resPromise.json();
-            showProducts(products);
+            products = await resPromise.json();
+            console.log(products);
+            displayProducts(products.data);
         }
         catch (error) {
             console.log(error);
@@ -14,8 +28,9 @@ window.addEventListener('load', function() {
         }
     }
 
-    let showProducts = function(products) {
-        let htmlString = products.data
+    let displayProducts = function(products) {
+        if(products.length >= 1){
+            let htmlString = products
             .map((product) => {
                 return `
                 <li>
@@ -28,7 +43,12 @@ window.addEventListener('load', function() {
             `;
             })
             .join('');
+        h2.innerText = 'Listado general de productos'
         ulProd.innerHTML = htmlString;
+        } else {
+            h2.innerText = ''
+            ulProd.innerHTML = '<h1 style="text-align: center;margin: 5px 0px;">No hay productos que cumplan con la busqueda</h1>'
+        }
     };
 
     loadProducts();
