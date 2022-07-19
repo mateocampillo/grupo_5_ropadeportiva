@@ -75,6 +75,36 @@ window.addEventListener('load', function() {
                 h2Categorias.style.display = `none`
             }
 
+        } else if(querys.has('busqueda')){
+
+            let busquedaSearch = querys.get('busqueda').toLowerCase();
+
+            let productsFiltered = products.filter( product => {
+                let stringName = product.name.toLowerCase();
+                return stringName.indexOf(busquedaSearch) !== -1;
+            });
+            
+            if(productsFiltered.length >= 1){
+                let htmlString = productsFiltered
+                .map((product) => {
+                    return `
+                    <li>
+                        <a href="/productos/detalle/${product.id}">
+                            <div class="container-imagen"><img src="/images/ProductDetail/${product.img1}" alt="Imagen"></div>
+                            <div><p>$ ${product.price}</p></div>
+                            <div><h3>${product.name}</h3></div>
+                        </a>
+                    </li>
+                `;
+                })
+                .join('');
+            h2.innerText = 'Listado general de productos'
+            ulProd.innerHTML = htmlString;
+            } else {
+                h2.innerText = ''
+                ulProd.innerHTML = '<h1 style="text-align: center;margin: 5px auto;">No hay productos que cumplan con la busqueda</h1>'
+            }
+
         } else {
 
             if(products.length >= 1){
@@ -95,7 +125,7 @@ window.addEventListener('load', function() {
             ulProd.innerHTML = htmlString;
             } else {
                 h2.innerText = ''
-                ulProd.innerHTML = '<h1 style="text-align: center;margin: 5px 0px;">No hay productos que cumplan con la busqueda</h1>'
+                ulProd.innerHTML = '<h1 style="text-align: center;margin: 5px auto;">No hay productos que cumplan con la busqueda</h1>'
             }
 
         }
@@ -122,7 +152,7 @@ window.addEventListener('load', function() {
             h2Categorias.style.display = 'none';
             } else {
                 h2.innerText = ''
-                ulProd.innerHTML = '<h1 style="text-align: center;margin: 5px 0px;">No hay productos que cumplan con la busqueda</h1>'
+                ulProd.innerHTML = '<h1 style="text-align: center;margin: 5px auto;">No hay productos que cumplan con la busqueda</h1>'
                 h2Categorias.style.display = 'none';
             }
         };
