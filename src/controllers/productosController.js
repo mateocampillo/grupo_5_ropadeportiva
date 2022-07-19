@@ -39,8 +39,19 @@ const controller = {
 
 //Controladores para el carrito
 
-    cart: function(req, res){
-        res.status(200).render("./products/ProductCart");
+    cart: async function(req, res){
+        try{
+            let productos = await db.products.findAll({
+                where: {
+                    active: 1
+                }
+            });
+            res.status(200).render("./products/ProductCart", {productos: productos});
+        }
+        catch (error){
+            console.log(error);
+            res.status(500).render('./error/error-general');
+        }
     },
 
 //Controladores para la seccion de agregar productos

@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.h2-envio{
+    margin: 150px auto 0px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.hr-1{
+    margin: 30px auto;
+}
+
+.container-li{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#lista-productos-carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-producto{
+    margin: 10px auto;
+    width: 95%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.container-producto-otros{
+    margin: 10px auto;
+    width: 95%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.container-producto a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container-producto-otros a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container-imagen{
+    display: flex;
+    justify-content: center;
+}
+
+.img-producto{
+    width: 70%;
+    margin: auto;
+}
+
+.nombre-producto{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0px auto 10px;
+}
+
+.precio-producto{
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0px auto 10px;
+}
+
+.cantidad-titulo{
+    display: inline;
+}
+
+.container-botones{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.input-cantidad{
+    padding: 3px 15px;
+    width: 20%;
+    text-align: center;
+}
+
+.eliminar-producto{
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: rgb(255, 64, 64);
+}
+
+.container-precio-total{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px auto;
+}
+
+.boton-comprar{
+    text-align: center;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+.h2-otros-productos{
+    margin: 15px auto 25px;
+    text-align: center;
+}
+
+.container-otros-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (min-width: 380px) {
+
+    .h2-envio{
+        margin: 180px auto 0px;
+    }
+
+    #lista-productos-carrito{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container-li{
+        width: 45%;
+    }
+
+    .container-otros-productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 15px;
+    }
+
+    .container-producto-otros{
+        width: 45%;
+    }
+    
+}
+
+@media (min-width: 834px){
+
+    .container-li{
+        width: 24%;
+    }
+
+    .container-producto-otros{
+        width: 24%;
+    }
+
+}

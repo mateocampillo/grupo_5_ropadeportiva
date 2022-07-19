@@ -9,83 +9,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/header_footerMain.css">
-    <link rel="stylesheet" href="/css/ProductCartPrueba.css">
+    <link rel="stylesheet" href="/css/ProductCart.css">
     <title>Todo deportes</title>
 </head>
 
 <body>
-    <%- include("../partials/header") %> 
-    <div><h2 class="subtitulo">Envio Gratis y 12 Cuotas Sin Interes</h2></div>
+    <%- include("../partials/header") %>
     <main>
-        <div id="fondo">
-                <div class="bloque">                
-                    <img class="imagen-producto" src="/images/ProductCart/compra1.jpg" alt="Imagen producto">
-                    <div class="descripcion-producto">CAMISETA TITULAR ROSARIO CENTRAL</div>
-                    <div class="botones">
-                        <button class="button-cantidad">+</button>
-                        <button class="acumulador">1</button>
-                        <button class="button-cantidad">-</button>
-                    </div>
-                    <div class="precio">$ 10.000</div>
-                    <button class="button-eliminar">Eliminar</button>          
+        <div class="h2-envio">
+            <h2>Envio gratis y 12 cuotas sin interes!</h2>
+        </div>
+        <hr class="hr-1">
+        <section>
+            <ul id="lista-productos-carrito"></ul>
+        </section>
+        <section>
+            <div class="container-precio-total">
+                <h3 id="total-compra">Total a abonar: $1222</h3>
+            </div>
+            <div class="container-botones">
+                <button class="boton-comprar">Finalizar compra</button>
+            </div>
+        </section>
+        <hr class="hr-1">
+        <section>
+            <h2 class="h2-otros-productos">Otros clientes tambien vieron</h2>
+            <div class="container-otros-productos">
+                <div class="container-producto-otros">
+                    <a href="/productos/detalle/<%= productos[2].id %>">
+                        <div class="container-imagen"><img class="img-producto" src="/images/ProductDetail/<%= productos[2].img1 %>" alt="Foto producto"></div>
+                        <div class="nombre-producto"><h2 ><%= productos[2].name %></h2></div>
+                    </a>
                 </div>
-                <div class="bloque"> 
-                    <img class="imagen-producto" src="/images/ProductCart/compra2.jpg" alt="Imagen producto">
-                    <div class="descripcion-producto">SHORT TITULAR ROSARIO CENTRAL</div>
-                    <div class="botones">
-                        <button class="button-cantidad">+</button>
-                        <button class="acumulador">1</button>
-                        <button class="button-cantidad">-</button>
-                    </div>
-                    <div class="precio">$ 8.000</div> 
-                    <button class="button-eliminar">Eliminar</button>
+                <div class="container-producto-otros">
+                    <a href="/productos/detalle/<%= productos[6].id %>">
+                        <div class="container-imagen"><img class="img-producto" src="/images/ProductDetail/<%= productos[6].img1 %>" alt="Foto producto"></div>
+                        <div class="nombre-producto"><h2 ><%= productos[6].name %></h2></div>
+                    </a>
                 </div>
-
-                <div class="codigo">
-                    Tienes un codigo de descuento?
-                    <input type="text" name="codigo" id="codigo" placeholder="Codigo">
-                    <button class="aplicar">Aplicar</button>
+                <div class="container-producto-otros">
+                    <a href="/productos/detalle/<%= productos[4].id %>">
+                        <div class="container-imagen"><img class="img-producto" src="/images/ProductDetail/<%= productos[4].img1 %>" alt="Foto producto"></div>
+                        <div class="nombre-producto"><h2 ><%= productos[4].name %></h2></div>
+                    </a>
                 </div>
-
-                <div class="forma-de-pago">
-                    <a> 12 cuotas sin interes de $ 1.500</a> 
-                    <img class="tarjeta" src="/images/ProductCart/visa.jpg" alt="tarjeta">                    
-                    <img class="tarjeta" src="/images/ProductCart/master.jpg" alt="tarjeta">
-                    <img class="tarjeta" src="/images/ProductCart/cabal.jpg" alt="tarjeta">
+                <div class="container-producto-otros">
+                    <a href="/productos/detalle/<%= productos[5].id %>">
+                        <div class="container-imagen"><img class="img-producto" src="/images/ProductDetail/<%= productos[5].img1 %>" alt="Foto producto"></div>
+                        <div class="nombre-producto"><h2 ><%= productos[5].name %></h2></div>
+                    </a>
                 </div>
-
-                <div class="total">
-                    Total a Abonar
-                    <div class="monto">$ 18.000</div>
-                    <button class="finalizar">Finalizar Compra</button>
-                </div>
-
-            
-            <h2 class="main-recomendado">Otros Clientes Tambien Vieron</h2>
-            <section class="main-temporada">
-                <article>
-                    <img class="main-imagen-producto" src="/images/ProductCart/productoa.jpg" alt="Imagen producto">
-                    <div class="main-texto-temporada">Ir al producto</div>
-                    <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
-                </article>
-                <article>
-                    <img class="main-imagen-producto" src="/images/ProductCart/productob.jpg" alt="Imagen producto">
-                    <div class="main-texto-temporada">Ir al producto</div>
-                    <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
-                </article>
-                <article>
-                    <img class="main-imagen-producto" src="/images/ProductCart/productoc.jpg" alt="Imagen producto">
-                    <div class="main-texto-temporada">Ir al producto</div>
-                    <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
-                </article>
-                <article>
-                    <img class="main-imagen-producto" src="/images/ProductCart/productod.jpg" alt="Imagen producto">
-                    <div class="main-texto-temporada">Ir al producto</div>
-                    <div class="main-temporada-contenedor-boton"><a href="/"><button class="main-temporada-boton">Ir al producto</button></a></div>
-                </article>
-            </section>
+            </div>
+        </section>
     </main>
     <%- include("../partials/footer") %> 
+    <script src="/js/listarCarrito.js"></script>
 </body>
 
 </html>
