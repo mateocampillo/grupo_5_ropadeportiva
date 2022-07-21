@@ -94,6 +94,12 @@ module.exports = (sequelize, dataTypes) => {
             as: 'u_sexo'
         })
 
+        //Relacion 1 usuario/ muchas facturas
+        users.hasMany(models.facturas, {
+            foreignKey: 'id_cliente',
+            as: 'usuarios'
+        })
+
     }
 
     return users

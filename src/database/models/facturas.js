@@ -19,6 +19,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
+        id_productos: {
+            type: dataTypes.STRING(100),
+            allowNull: false
+        }
     };
     let config = {
         tableName: 'facturas',
@@ -29,10 +33,10 @@ module.exports = (sequelize, dataTypes) => {
 
     facturas.associate = function(models) {
 
-        //Relacion 1 cart/ 1 factura
-        facturas.belongsTo(models.cart, {
-            foreignKey: 'id',
-            as: 'cart'
+        //Relacion 1 user/ muchas facturas
+        facturas.belongsTo(models.users, {
+            foreignKey: 'id_cliente',
+            as: 'usuarios'
         })
 
     }

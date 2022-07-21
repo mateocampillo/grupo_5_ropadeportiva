@@ -8,6 +8,8 @@ window.addEventListener('load', function() {
     let productosEnCarrito = JSON.stringify(localStorage.getItem('CarritoProductos'));
     let num = productosEnCarrito.match(/\d+/g);
     let totalCompra = document.querySelector('#total-compra');
+    let inputTotal = document.querySelector('#inputTotal');
+    let arrInputProductos = document.querySelector('#arrInputProductos')
 
     let loadProducts = async function() {
         try{
@@ -70,6 +72,8 @@ window.addEventListener('load', function() {
                 contadorPrecioTotal = contadorPrecioTotal + producto.price;
             })
             totalCompra.innerHTML = `Total a abonar: $${contadorPrecioTotal}`;
+            inputTotal.value = contadorPrecioTotal;
+            arrInputProductos.value = JSON.parse(localStorage.getItem('CarritoProductos'))
     
             //Seccion eliminar productos del carrito
     

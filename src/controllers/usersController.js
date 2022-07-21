@@ -31,7 +31,7 @@ const controller = {
                     img: user.img,
                     cat: user.category
                 }
-                if(req.session.userLogeado != undefined && req.body.chkRemember != undefined){
+                if(req.session.userLogeado != undefined){             // && req.body.chkRemember != undefined
                     let idEncriptada = cryptr.encrypt(user.id);
                     res.cookie('cookieRecordar', idEncriptada, {maxAge: 1000 * 60 * 60 * 24 * 3}) // 3 dias
                 }

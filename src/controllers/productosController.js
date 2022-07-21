@@ -1,6 +1,10 @@
+const Cryptr = require('cryptr');
+const cryptr = new Cryptr('myTotallySecretKey');                //cambiar
+const moment = require('moment')
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const bcrypt = require('bcryptjs/dist/bcrypt');
 
 const controller = {
 
@@ -52,6 +56,27 @@ const controller = {
             console.log(error);
             res.status(500).render('./error/error-general');
         }
+    },
+
+    sold: async function(req, res) {
+
+        let id = cryptr.decrypt(req.cookies.cookieRecordar);
+        let productosSpliteados = req.body.arrInputProductos.split(',').toString();
+        let datetime = moment().tz('America/Argentina/Buenos_Aires').format('YYYY-MM-DD HH:mm:ss');
+        try{
+            await db.facturas.create({
+                id_cliente: id,
+                fecha_compra: datetime,
+                total: req.body.inputTotal,
+                id_productos: productosSpliteados
+            })
+            res.status(200).redirect('/');
+        }
+        catch(error){
+            console.log(error);
+            res.status(500).render('./error/error-general');
+        }
+
     },
 
 //Controladores para la seccion de agregar productos

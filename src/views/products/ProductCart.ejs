@@ -28,7 +28,11 @@
                 <h3 id="total-compra"></h3>
             </div>
             <div class="container-botones">
-                <button class="boton-comprar">Finalizar compra</button>
+                <form action="/productos/carrito" method="post">
+                    <input type="hidden" id="arrInputProductos" name="arrInputProductos">
+                    <input type="hidden" id="inputTotal" name="inputTotal">
+                    <button class="boton-comprar" type="submit">Finalizar compra</button>
+                </form>
             </div>
         </section>
         <hr class="hr-1">
@@ -64,6 +68,7 @@
     </main>
     <%- include("../partials/footer") %> 
     <script src="/js/listarCarrito.js"></script>
+    <script src="/js/finalizarCompraCarrito.js"></script>
 </body>
 
 </html>
