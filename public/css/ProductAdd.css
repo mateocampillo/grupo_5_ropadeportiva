@@ -13,6 +13,17 @@ h2{
     text-align: center;
     }
 
+.erroresValidation{
+
+    margin-top: 15px;
+    font-weight: 500;
+    color: #ff5151;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    
+}
+
 .container-prod-nuevo{
     text-align: center;
 }

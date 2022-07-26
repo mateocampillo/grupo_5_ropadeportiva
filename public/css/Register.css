@@ -12,6 +12,17 @@ main h1{
     margin: 10px;
 }
 
+.erroresValidation{
+
+    margin-top: 15px;
+    font-weight: 500;
+    color: #ff5151;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    
+}
+
 .formulario-container{
     display: flex;
     flex-direction: column;

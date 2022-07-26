@@ -19,23 +19,58 @@
         <form action="/users/register" method="post" class="formulario-container">
             <div class="formulario-container-div-texto">
                 <label for="txtName">Nombre</label>
-                <input type="text" name="txtName" id="txtName" placeholder="Nombre completo" required>
+                <input type="text" name="txtName" id="txtName" placeholder="Nombre completo" required value="<%= locals.old && old.txtName %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtName') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtSurname">Apellido</label>
-                <input type="text" name="txtSurname" id="txtSurname" placeholder="Apellido" required>
+                <input type="text" name="txtSurname" id="txtSurname" placeholder="Apellido" required value="<%= locals.old && old.txtSurname %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtSurname') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtMail">Email</label>
-                <input type="email" name="txtMail" id="txtMail" placeholder="Email" required>
+                <input type="email" name="txtMail" id="txtMail" placeholder="Email" required value="<%= locals.old && old.txtMail %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtMail') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtUser">Nombre de usuario</label>
-                <input type="text" name="txtUser" id="txtUser" placeholder="Usuario" required minlength="6" maxlength="30">
+                <input type="text" name="txtUser" id="txtUser" placeholder="Usuario" required minlength="6" maxlength="30" value="<%= locals.old && old.txtUser %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtUser') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtPassword">Contraseña</label>
-                <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required minlength="6" maxlength="24">
+                <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required minlength="6" maxlength="24" value="<%= locals.old && old.txtPassword %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtPassword') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
                 <input type="password" name="txtRePassword" id="txtPassword" placeholder="Repetir contraseña" required minlength="6" maxlength="24">
             </div>
             <div class="formulario-container-div-texto">
@@ -50,7 +85,14 @@
             </div>
             <div class="formulario-container-div-texto">
                 <label for="numberTel">Teléfono</label>
-                <input type="tel" name="numberTel" id="numberTel" placeholder="Teléfono" required minlength="8" maxlength="14">
+                <input type="tel" name="numberTel" id="numberTel" placeholder="Teléfono" required minlength="8" maxlength="14" value="<%= locals.old && old.numberTel %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'numberTel') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="optProvincias">Provincia de residencia</label>
@@ -83,9 +125,23 @@
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtAddress">Domicilio</label>
-                <input type="text" name="txtStreet" id="txtAddress" placeholder="Calle y número" required>
+                <input type="text" name="txtStreet" id="txtAddress" placeholder="Calle y número" required value="<%= locals.old && old.txtStreet %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtStreet') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
                 <!-- <input type="text" name="txtFloor" id="txtAddress" placeholder="Piso"> -->
-                <input type="text" name="txtPostal" id="txtAddress" placeholder="Codigo Postal" required>
+                <input type="text" name="txtPostal" id="txtAddress" placeholder="Codigo Postal" required value="<%= locals.old && old.txtPostal %>">
+                <% if (locals.errors && errors)  { %>
+                    <% errors.forEach(error => { %>
+                        <% if (error.param == 'txtPostal') { %>
+                            <p class="erroresValidation"><%= error.msg %></p>
+                        <% } %> 
+                    <% }) %>
+                <% } %>
             </div>
             <div class="formulario-container-div-checkbox-newsletter">
                 <label for="chkNewsletter">Desea suscribirse a nuestro Newsletter?</label>

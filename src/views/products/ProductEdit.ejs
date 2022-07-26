@@ -45,10 +45,24 @@
                 <div>
                     <label for="txtNuevoName">Nombre del producto:</label><br>
                     <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= producto.dataValues.name %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtNuevoName') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="txtNuevoDesc">Descripción del producto:</label><br>
                     <textarea name="txtNuevoDesc" id="txtNuevoDesc" cols="30" rows="5"></textarea>
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtNuevoDesc') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="radioNuevoCat">Categoria del producto:</label><br>
@@ -59,6 +73,13 @@
                 <div>
                     <label for="numNuevoPrice">Precio del producto:</label><br>
                     <input type="number" id="numNuevoPrice" name="numNuevoPrice" value="<%= producto.dataValues.price %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'numNuevoPrice') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="radioNuevoType">Tipo del producto:</label><br>
@@ -116,6 +137,13 @@
                 <div>
                     <label for="txtNuevoCode">Codigo de producto:</label><br>
                     <input type="text" id="txtNuevoCode" name="txtNuevoCode" value="<%= producto.dataValues.code %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtNuevoCode') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="imgNuevoImages">Fotos de producto:</label><br>

@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs")
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-
+const { validationResult } = require('express-validator');
 
 const controller = {
 
@@ -19,31 +19,41 @@ const controller = {
     },
     loginPost: function(req, res){
 
-        db.users.findOne({
-            where: {
-                email: req.body.emailUserEmail,
-            }
-        })
-        .then(function(user) {
-            if(bcrypt.compareSync(req.body.txtPassword, user.password)){
-                req.session.userLogeado = {
-                    user: user.username,
-                    img: user.img,
-                    cat: user.category
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()) {
+
+            db.users.findOne({
+                where: {
+                    email: req.body.emailUserEmail,
                 }
-                if(req.session.userLogeado != undefined){             // && req.body.chkRemember != undefined
-                    let idEncriptada = cryptr.encrypt(user.id);
-                    res.cookie('cookieRecordar', idEncriptada, {maxAge: 1000 * 60 * 60 * 24 * 3}) // 3 dias
+            })
+            .then(function(user) {
+                if(bcrypt.compareSync(req.body.txtPassword, user.password)){
+                    req.session.userLogeado = {
+                        user: user.username,
+                        img: user.img,
+                        cat: user.category
+                    }
+                    if(req.session.userLogeado != undefined){             // && req.body.chkRemember != undefined
+                        let idEncriptada = cryptr.encrypt(user.id);
+                        res.cookie('cookieRecordar', idEncriptada, {maxAge: 1000 * 60 * 60 * 24 * 3}) // 3 dias
+                    }
+                    res.status(200).render("./users/Profile", {user: user});
+                } else {
+                    res.status(401).render("./users/Login", {err: "Credenciales invalidas"});
                 }
-                res.status(200).render("./users/Profile", {user: user});
-            } else {
+            })
+            .catch(function(err) {
+                console.log(err);
                 res.status(401).render("./users/Login", {err: "Credenciales invalidas"});
-            }
-        })
-        .catch(function(err) {
-            console.log(err);
-            res.status(401).render("./users/Login", {err: "Credenciales invalidas"});
-        })
+            })
+
+        } else {
+
+            res.status(400).render("./users/Login", {errors: errors.errors, old: req.body, err: ""});
+
+        }
         
     },
 
@@ -61,29 +71,40 @@ const controller = {
             var nl_add_user = true;
         }
 
-        db.users.create({
-            name: req.body.txtName,
-            surname: req.body.txtSurname,
-            email: req.body.txtMail,
-            username: req.body.txtUser,
-            password: bcrypt.hashSync(req.body.txtPassword, 10),
-            category: 2,
-            img: 'imgUserDefault.jpg',
-            birthday: req.body.dateCumple,
-            provincia: req.body.optProvincias,
-            address: req.body.txtStreet,
-            postal: req.body.txtPostal,
-            newsletter: nl_add_user,
-            phone: req.body.numberTel,
-            sex: req.body.radioSex
-        })
-            .then(function() {
-                res.status(201).redirect('/');
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()) {
+
+            db.users.create({
+                name: req.body.txtName,
+                surname: req.body.txtSurname,
+                email: req.body.txtMail,
+                username: req.body.txtUser,
+                password: bcrypt.hashSync(req.body.txtPassword, 10),
+                category: 2,
+                img: 'imgUserDefault.jpg',
+                birthday: req.body.dateCumple,
+                provincia: req.body.optProvincias,
+                address: req.body.txtStreet,
+                postal: req.body.txtPostal,
+                newsletter: nl_add_user,
+                phone: req.body.numberTel,
+                sex: req.body.radioSex
             })
-            .catch(function(err) {
-                console.log(err);
-                res.status(500).render('./error/error-general');
-            })
+                .then(function() {
+                    res.status(201).redirect('/');
+                })
+                .catch(function(err) {
+                    console.log(err);
+                    res.status(500).render('./error/error-general');
+                })
+
+        } else {
+
+            res.status(400).render("./users/Register", {errors: errors.errors, old: req.body});
+
+        }
+
     },
 
     //Controlador de recuperar contraseña
@@ -93,21 +114,32 @@ const controller = {
     },
     recoverPatch: function(req, res){
 
-        db.users.update({
-            password: bcrypt.hashSync(req.body.txtRecPass, 10)
-        } , {
-            where: {
-                email: req.body.txtRecEmail,
-                phone: req.body.txtRecTel
-            }
-        })
-            .then(function() {
-                res.status(201).redirect("/users/login");
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()) {
+
+            db.users.update({
+                password: bcrypt.hashSync(req.body.txtRecPass, 10)
+            } , {
+                where: {
+                    email: req.body.txtRecEmail,
+                    phone: req.body.txtRecTel
+                }
             })
-            .catch(function(err) {
-                console.log(err);
-                res.status(500).render('./error/error-general')
-            })
+                .then(function() {
+                    res.status(201).redirect("/users/login");
+                })
+                .catch(function(err) {
+                    console.log(err);
+                    res.status(500).render('./error/error-general')
+                })
+
+        } else {
+
+            res.status(400).render("./users/Recover.ejs", {errors: errors.errors, old: req.body});
+
+        }
+
     },
 
     //Controlador para el despliege de la info del usuario

@@ -119,12 +119,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'color',
             as: 'p_color'
         })
-        
-        //Relacion +1 products/ 1 cart
-        products.hasMany(models.cart, {
-            foreignKey: 'cart',
-            as: 'cart'
-        })
 
     }
 

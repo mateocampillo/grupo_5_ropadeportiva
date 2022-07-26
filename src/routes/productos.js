@@ -5,6 +5,8 @@ const path = require("path");
 const productosController = require("../controllers/productosController");
 const authLogin = require('../middlewares/authLogin');
 const authAdmin = require('../middlewares/authAdmin');
+const addedProductValidation = require('../backEndValidations/addedProductValidation');
+const editProductValidation = require('../backEndValidations/editProductValidation');
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -29,10 +31,10 @@ router.get("/carrito", authLogin, productosController.cart);        //ruta que m
 router.post('/carrito', productosController.sold);                  //ruta que maneja la venta al finalizar compra en el carrito
 
 router.get("/edit/:id", authAdmin, productosController.edit);        //ruta del form para editar productos en la base de datos.
-router.put("/edit/:id", uploadFile.array("imgNuevoImages"), productosController.save);          //endpoint donde pega el form de editar productos.
+router.put("/edit/:id", uploadFile.array("imgNuevoImages"), editProductValidation, productosController.save);          //endpoint donde pega el form de editar productos.
 
 router.get("/agregar", authAdmin, productosController.add);            //ruta del form para agregar productos a la base de datos.
-router.post("/agregar", uploadFile.array("imgAddimage"), productosController.added);        //endpoint donde pega el form de agregar productos.
+router.post("/agregar", uploadFile.array("imgAddimage"), addedProductValidation, productosController.added);        //endpoint donde pega el form de agregar productos.
 
 router.delete("/:id", productosController.delete);          //ruta donde pega el formulario de borrar productos, se accede mediante la vista de admin
 

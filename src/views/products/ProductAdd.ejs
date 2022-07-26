@@ -18,11 +18,26 @@
             <form method="POST" action="/productos/agregar" enctype="multipart/form-data">
                 <div>
                     <label for="txtAddName">Nombre de producto:</label>
-                    <input type="text" name="txtAddName" id="txtAddName">
+                    <input type="text" name="txtAddName" id="txtAddName" value="<%= locals.old && old.txtAddName %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtAddName') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="txtAddDesc">Descripcion de producto:</label><br>
                     <textarea name="txtAddDesc" id="txtAddDesc" cols="30" rows="5"></textarea>
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtAddDesc') { %>
+                                <br>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="radioAddCat">Categoria del producto:</label><br>
@@ -32,7 +47,14 @@
                 </div>
                 <div>
                     <label for="numAddPrice">Precio del producto:</label><br>
-                    <input type="number" id="numAddPrice" name="numAddPrice">
+                    <input type="number" id="numAddPrice" name="numAddPrice" value="<%= locals.old && old.numAddPrice %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'numAddPrice') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
                     <label for="radioAddType">Tipo del producto:</label><br>
@@ -89,11 +111,18 @@
                 </div>
                 <div>
                     <label for="txtAddCode">Codigo de producto:</label><br>
-                    <input type="text" id="txtAddCode" name="txtAddCode">
+                    <input type="text" id="txtAddCode" name="txtAddCode" value="<%= locals.old && old.txtAddCode %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtAddCode') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div>
-                    <label for="imgAddimage">Fotos de producto:</label><br>
-                    <input type="file" id="imgAddimage" name="imgAddimage" accept=".jpg, .jpeg, .png, .svg" multiple>
+                    <label for="imgAddimage">Fotos de producto (solo 4 archivos .jpg):</label><br>
+                    <input type="file" id="imgAddimage" name="imgAddimage" accept=".jpg" multiple>
                 </div>
                 <div>
                     <button type="submit">Añadir Producto</button>

@@ -21,11 +21,25 @@
             <form class="formulario-contenedor" action="/users/login" method="post">
                 <div class="form-div-texto">
                     <label for="emailUserEmail">Email</label>
-                    <input type="email" name="emailUserEmail" id="emailUserEmail" required minlength="6">
+                    <input type="email" name="emailUserEmail" id="emailUserEmail" required minlength="6"  value="<%= locals.old && old.emailUserEmail %>">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'emailUserEmail') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <div class="form-div-texto">
                     <label for="txtPassword">Contraseña</label>
                     <input type="password" name="txtPassword" id="txtPassword" required minlength="6">
+                    <% if (locals.errors && errors)  { %>
+                        <% errors.forEach(error => { %>
+                            <% if (error.param == 'txtPassword') { %>
+                                <p class="erroresValidation"><%= error.msg %></p>
+                            <% } %> 
+                        <% }) %>
+                    <% } %>
                 </div>
                 <!-- <div class="chkRemember">
                     <label for="chkRemember">Recordarme</label>

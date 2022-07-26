@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+.erroresValidation{
+
+    margin-top: 15px;
+    font-weight: 500;
+    color: #ff5151;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    
+}
+
 main h2{
     margin: 25px 0px;
     text-align: center;

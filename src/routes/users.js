@@ -4,6 +4,9 @@ const usersController = require("../controllers/usersController");
 const authLogin = require("../middlewares/authLogin")
 const multer = require("multer");
 const path = require("path");
+const loginUserValidation = require('../backEndValidations/loginUserValidation');
+const registerUserValidation = require('../backEndValidations/RegisterUserValidation');
+const recoverUserValidation = require('../backEndValidations/recoverUserValidation');
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -24,13 +27,13 @@ let uploadFile = multer({storage: storage});
 // Dentro de localhost:3000/users
 
 router.get("/login", usersController.loginGet);            //ruta para el login de usuarios
-router.post("/login", usersController.loginPost);
+router.post("/login", loginUserValidation, usersController.loginPost);
 
 router.get("/register", usersController.register);      //ruta para el registro de nuevos usuarios
-router.post("/register", usersController.add)
+router.post("/register", registerUserValidation, usersController.add)
 
 router.get("/recover", usersController.recoverGet);         //ruta para el recover de la contraseña
-router.patch("/recover", usersController.recoverPatch);
+router.patch("/recover", recoverUserValidation, usersController.recoverPatch);
 
 router.get("/perfil", authLogin, usersController.perfil);          //ruta para el perfil de cada usuario
 router.patch("/perfil", uploadFile.single("imgUser"), usersController.perfilImg)

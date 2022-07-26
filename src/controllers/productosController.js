@@ -5,6 +5,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const bcrypt = require('bcryptjs/dist/bcrypt');
+const { validationResult } = require('express-validator');
 
 const controller = {
 
@@ -86,31 +87,43 @@ const controller = {
     },
     added: function(req, res){
 
-        db.products.create({
-            name: req.body.txtAddName,
-            descripcion: req.body.txtAddDesc,
-            category: req.body.radioAddCat,
-            price: req.body.numAddPrice,
-            type: req.body.radioAddType,
-            size: req.body.radioAddSize,
-            waist: req.body.txtAddWaist,
-            waist: req.body.txtAddWaist,
-            chest: req.body.txtAddChest,
-            back: req.body.txtAddBack,
-            height: req.body.txtAddHeight,
-            cloth: req.body.radioAddCloth,
-            color: req.body.radioAddColor,
-            code: req.body.txtAddCode,
-            img1: req.files[0].filename,
-            img2: req.files[1].filename,
-            img3: req.files[2].filename,
-            img4: req.files[3].filename,
-            active: 1
-        })
-            .catch(function(err) {
-                console.log(err);
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()) {
+
+            db.products.create({
+                name: req.body.txtAddName,
+                descripcion: req.body.txtAddDesc,
+                category: req.body.radioAddCat,
+                price: req.body.numAddPrice,
+                type: req.body.radioAddType,
+                size: req.body.radioAddSize,
+                waist: req.body.txtAddWaist,
+                waist: req.body.txtAddWaist,
+                chest: req.body.txtAddChest,
+                back: req.body.txtAddBack,
+                height: req.body.txtAddHeight,
+                cloth: req.body.radioAddCloth,
+                color: req.body.radioAddColor,
+                code: req.body.txtAddCode,
+                img1: req.files[0].filename,
+                img2: req.files[1].filename,
+                img3: req.files[2].filename,
+                img4: req.files[3].filename,
+                active: 1
             })
-            res.status(201).redirect("/");
+                .catch(function(err) {
+                    console.log(err);
+                })
+                res.status(201).redirect("/");
+
+        } else {
+
+            console.log(errors.errors);
+            res.status(400).render("./products/ProductAdd", {errors: errors.errors, old: req.body});
+
+        }
+
     },
 
 //Controladores para la seccion de edicion de productos
@@ -132,65 +145,88 @@ const controller = {
     },
     save: function(req, res){
 
-        if(req.files != ''){
-            db.products.update({
-                name: req.body.txtNuevoName,
-                description: req.body.txtNuevoDesc,
-                category: req.body.radioNuevoCat,
-                price: req.body.numNuevoPrice,
-                type: req.body.radioNuevoType,
-                size: req.body.radioNuevoSize,
-                waist: req.body.txtNuevoWaist,
-                chest: req.body.txtNuevoChest,
-                back: req.body.txtNuevoBack,
-                height: req.body.txtNuevoHeight,
-                cloth: req.body.radioNuevoCloth,
-                color: req.body.radioNuevoColor,
-                code: req.body.txtNuevoCode,
-                img1: req.files[0].filename,
-                img2: req.files[1].filename,
-                img3: req.files[2].filename,
-                img4: req.files[3].filename,
-                active: req.body.radioNuevoActive
-            }, {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()) {
+
+            if(req.files != ''){
+                db.products.update({
+                    name: req.body.txtNuevoName,
+                    description: req.body.txtNuevoDesc,
+                    category: req.body.radioNuevoCat,
+                    price: req.body.numNuevoPrice,
+                    type: req.body.radioNuevoType,
+                    size: req.body.radioNuevoSize,
+                    waist: req.body.txtNuevoWaist,
+                    chest: req.body.txtNuevoChest,
+                    back: req.body.txtNuevoBack,
+                    height: req.body.txtNuevoHeight,
+                    cloth: req.body.radioNuevoCloth,
+                    color: req.body.radioNuevoColor,
+                    code: req.body.txtNuevoCode,
+                    img1: req.files[0].filename,
+                    img2: req.files[1].filename,
+                    img3: req.files[2].filename,
+                    img4: req.files[3].filename,
+                    active: req.body.radioNuevoActive
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                    .catch(function(err) {
+                        console.log(err);
+                        res.status(500).render('./error/error-general')
+                    })
+                
+                res.status(201).redirect("/");
+            } else if (req.files == '') {
+                db.products.update({
+                    name: req.body.txtNuevoName,
+                    description: req.body.txtNuevoDesc,
+                    category: req.body.radioNuevoCat,
+                    price: req.body.numNuevoPrice,
+                    type: req.body.radioNuevoType,
+                    size: req.body.radioNuevoSize,
+                    waist: req.body.txtNuevoWaist,
+                    chest: req.body.txtNuevoChest,
+                    back: req.body.txtNuevoBack,
+                    height: req.body.txtNuevoHeight,
+                    cloth: req.body.radioNuevoCloth,
+                    color: req.body.radioNuevoColor,
+                    code: req.body.txtNuevoCode,
+                    active: req.body.radioNuevoActive
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                })
+                    .catch(function(err) {
+                        console.log(err);
+                        res.status(500).render('./error/error-general')
+                    })
+        
+                res.status(201).redirect("/");
+            }
+
+        } else {
+
+            db.products.findOne({
                 where: {
                     id: req.params.id
-                }
+                },
+                include: ['p_category', 'p_cloth', 'p_color', 'p_size', 'p_type']
             })
+                .then(function(producto) {
+                    res.status(400).render("./products/ProductEdit", {errors: errors.errors, old: req.body, producto: producto});
+                })
                 .catch(function(err) {
                     console.log(err);
-                    res.status(500).render('./error/error-general')
+                    res.status(500).render('./error/error-general');
                 })
-            
-            res.status(201).redirect("/");
-        } else if (req.files == '') {
-            db.products.update({
-                name: req.body.txtNuevoName,
-                description: req.body.txtNuevoDesc,
-                category: req.body.radioNuevoCat,
-                price: req.body.numNuevoPrice,
-                type: req.body.radioNuevoType,
-                size: req.body.radioNuevoSize,
-                waist: req.body.txtNuevoWaist,
-                chest: req.body.txtNuevoChest,
-                back: req.body.txtNuevoBack,
-                height: req.body.txtNuevoHeight,
-                cloth: req.body.radioNuevoCloth,
-                color: req.body.radioNuevoColor,
-                code: req.body.txtNuevoCode,
-                active: req.body.radioNuevoActive
-            }, {
-                where: {
-                    id: req.params.id
-                }
-            })
-                .catch(function(err) {
-                    console.log(err);
-                    res.status(500).render('./error/error-general')
-                })
-    
-            res.status(201).redirect("/");
+
         }
+
     },
 
 //Controladores para borrar productos
