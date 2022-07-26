@@ -119,7 +119,6 @@ const controller = {
 
         } else {
 
-            console.log(errors.errors);
             res.status(400).render("./products/ProductAdd", {errors: errors.errors, old: req.body});
 
         }
