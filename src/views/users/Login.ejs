@@ -22,6 +22,7 @@
                 <div class="form-div-texto">
                     <label for="emailUserEmail">Email</label>
                     <input type="email" name="emailUserEmail" id="emailUserEmail" required minlength="6"  value="<%= locals.old && old.emailUserEmail %>">
+                    <p id="inputErrorEmailUserEmail" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'emailUserEmail') { %>
@@ -33,6 +34,7 @@
                 <div class="form-div-texto">
                     <label for="txtPassword">Contraseña</label>
                     <input type="password" name="txtPassword" id="txtPassword" required minlength="6">
+                    <p id="inputErrorTxtPassword" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtPassword') { %>
@@ -58,5 +60,6 @@
         </div>
     </main>
     <%- include("../partials/footerUsers") %>
+    <script src="/js/frontEndValidations/validacionLogin.js"></script>
 </body>
 </html>
