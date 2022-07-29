@@ -15,6 +15,14 @@
     
 }
 
+.erroresInput{
+
+    font-weight: 500;
+    color: #ff5151;
+    text-align: center;
+
+}
+
 main h2{
     margin: 25px 0px;
     text-align: center;

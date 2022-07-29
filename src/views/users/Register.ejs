@@ -20,6 +20,7 @@
             <div class="formulario-container-div-texto">
                 <label for="txtName">Nombre</label>
                 <input type="text" name="txtName" id="txtName" placeholder="Nombre completo" required value="<%= locals.old && old.txtName %>">
+                <p id="inputErrorNombre" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'txtName') { %>
@@ -31,6 +32,7 @@
             <div class="formulario-container-div-texto">
                 <label for="txtSurname">Apellido</label>
                 <input type="text" name="txtSurname" id="txtSurname" placeholder="Apellido" required value="<%= locals.old && old.txtSurname %>">
+                <p id="inputErrorApellido" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'txtSurname') { %>
@@ -42,6 +44,7 @@
             <div class="formulario-container-div-texto">
                 <label for="txtMail">Email</label>
                 <input type="email" name="txtMail" id="txtMail" placeholder="Email" required value="<%= locals.old && old.txtMail %>">
+                <p id="inputErrorEmail" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'txtMail') { %>
@@ -53,6 +56,7 @@
             <div class="formulario-container-div-texto">
                 <label for="txtUser">Nombre de usuario</label>
                 <input type="text" name="txtUser" id="txtUser" placeholder="Usuario" required minlength="6" maxlength="30" value="<%= locals.old && old.txtUser %>">
+                <p id="inputErrorNombreUsuario" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'txtUser') { %>
@@ -64,6 +68,7 @@
             <div class="formulario-container-div-texto">
                 <label for="txtPassword">Contraseña</label>
                 <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required minlength="6" maxlength="24" value="<%= locals.old && old.txtPassword %>">
+                <p id="inputErrorContraseña" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'txtPassword') { %>
@@ -71,7 +76,8 @@
                         <% } %> 
                     <% }) %>
                 <% } %>
-                <input type="password" name="txtRePassword" id="txtPassword" placeholder="Repetir contraseña" required minlength="6" maxlength="24">
+                <input type="password" name="txtRePassword" id="txtPasswordConfirm" placeholder="Repetir contraseña" required minlength="6" maxlength="24">
+                <p id="inputErrorContraseñaConfirm" class="erroresInput"></p>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="dateCumple">Fecha de nacimiento</label>
@@ -82,10 +88,12 @@
                 <div>Hombre<input type="radio" name="radioSex" id="radioSex" value="1"></div>
                 <div>Mujer<input type="radio" name="radioSex" id="radioSex" value="2"></div>
                 <div>Otro<input type="radio" name="radioSex" id="radioSex" value="3"></div>
+                <p id="inputErrorSexo" class="erroresInput"></p>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="numberTel">Teléfono</label>
                 <input type="tel" name="numberTel" id="numberTel" placeholder="Teléfono" required minlength="8" maxlength="14" value="<%= locals.old && old.numberTel %>">
+                <p id="inputErrorTelefono" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'numberTel') { %>
@@ -121,11 +129,13 @@
                     <option value="22">Santiago del Estero</option>
                     <option value="23">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
                     <option value="24">Tucumán</option>
+                    <p id="inputErrorProvinciaResidencia" class="erroresInput"></p>
                 </select>
             </div>
             <div class="formulario-container-div-texto">
                 <label for="txtAddress">Domicilio</label>
                 <input type="text" name="txtStreet" id="txtAddress" placeholder="Calle y número" required value="<%= locals.old && old.txtStreet %>">
+                <p id="inputErrorDomicilio" class="erroresInput"></p>
                 <% if (locals.errors && errors)  { %>
                     <% errors.forEach(error => { %>
                         <% if (error.param == 'txtStreet') { %>

@@ -1,92 +1,110 @@
 window.onload = function(){
-    let formulario = document.querySelector('div.container-prod-nuevo');
     let nombreProducto = document.querySelector('txtAddName');
+    let inputErrProducto = document.querySelector('#InputErrorProducto');
     let descripcion = document.querySelector('txtAddDesc');
+    let inputErrDescripcion = document.querySelector('#InputErrorDescripcion');
     let categoria = document.querySelector('radioAddCat');
+    let inputErrCategoria = document.querySelector('#InputErrorCategoria');
     let precio = document.querySelector('numAddPrice');
+    let inputErrPrecio = document.querySelector('#InputErrorPrecio');
     let tipo = document.querySelector('radioAddType');
+    let inputErrTipo = document.querySelector('#InputErrorTipo');
     let talle = document.querySelector('radioAddSize');
-    let cintura = document.querySelector('txtAddWaist');
-    let pecho = document.querySelector('txtAddChest');
-    let espalda = document.querySelector('txtAddBack');
-    let altura = document.querySelector('txtAddHeight');
+    let inputErrTalle = document.querySelector('#InputErrorTalle');
     let tela = document.querySelector('radioAddCloth');
+    let inputErrTela = document.querySelector('#InputErrorTela');
     let color = document.querySelector('radioAddColor');
+    let inputErrColor = document.querySelector('#InputErrorColor');
     let codigo = document.querySelector('txtAddCode');
-    let fotos = document.querySelector('imgAddimage');
+    let inputErrCodigo = document.querySelector('#InputErrorCodigo');
 
+    nombreProducto.addEventListener('input', function() {
 
-    formulario.addEventListener("submit", function(e){
-        
-        let errores = [];
-
-        if(nombreProducto.value = ""){
-            errores.push("El campo de nombre de producto tiene que estar completo")
-        } else if(contraseña < 5){
-            errores.push("El campo de nombre de producto tiene menos de 5 caracteres")
+        if(nombreProducto.value.length < 5){
+            inputErrProducto.innerHTML = "El campo de nombre de producto tiene menos de 5 caracteres"
+        } else {
+            inputErrProducto.innerHTML = ''
         }
-
-        if(descripcion.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        } else if(contraseña < 20){
-            errores.push("El campo de descripcion tiene menos de 20 caracteres")
-        }
-
-        if(categoria.value = ""){
-            errores.push("El campo de categoria tiene que estar completo")
-        }
-
-        if(precio.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(tipo.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-        
-        if(talle.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(cintura.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(pecho.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(espalda.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(altura.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(tela.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(color.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(codigo.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-
-        if(fotos.value = ""){
-            errores.push("El campo de descripcion tiene que estar completo")
-        }
-        
-
-        if(errores.length > 0){
-            e.preventDefault();
-
-            for(let i = 0; i < errores.length; i++){
-                ulErrores.innerHTML +- "<li>" + errores[i] + "<li>"
-            }
-        }      
     })
+
+    descripcion.addEventListener('input', function() {
+
+        if(descripcion.value.length < 20){
+            inputErrDescripcion.innerHTML = "El campo de nombre de producto tiene menos de 20 caracteres"
+        } else {
+            inputErrDescripcion.innerHTML = ''
+        }
+    })
+
+    categoria.addEventListener('input', function() {
+
+        if(categoria.value != 1 && categoria.value != 2 && categoria.value != 3){
+            inputErrCategoria.innerHTML = "El campo de categoria esta vacio"
+        } else {
+            inputErrCategoria.innerHTML = ''
+        }
+    })
+
+    precio.addEventListener('input', function() {
+
+        if(precio.value.length == 0){
+            inputErrPrecio.innerHTML = 'El precio no puede estar vacio'
+        } else {
+            inputErrPrecio.innerHTML = ''
+        }
+    })
+
+    tipo.addEventListener('input', function() {
+
+        if(tipo.value != 1 && tipo.value != 2 && tipo.value != 3 && tipo.value != 4){
+            inputErrTipo.innerHTML = "El campo de tipo de categoria esta vacio"
+        } else {
+            inputErrTipo.innerHTML = ''
+        }
+    })
+
+    precio.addEventListener('input', function() {
+
+        if(precio.value.length == 0){
+            inputErrPrecio.innerHTML = 'El precio no puede estar vacio'
+        } else {
+            inputErrPrecio.innerHTML = ''
+        }
+    })
+
+    talle.addEventListener('input', function() {
+
+        if(telefono.value > 10 &&  telefono.value < 1 ){
+            inputErrTalle.innerHTML = "El campo de talle esta vacio"
+        } else {
+            inputErrTalle.innerHTML = ''
+        }
+    })
+
+    tela.addEventListener('input', function() {
+
+        if(tela.value > 6 &&  tela.value < 1 ){
+            inputErrTela.innerHTML = "El campo de tela esta vacio"
+        } else {
+            inputErrTela.innerHTML = ''
+        }
+    })
+
+    color.addEventListener('input', function() {
+
+        if(color.value > 4 &&  color.value < 1 ){
+            inputErrColor.innerHTML = "El campo de color esta vacio"
+        } else {
+            inputErrColor.innerHTML = ''
+        }
+    })
+
+    codigo.addEventListener('input', function() {
+
+        if(codigo.value.length == 0){
+            inputErrCodigo.innerHTML = "El campo de codigo esta vacio"
+        } else {
+            inputErrCodigo.innerHTML = ''
+        }
+    })    
 }

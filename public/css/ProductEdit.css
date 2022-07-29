@@ -21,6 +21,14 @@ text-align: center;
     
 }
 
+.erroresInput{
+
+    font-weight: 500;
+    color: #ff5151;
+    text-align: center;
+
+}
+
 .container-prod-viejo{
     display: flex;
     flex-direction: column;

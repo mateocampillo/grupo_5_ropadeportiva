@@ -1,46 +1,52 @@
 window.onload = function(){
-    let formulario = document.querySelector('form');
     let email = document.querySelector('txtRecEmail');
+    let inputErrEmail = document.querySelector('#InputErrorUserRecEmail');
     let telefono = document.querySelector('txtRecTel');
+    let inputErrTelefono = document.querySelector('#InputErrorUserRecTelefono');
     let contraseña = document.querySelector('txtRecPass');
+    let inputErrContraseña = document.querySelector('#InputErrorUserRecContraseña');
     let recContraseña = document.querySelector('txtRecPassConfirm'); 
+    let inputErrContraseñaConfirm = document.querySelector('#InputErrorUserRecContraseñaConfirm');
 
-    formulario.addEventListener("submit", function(e){
-        
-        let errores = [];
+    email.addEventListener('input', function() {
 
-        if(email.value = ""){
-            errores.push("El campo de email tiene que estar completo")
-        } else if(contraseña < 6){
-            errores.push("El campo de email tiene menos de 6 caracteres")
+        if(email.value.length == 0){
+            inputErrEmail.innerHTML = 'El email no puede estar vacio'
+        } else {
+            inputErrEmail.innerHTML = ''
         }
 
-        if(telefono.value = ""){
-            errores.push("El campo de telefono tiene que estar completo")
-        } else if (telefono.value > 14 ){
-            errores.push("El campo de nombre de usuario tiene mas de 14 caracteres")
-        } else if(telefono < 8){
-            errores.push("El campo de telefono tiene menos de 8 caracteres")
-        } else if (isNaN(telefono.value)){
-            errores.push("Inserte un numero telefonico")
+    })
+
+    telefono.addEventListener('input', function() {
+
+        if(telefono.value.length == 0){
+            inputErrTelefono.innerHTML = 'El telefono no puede estar vacio'
+        } else {
+            inputErrTelefono.innerHTML = ''
         }
 
-        if(contraseña.value = ""){
-            errores.push("El campo de contraseña tiene que estar completo")
-        } else if(contraseña < 6){
-            errores.push("El campo de contraseña tiene menos de 6 caracteres")
+    })
+
+    contraseña.addEventListener('input', function() {
+
+        if(contraseña.value.length == 0){
+            inputErrContraseña.innerHTML = 'La contraseña no puede estar vacia'
+        } else {
+            inputErrContraseña.innerHTML = ''
         }
 
-        if(recContraseña.value != contraseña.value){
-            errores.push("Las contraseñas no coinciden")
+    })
+
+    recContraseña.addEventListener('input', function() {
+
+        if(recContraseña.value.length == 0){
+            inputErrContraseñaConfirm.innerHTML = 'La contraseña no puede estar vacia'
+        } else if(recContraseña.value == contraseña.value.length){
+            inputErrContraseñaConfirm.innerHTML = 'Las contraseñas no coinciden'
+        } else {
+            inputErrContraseñaConfirm.innerHTML = ''
         }
 
-        if(errores.length > 0){
-            e.preventDefault();
-
-            for(let i = 0; i < errores.length; i++){
-                ulErrores.innerHTML +- "<li>" + errores[i] + "<li>"
-            }
-        }      
     })
 }

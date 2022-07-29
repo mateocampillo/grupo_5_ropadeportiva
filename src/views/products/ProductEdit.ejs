@@ -45,6 +45,7 @@
                 <div>
                     <label for="txtNuevoName">Nombre del producto:</label><br>
                     <input type="text" id="txtNuevoName" name="txtNuevoName" value="<%= producto.dataValues.name %>">
+                    <p id="inputErrorNombre" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtNuevoName') { %>
@@ -56,6 +57,7 @@
                 <div>
                     <label for="txtNuevoDesc">Descripción del producto:</label><br>
                     <textarea name="txtNuevoDesc" id="txtNuevoDesc" cols="30" rows="5"></textarea>
+                    <p id="inputErrorDescripcion" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtNuevoDesc') { %>
@@ -69,10 +71,12 @@
                     <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value='1' <% if (producto.dataValues.category == 1) { %> checked <% } %> >Hombre
                     <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value='2' <% if (producto.dataValues.category == 2) { %> checked <% } %> >Mujer
                     <input type="radio" id="radioNuevoCat" name="radioNuevoCat" value='3' <% if (producto.dataValues.category == 3) { %> checked <% } %> >Infantil
+                    <p id="inputErrorCategoria" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="numNuevoPrice">Precio del producto:</label><br>
                     <input type="number" id="numNuevoPrice" name="numNuevoPrice" value="<%= producto.dataValues.price %>">
+                    <p id="inputErrorPrecio" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'numNuevoPrice') { %>
@@ -87,6 +91,7 @@
                     <input type="radio" id="radioNuevoType" name="radioNuevoType" value='2' <% if (producto.dataValues.type == 2) { %> checked <% } %> >Pantalon
                     <input type="radio" id="radioNuevoType" name="radioNuevoType" value='3' <% if (producto.dataValues.type == 3) { %> checked <% } %> >Zapatillas
                     <input type="radio" id="radioNuevoType" name="radioNuevoType" value='4' <% if (producto.dataValues.type == 4) { %> checked <% } %> >Buzo
+                    <p id="inputErrorProducto" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="radioNuevoSize">Talle del producto:</label><br>
@@ -101,6 +106,7 @@
                     <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="8" <% if (producto.dataValues.size == 8) { %> checked <% } %> >41
                     <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="9" <% if (producto.dataValues.size == 9) { %> checked <% } %> >42
                     <input type="radio" id="radioNuevoSize" name="radioNuevoSize" value="10" <% if (producto.dataValues.size == 10) { %> checked <% } %> >43
+                    <p id="inputErrorTalle" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="txtNuevoWaist">Cm de cintura:</label><br>
@@ -126,6 +132,7 @@
                     <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="4" <% if (producto.dataValues.cloth == 4) { %> checked <% } %> >Jersey
                     <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="5" <% if (producto.dataValues.cloth == 5) { %> checked <% } %> >Nylon
                     <input type="radio" id="radioNuevoCloth" name="radioNuevoCloth" value="6" <% if (producto.dataValues.cloth == 6) { %> checked <% } %> >Poliéster
+                    <p id="inputErrorTela" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="radioNuevoColor">Color del producto:</label><br>
@@ -133,10 +140,12 @@
                     <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="2" <% if (producto.dataValues.color == 2) { %> checked <% } %> >Blanco
                     <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="3" <% if (producto.dataValues.color == 3) { %> checked <% } %> >Rojo
                     <input type="radio" id="radioNuevoColor" name="radioNuevoColor" value="4" <% if (producto.dataValues.color == 4) { %> checked <% } %> >Azul
+                    <p id="inputErrorColor" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="txtNuevoCode">Codigo de producto:</label><br>
                     <input type="text" id="txtNuevoCode" name="txtNuevoCode" value="<%= producto.dataValues.code %>">
+                    <p id="inputErrorCodigo" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtNuevoCode') { %>
