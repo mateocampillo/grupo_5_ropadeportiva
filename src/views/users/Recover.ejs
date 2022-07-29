@@ -29,7 +29,7 @@
                 <div class="container">
                     <label for="txtRecTel">Telefono asociado a tu cuenta:</label><br>
                     <input type="number" name="txtRecTel" id="txtRecTel" minlength="8" maxlength="14" required  value="<%= locals.old && old.txtRecTel %>">
-                    <p id="inputErrorUserRecTelefono" class="erroresInput"></p>
+                    <p id="InputErrorUserRecTelefono" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtRecTel') { %>
@@ -41,7 +41,7 @@
                 <div class="container">
                     <label for="txtRecPass">Nueva contraseña:</label><br>
                     <input type="password" name="txtRecPass" id="txtRecPass" placeholder="Contraseña" required><br>
-                    <p id="inputErrorUserRecContraseña" class="erroresInput"></p>
+                    <p id="InputErrorUserRecContraseña" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtRecPass') { %>
@@ -50,7 +50,7 @@
                         <% }) %>
                     <% } %>
                     <input type="password" name="txtRecPassConfirm" id="txtRecPassConfirm" placeholder="Confirmar contraseña" required>
-                    <p id="inputErrorUserRecContraseñaConfirm" class="erroresInput"></p>
+                    <p id="InputErrorUserRecContraseñaConfirm" class="erroresInput"></p>
                 </div>
                 <div class="container">
                     <button>Enviar</button>
@@ -59,5 +59,6 @@
         </div>
     </main>
     <%- include("../partials/footerUsers") %>
+    <script src="/js/frontEndValidations/validacionRecover.js"></script>
 </body>
 </html>

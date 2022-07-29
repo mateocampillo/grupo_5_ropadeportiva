@@ -18,8 +18,8 @@
             <form method="POST" action="/productos/agregar" enctype="multipart/form-data">
                 <div>
                     <label for="txtAddName">Nombre de producto:</label>
-                    <input type="text" name="txtAddName" id="txtAddName" value="<%= locals.old && old.txtAddName %>">
-                    <p id="inputErrorProducto" class="erroresInput"></p>
+                    <input type="text" name="txtAddName" id="txtAddName" minlength="5" value="<%= locals.old && old.txtAddName %>">
+                    <p id="InputErrorProducto" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtAddName') { %>
@@ -31,7 +31,7 @@
                 <div>
                     <label for="txtAddDesc">Descripcion de producto:</label><br>
                     <textarea name="txtAddDesc" id="txtAddDesc" cols="30" rows="5"></textarea>
-                    <p id="inputErrorDescripcion" class="erroresInput"></p>
+                    <p id="InputErrorDescripcion" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtAddDesc') { %>
@@ -46,12 +46,11 @@
                     <input type="radio" id="radioAddCat" name="radioAddCat" value="1">Hombre
                     <input type="radio" id="radioAddCat" name="radioAddCat" value="2">Mujer
                     <input type="radio" id="radioAddCat" name="radioAddCat" value="3">Infantil
-                    <p id="inputErrorCategoria" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="numAddPrice">Precio del producto:</label><br>
                     <input type="number" id="numAddPrice" name="numAddPrice" value="<%= locals.old && old.numAddPrice %>">
-                    <p id="inputErrorPrecio" class="erroresInput"></p>
+                    <p id="InputErrorPrecio" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'numAddPrice') { %>
@@ -66,7 +65,6 @@
                     <input type="radio" id="radioAddType" name="radioAddType" value="2">Pantalon
                     <input type="radio" id="radioAddType" name="radioAddType" value="3">Zapatillas
                     <input type="radio" id="radioAddType" name="radioAddType" value="4">Buzo
-                    <p id="inputErrorTipo" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="radioAddSize">Talle del producto:</label><br>
@@ -81,7 +79,6 @@
                     <input type="radio" id="radioAddSize" name="radioAddSize" value="8">41
                     <input type="radio" id="radioAddSize" name="radioAddSize" value="9">42
                     <input type="radio" id="radioAddSize" name="radioAddSize" value="10">43
-                    <p id="inputErrorTalle" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="txtAddWaist">Cm de cintura:</label><br>
@@ -107,7 +104,6 @@
                     <input type="radio" id="radioAddCloth" name="radioAddCloth" value="4">Jersey
                     <input type="radio" id="radioAddCloth" name="radioAddCloth" value="5">Nylon
                     <input type="radio" id="radioAddCloth" name="radioAddCloth" value="6">Poliéster
-                    <p id="inputErrorTela" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="radioAddColor">Color del producto:</label><br>
@@ -115,12 +111,11 @@
                     <input type="radio" id="radioAddColor" name="radioAddColor" value="2">Blanco
                     <input type="radio" id="radioAddColor" name="radioAddColor" value="3">Rojo
                     <input type="radio" id="radioAddColor" name="radioAddColor" value="4">Azul
-                    <p id="inputErrorColor" class="erroresInput"></p>
                 </div>
                 <div>
                     <label for="txtAddCode">Codigo de producto:</label><br>
                     <input type="text" id="txtAddCode" name="txtAddCode" value="<%= locals.old && old.txtAddCode %>">
-                    <p id="inputErrorCodigo" class="erroresInput"></p>
+                    <p id="InputErrorCodigo" class="erroresInput"></p>
                     <% if (locals.errors && errors)  { %>
                         <% errors.forEach(error => { %>
                             <% if (error.param == 'txtAddCode') { %>
@@ -140,5 +135,6 @@
         </div>
     </main>
     <%- include("../partials/footerUsers") %>
+    <script src="/js/frontEndValidations/validacionAddProduct.js"></script>
 </body>
 </html>

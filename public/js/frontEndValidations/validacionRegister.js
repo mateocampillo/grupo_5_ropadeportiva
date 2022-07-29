@@ -1,121 +1,121 @@
-window.onload = function(){
-    let nombre = document.querySelector('txtName');
+window.addEventListener('load', function() {
+
+    let nombre = document.querySelector('#txtName');
     let inputErrNombre = document.querySelector('#InputErrorNombre');
-    let apellido = document.querySelector('txtSurname');
-    let inputErrApellido = document.querySelector('#InputErrorApellido');
-    let email = document.querySelector('txtMail');
-    let inputErrEmail = document.querySelector('#InputErrorEmail');
-    let nombreUsuario = document.querySelector('txtUser');
-    let inputErrNombreUsuario = document.querySelector('#InputErrorNombreUsuario');
-    let contraseña = document.querySelector('txtPassword');
-    let inputErrContraseña = document.querySelector('#InputErrorContraseña');
-    let contraseñaConfirm = document.querySelector('txtPasswordConfirm');
-    let inputErrContraseñaConfirm = document.querySelector('#InputErrorContraseñaConfirm');
-    let sexo = document.querySelector('radioSex');
-    let inputErrSexo = document.querySelector('#InputErrorSexo');
-    let telefono = document.querySelector('numberTel');
-    let inputErrTelefono = document.querySelector('#InputErrorTelefono');
-    let provinciaResidencia = document.querySelector('optProvincias');
-    let inputErrProvinciaResidencia = document.querySelector('#InputErrorProvinciaResidencia');
-    let domicilio = document.querySelector('txtAddress');
-    let inputErrDomicilio = document.querySelector('#InputErrorDomicilio');
+    let apellido = document.querySelector('#txtSurname');
+    let inputErrorApellido = document.querySelector('#InputErrorApellido');
+    let email = document.querySelector('#txtMail');
+    let inputErrorEmail = document.querySelector('#InputErrorEmail');
+    let username = document.querySelector('#txtUser');
+    let inputErrorUsername = document.querySelector('#InputErrorNombreUsuario');
+    let password = document.querySelector('#txtPassword');
+    let inputErrorPassword = document.querySelector('#InputErrorContraseña');
+    let confirmPassword = document.querySelector('#txtPasswordConfirm');
+    let inputErrorConfirmPassword = document.querySelector('#InputErrorContraseñaConfirm');
+    let telefono = document.querySelector('#numberTel');
+    let inputErrorTelefono = document.querySelector('#InputErrorTelefono');
+    let domicilio = document.querySelector('#txtAddress');
+    let inputErrorDomicilio = document.querySelector('#InputErrorDomicilio');
+    let postal = document.querySelector('#txtPostal');
+    let inputErrorPostal = document.querySelector('#InputErrorPostal');
 
     nombre.addEventListener('input', function() {
 
         if(nombre.value.length == 0){
-            inputErrNombre.innerHTML = 'El nombre no puede estar vacio'
+            inputErrNombre.innerHTML = "El nombre no puede estar vacio"
         } else {
             inputErrNombre.innerHTML = ''
         }
-
     })
 
     apellido.addEventListener('input', function() {
 
         if(apellido.value.length == 0){
-            inputErrApellido.innerHTML = 'El apellido no puede estar vacio'
+            inputErrorApellido.innerHTML = "El apellido no puede estar vacio"
         } else {
-            inputErrApellido.innerHTML = ''
+            inputErrorApellido.innerHTML = ''
         }
-
     })
 
     email.addEventListener('input', function() {
 
         if(email.value.length == 0){
-            inputErrEmail.innerHTML = 'El email no puede estar vacio'
+            inputErrorEmail.innerHTML = "El mail no puede estar vacio"
         } else {
-            inputErrEmail.innerHTML = ''
-        }
-
-    })
-
-    nombreUsuario.addEventListener('input', function() {
-
-        if(nombreUsuario.value.length == 0){
-            inputErrNombreUsuario.innerHTML = 'El nombre de usuario no puede estar vacio'
-        } else {
-            inputErrNombreUsuario.innerHTML = ''
-        }
-
-    })
-
-    contraseña.addEventListener('input', function() {
-
-        if(contraseña.value.length < 6){
-            inputErrContraseña.innerHTML = 'La contraseña debe tener minimo 6 caracteres'
-        } else {
-            inputErrContraseña.innerHTML = ''
+            inputErrorEmail.innerHTML = ''
         }
     })
 
-    contraseñaConfirm.addEventListener('input', function() {
+    username.addEventListener('input', function() {
 
-        if(contraseña.value == contraseña.value.length){
-            inputErrContraseñaConfirm.innerHTML = 'Las contraseñas no coinciden'
+        if(username.value.length == 0){
+            inputErrorUsername.innerHTML = "El nombre de usuario no puede estar vacio"
+        } else if(username.value.length < 6){
+            inputErrorUsername.innerHTML = "El nombre de usuario no puede ser menor a 6 caracteres"
+        } else if(username.value.length > 30) {
+            inputErrorUsername.innerHTML = "El nombre de usuario no puede ser mayor a 30 caracteres"
         } else {
-            inputErrContraseñaConfirm.innerHTML = ''
+            inputErrorUsername.innerHTML = ''
         }
-
     })
 
-    sexo.addEventListener('input', function() {
-        
-        if(sexo.value != 1 && sexo.value != 2 && sexo.value != 3){
-            inputErrSexo.innerHTML = 'El sexo no puede estar vacio'
+    password.addEventListener('input', function() {
+
+        if(password.value.length == 0){
+            inputErrorPassword.innerHTML = "La contraseña no puede estar vacia"
+        } else if(password.value.length < 6){
+            inputErrorPassword.innerHTML = "La contraseña no puede ser menor a 6 caracteres"
+        } else if(password.value.length > 24) {
+            inputErrorPassword.innerHTML = "La contraseña no puede ser mayor a 24 caracteres"
         } else {
-            inputErrSexo.innerHTML = ''
+            inputErrorPassword.innerHTML = ''
+        }
+    })
+    
+    confirmPassword.addEventListener('input', function() {
+
+        if(confirmPassword.value.length == 0){
+            inputErrorConfirmPassword.innerHTML = "La contraseña no puede estar vacia"
+        } else if(confirmPassword.value != password.value){
+            inputErrorConfirmPassword.innerHTML = "Ambas contraseñas deben coincidir"
+        } else if(confirmPassword.value.length < 6){
+            inputErrorConfirmPassword.innerHTML = "La contraseña no puede ser menor a 6 caracteres"
+        } else if(confirmPassword.value.length > 24) {
+            inputErrorConfirmPassword.innerHTML = "La contraseña no puede ser mayor a 24 caracteres"
+        } else {
+            inputErrorConfirmPassword.innerHTML = ''
         }
     })
 
     telefono.addEventListener('input', function() {
-        
+
         if(telefono.value.length == 0){
-            inputErrTelefono.innerHTML = 'El telefono no puede estar vacio'
+            inputErrorTelefono.innerHTML = "El telefono no puede estar vacio"
+        } else if(telefono.value.length < 8) {
+            inputErrorTelefono.innerHTML = "El telefono debe ser mayor a 8 caracteres"
+        } else if(telefono.value.length > 14){
+            inputErrorTelefono.innerHTML = "El telefono debe ser menor a 14 caracteres"
         } else {
-            inputErrTelefono.innerHTML = ''
+            inputErrorTelefono.innerHTML = ''
         }
     })
-
-    provinciaResidencia.addEventListener('input', function() {
-        
-        if(telefono.value > 24 &&  telefono.value < 1 ){
-            inputErrProvinciaResidencia.innerHTML = 'La provincia de residencia no puede estar vacia'
-        } else {
-            inputErrProvinciaResidencia.innerHTML = ''
-        }
-    })
-
-    
 
     domicilio.addEventListener('input', function() {
-        
+
         if(domicilio.value.length == 0){
-            inputErrDomicilio.innerHTML = 'El domicilio no puede estar vacio'
+            inputErrorDomicilio.innerHTML = "El domicilio no puede estar vacio"
         } else {
-            inputErrDomicilio.innerHTML = ''
+            inputErrorDomicilio.innerHTML = ''
         }
     })
 
+    postal.addEventListener('input', function() {
 
-}
+        if(postal.value.length == 0){
+            inputErrorPostal.innerHTML = "El codigo postal no puede estar vacio"
+        } else {
+            inputErrorPostal.innerHTML = ''
+        }
+    })
+
+})

@@ -1,11 +1,12 @@
-window.onload = function(){
-    let email = document.querySelector('txtRecEmail');
-    let inputErrEmail = document.querySelector('#InputErrorUserRecEmail');
-    let telefono = document.querySelector('txtRecTel');
+window.addEventListener('load', function() {
+
+    let email = document.querySelector('#txtRecEmail');
+    let inputErrEmail = document.querySelector('#inputErrorUserRecEmail');
+    let telefono = document.querySelector('#txtRecTel');
     let inputErrTelefono = document.querySelector('#InputErrorUserRecTelefono');
-    let contraseña = document.querySelector('txtRecPass');
+    let contraseña = document.querySelector('#txtRecPass');
     let inputErrContraseña = document.querySelector('#InputErrorUserRecContraseña');
-    let recContraseña = document.querySelector('txtRecPassConfirm'); 
+    let recContraseña = document.querySelector('#txtRecPassConfirm'); 
     let inputErrContraseñaConfirm = document.querySelector('#InputErrorUserRecContraseñaConfirm');
 
     email.addEventListener('input', function() {
@@ -32,6 +33,8 @@ window.onload = function(){
 
         if(contraseña.value.length == 0){
             inputErrContraseña.innerHTML = 'La contraseña no puede estar vacia'
+        } else if(contraseña.value.length < 6){
+            inputErrContraseña.innerHTML = 'La contraseña debe ser mayor a 6 caracteres'
         } else {
             inputErrContraseña.innerHTML = ''
         }
@@ -42,11 +45,14 @@ window.onload = function(){
 
         if(recContraseña.value.length == 0){
             inputErrContraseñaConfirm.innerHTML = 'La contraseña no puede estar vacia'
-        } else if(recContraseña.value == contraseña.value.length){
+        } else if(recContraseña.value.length < 6){
+            inputErrContraseñaConfirm.innerHTML = 'La contraseña debe ser mayor a 6 caracteres'
+        } else if(recContraseña.value != contraseña.value){
             inputErrContraseñaConfirm.innerHTML = 'Las contraseñas no coinciden'
         } else {
             inputErrContraseñaConfirm.innerHTML = ''
         }
 
     })
-}
+
+})
