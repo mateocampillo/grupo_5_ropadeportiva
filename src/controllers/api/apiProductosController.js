@@ -13,10 +13,21 @@ const controller = {
                     active: 1
                 }
             })
+
+            let categories = [];
+            for (let { category } of productos) {
+                categories[category] = (categories[category] || 0) + 1;
+            }
+
             res.json({
                 total: productos.length,
-                data: productos,
-                status: 200
+                status: 200,
+                countByCategory: {
+                    hombres: categories[1],
+                    mujeres: categories[2],
+                    infantil: categories[3]
+                },
+                data: productos
             })
         }
         catch(error) {
