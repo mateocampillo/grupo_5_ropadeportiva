@@ -18,24 +18,6 @@
 USE grupo_5_ropadeportiva;
 
 --
--- Dumping data for table `cart`
---
-
-LOCK TABLES `cart` WRITE;
-/*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cart` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Dumping data for table `facturas`
---
-
-LOCK TABLES `facturas` WRITE;
-/*!40000 ALTER TABLE `facturas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `facturas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping data for table `p_categories`
 --
 
@@ -91,7 +73,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,_binary 'Camiseta River',_binary 'Camiseta temporada 2021/22 del club River Plate',1,5000,1,2,_binary '40cm',_binary '60cm',_binary '70cm',_binary '180cm',4,2,_binary 'H2V1BK3V4H',_binary '1652144875317_img_.jpg',_binary '1652144875318_img_.jpg',_binary '1652144875322_img_.jpg',_binary '1652144875323_img_.jpg',1),(2,_binary 'Pantalon Boca Juniors',_binary 'Pantalon deportivo del club Boca Juniors, temporada 2021/22',2,15000,2,1,_binary '35cm','','',_binary '165cm',4,4,_binary '512B3KV1H2',_binary '1653346782474_img_.jpg',_binary '1653346782475_img_.jpg',_binary '1653346782476_img_.jpg',_binary '1653346782480_img_.jpg',1),(3,_binary 'Zapatillas Forum Low',_binary 'Zapatillas deportivas, muy comodas y resistentes para las mas pequeñas de la casa',3,10500,3,4,'','','','',5,2,_binary 'H12B3HV312',_binary '1652143977454_img_.jpg',_binary '1652143977458_img_.jpg',_binary '1652143977462_img_.jpg',_binary '1652143977464_img_.jpg',1),(4,_binary 'Camiseta Rosario Central',_binary 'Camiseta del club Rosario Central, temporada 2021/22.',1,8500,1,2,_binary '45cm',_binary '60cm',_binary '60cm',_binary '175cm',6,4,_binary 'B21KB31B12',_binary '1652144044984_img_.jpg',_binary '1652144044988_img_.jpg',_binary '1652144044993_img_.jpg',_binary '1652144044996_img_.jpg',1),(5,_binary 'Zapatillas X9000L4',_binary 'Descripcion de zapas que estan super buenas por favor compranos',2,18600,3,6,'','','','',4,1,_binary 'LN2LB31L2',_binary '1652143693910_img_.jpg',_binary '1652143693916_img_.jpg',_binary '1652143693922_img_.jpg',_binary '1652143693925_img_.jpg',1),(6,_binary 'Camiseta de Independiente',_binary 'Camiseta de los diablos de Avellaneda, titular temporada 2021/22',1,12500,1,2,_binary '60cm',_binary '70cm',_binary '75cm',_binary '190cm',6,3,_binary 'JKB1K2H3',_binary '1653145282489_img_.jpg',_binary '1653145282501_img_.jpg',_binary '1653145282504_img_.jpg',_binary '1653145282508_img_.jpg',1);
+INSERT INTO `products` VALUES (1,_binary 'Camiseta River',_binary 'Camiseta temporada 2021/22 del club River Plate',1,5000,1,2,_binary '40cm',_binary '60cm',_binary '70cm',_binary '180cm',4,2,_binary 'H2V1BK3V4H',_binary '1652144875317_img_.jpg',_binary '1652144875318_img_.jpg',_binary '1652144875322_img_.jpg',_binary '1652144875323_img_.jpg',1),(2,_binary 'Pantalon Boca Juniors',_binary 'Pantalon deportivo del club Boca Juniors, temporada 2021/22',2,15000,2,1,_binary '35cm','','',_binary '165cm',4,4,_binary '512B3KV1H2',_binary '1653346782474_img_.jpg',_binary '1653346782475_img_.jpg',_binary '1653346782476_img_.jpg',_binary '1653346782480_img_.jpg',1),(3,_binary 'Zapatillas Forum Low',_binary 'Zapatillas deportivas, muy comodas y resistentes para las mas pequeñas de la casa',3,10500,3,4,'','','','',5,2,_binary 'H12B3HV312',_binary '1652143977454_img_.jpg',_binary '1652143977458_img_.jpg',_binary '1652143977462_img_.jpg',_binary '1652143977464_img_.jpg',1),(4,_binary 'Camiseta Rosario Central',_binary 'Camiseta del club Rosario Central, temporada 2021/22.',1,8500,1,2,_binary '45cm',_binary '60cm',_binary '60cm',_binary '175cm',6,4,_binary 'B21KB31B12',_binary '1652144044984_img_.jpg',_binary '1652144044988_img_.jpg',_binary '1652144044993_img_.jpg',_binary '1652144044996_img_.jpg',1),(5,_binary 'Zapatillas X9000L4',_binary 'Descripcion de zapas que estan super buenas por favor compranos',2,18600,3,6,'','','','',4,1,_binary 'LN2LB31L2',_binary '1652143693910_img_.jpg',_binary '1652143693916_img_.jpg',_binary '1652143693922_img_.jpg',_binary '1652143693925_img_.jpg',1),(6,_binary 'Camiseta de Independiente',_binary 'Camiseta de los diablos de Avellaneda, titular temporada 2021/22',1,12500,1,2,_binary '60cm',_binary '70cm',_binary '75cm',_binary '190cm',6,3,_binary 'JKB1K2H3',_binary '1653145282489_img_.jpg',_binary '1653145282501_img_.jpg',_binary '1653145282504_img_.jpg',_binary '1653145282508_img_.jpg',1),(7,_binary 'Zapatillas Superstar',_binary 'Por más de 50 años las zapatillas adidas Superstar han sido las preferidas de las leyendas del mundo del deporte y de las calles, conectando creadores con culturas.',2,25899,3,5,_binary '-',_binary '-',_binary '-',_binary '-',5,1,_binary 'JKNSADS2',_binary '1657295475138_img_.jpg',_binary '1657295475143_img_.jpg',_binary '1657295475149_img_.jpg',_binary '1657295475152_img_.jpg',1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,9 +113,21 @@ UNLOCK TABLES;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,_binary 'Admin',_binary 'Admin',_binary 'admin@gmail.com',_binary 'admin',_binary '$2a$10$KtTpo/2wLbzkhLV1E9K2cOzs/2wurOQvjvzpQTDFbXyvBfS00szG6',1,_binary '1654285398940_UserImg_.jpg','1990-01-01',1,_binary '10 1010',_binary '123456',0,_binary '1123456789',1),(2,_binary 'Cliente',_binary 'Lopez',_binary 'cliente@gmail.com',_binary 'cliente',_binary '$2a$10$MsrUGNTutuh/J9NoBNg68ePZp.xph2790eJsU1IqRtl388T/rkm/C',2,_binary '1654611807569_UserImg_.jpg','2022-05-10',1,_binary '162 1923',_binary '882913',0,_binary '121234567',1),(3,_binary 'mateoprueba',_binary 'prueba',_binary 'prueba@hotmail.com',_binary 'pruebas',_binary '$2a$10$J9d1q2MsS/mefc.0fOvsTOVOBiEZf7rqMOFz1RxcHQzLAY/KXczti',2,_binary 'imgUserDefault.jpg','2001-11-10',1,_binary '12',_binary '12314',1,_binary '1212121212',1),(4,_binary 'Sergio',_binary 'Aguero',_binary 'sergio@gmail.com',_binary 'saguero',_binary '$2a$10$mdW8QPiFOBKNFbT.0HmCKePERBcWb2O75frBjfXqT2vWc60HRYTuq',2,_binary 'imgUserDefault.jpg','1989-06-22',1,_binary 'Rivadavia 5501',_binary '2371AB',0,_binary '011-2381-1231',1);
+INSERT INTO `users` VALUES (1,_binary 'Admin',_binary 'Admin',_binary 'admin@gmail.com',_binary 'admin',_binary '$2a$10$KtTpo/2wLbzkhLV1E9K2cOzs/2wurOQvjvzpQTDFbXyvBfS00szG6',1,_binary '1654285398940_UserImg_.jpg','1990-01-01',1,_binary '10 1010',_binary '123456',0,_binary '1123456789',1),(2,_binary 'Cliente',_binary 'Lopez',_binary 'cliente@gmail.com',_binary 'cliente',_binary '$2a$10$MsrUGNTutuh/J9NoBNg68ePZp.xph2790eJsU1IqRtl388T/rkm/C',2,_binary '1654611807569_UserImg_.jpg','2022-05-10',1,_binary '162 1923',_binary '882913',0,_binary '121234567',1),(3,_binary 'mateoprueba',_binary 'prueba',_binary 'prueba@hotmail.com',_binary 'pruebas',_binary '$2a$10$J9d1q2MsS/mefc.0fOvsTOVOBiEZf7rqMOFz1RxcHQzLAY/KXczti',2,_binary 'imgUserDefault.jpg','2001-11-10',1,_binary '12',_binary '12314',1,_binary '1212121212',1),(4,_binary 'Sergio',_binary 'Aguero',_binary 'sergio@gmail.com',_binary 'saguero',_binary '$2a$10$mdW8QPiFOBKNFbT.0HmCKePERBcWb2O75frBjfXqT2vWc60HRYTuq',2,_binary 'imgUserDefault.jpg','1989-06-22',1,_binary 'Rivadavia 5501',_binary '2371AB',0,_binary '011-2381-1231',1),(5,_binary 'Juan Carlos',_binary 'García',_binary 'juancgarcia@gmail.com',_binary 'jcgarcia',_binary '$2a$10$zrRR5U3jH.nhP7VbphewfOFruF3gOu.WFEcNGMQrZNfbGRZUPbhmm',2,_binary 'imgUserDefault.jpg','1960-11-23',10,_binary 'La resistencia 44',_binary '9105DX',1,_binary '1187390192',1),(6,_binary 'Malena',_binary 'Draghi',_binary 'mdraghi@gmail.com',_binary 'mdraghi',_binary '$2a$10$qtLVh.ta9bIs2UfZ8/JWWOsNjzRc2U.HSqXP3MSf7kXChSJoG5vVu',2,_binary '1657388191851_UserImg_.jpg','2001-08-17',23,_binary 'Calle Antartida Argentina 159',_binary '9152BC',1,_binary '1189317653',2),(7,_binary 'Estefan',_binary 'Alvarez',_binary 'ealvarez@gmail.com',_binary 'ealvarez',_binary '$2a$10$UIOi4EByE9mMGHCgXYG81e49fKgFSp96WaoLW9wCuxlayMVlNoV42',2,_binary 'imgUserDefault.jpg','1995-07-12',7,_binary 'Calle Libertad 900',_binary '8611HW',0,_binary '1156128213',3);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping data for table `facturas`
+--
+
+LOCK TABLES `facturas` WRITE;
+/*!40000 ALTER TABLE `facturas` DISABLE KEYS */;
+INSERT INTO `facturas` VALUES (1,2,'2022-07-21 21:53:10',43399,'6,1,7'),(3,2,'2022-07-21 21:59:36',12500,'6'),(4,2,'2022-07-21 22:00:02',44100,'2,3,5'),(5,6,'2022-07-21 22:00:50',33600,'5,2'),(6,2,'2022-07-28 00:16:18',31500,'3,4,6');
+/*!40000 ALTER TABLE `facturas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -144,4 +138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-06  9:53:28
+-- Dump completed on 2022-08-01 21:45:30
