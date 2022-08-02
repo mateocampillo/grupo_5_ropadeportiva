@@ -1,0 +1,22 @@
+Retrospectiva del sprint 7, fecha 02/08/2022:
+
+Mateo: 
+-Comenzar a hacer: Creo que note en estas ultimas semanas que debo estar mas al tanto del progreso de mis compañeros de equipo, a veces no vamos al mismo ritmo y siento que si me comunico con ellos podemos avanzar de forma mas comoda para todos.
+-Hacer mas: Debo buscar mas acerca de los conceptos charlados en clase, intento siempre buscar librerias o conceptos que suelen repetirse mucho y que no alcanza a cubrir el curso.
+-Continuar haciendo: Debo continuar trabajando como hice hasta ahora, este es el ultimo sprint y queda poco para completar el curso por lo tanto voy a intentar mantener el ritmo.
+-Hacer menos: Debo dejar de pushear codigo sin comentar, a veces con tal de seguir completando el proyecto no comento mucha parte del codigo que puede ser confusa y siento que debo dejar esta practica ya que no es útil para mis compañeros.
+-Dejar de hacer: Debo dejar de esperar para profundizar con react ya que es una gran parte del proximo sprint y creo que es importante afinar el conocimiento y profundizar conceptos a base de la practica y de videos educacionales sobre el mismo.
+
+Felipe:
+-Comenzar a hacer:
+-Hacer mas:
+-Continuar haciendo:
+-Hacer menos:
+-Dejar de hacer:
+
+Matias:
+-Comenzar a hacer:
+-Hacer mas:
+-Continuar haciendo:
+-Hacer menos:
+-Dejar de hacer:
