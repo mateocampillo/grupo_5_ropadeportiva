@@ -1,14 +1,21 @@
 import React from 'react';
-import ApiProductos from './components/ApiProductos';
-import PruebaH1 from './components/PruebaH1';
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import BarraLateral from './components/BarraLateral';
+import MainContainer from './components/MainContainer';
 
 function App() {
 
   return (
-    <div>
-      <PruebaH1 />
-      <ApiProductos />
-    </div>
+
+    <BrowserRouter>
+
+      <div id='div-general'>
+        <BarraLateral />
+        <MainContainer />
+      </div>
+
+      </BrowserRouter>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import ApiSettings from '../ApiSettings.json';
+import ApiSettings from '../../ApiSettings.json';
 
 function ApiProductos() {
 
