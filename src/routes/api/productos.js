@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const cors = require('cors');
 const apiProductosController = require("../../controllers/api/apiProductosController");
 
 
 // Dentro de localhost:3000/api/productos
 
-router.get('/', apiProductosController.list);
-router.get('/:id', apiProductosController.detail);
+router.get('/', cors(), apiProductosController.list);
+router.get('/:id', cors(), apiProductosController.detail);
 
 module.exports = router;

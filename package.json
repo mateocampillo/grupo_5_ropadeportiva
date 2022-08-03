@@ -2,9 +2,11 @@
   "name": "grupo_5_ropadeportiva",
   "version": "1.0.0",
   "description": "Proyecto Grupo 5 Digital House FS 2022",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon src/server"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "cryptr": "^6.0.3",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
