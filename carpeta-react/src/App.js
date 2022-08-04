@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import BarraLateral from './components/BarraLateral';
 import MainContainer from './components/MainContainer';
+import ProductosList from './components/ProductosList';
 
 function App() {
 
@@ -12,10 +13,13 @@ function App() {
 
       <div id='div-general'>
         <BarraLateral />
-        <MainContainer />
+        <Routes>
+          <Route path='/' exact='true' element={<MainContainer />}></Route>
+          <Route path='/productos' element={<ProductosList />}></Route>
+        </Routes>
       </div>
 
-      </BrowserRouter>
+    </BrowserRouter>
   )
 }
 

@@ -4,7 +4,7 @@ import EnlaceNavBarLateral from './EnlaceNavBarLateral';
 function NavBarLateral() {
 
     return (
-      <div>
+      <div id='div-container-enlaces-navbar'>
           <div className='container-enlace-navBar'>
             <EnlaceNavBarLateral name='Productos'/>
           </div>

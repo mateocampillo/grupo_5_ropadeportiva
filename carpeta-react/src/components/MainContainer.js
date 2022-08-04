@@ -2,6 +2,8 @@ import React from 'react';
 import McDivTarjetasInicio from './McDivTarjetasInicio';
 import UltimoProducto from './UltimoProducto';
 import UltimoUsuario from './UltimoUsuario';
+import CategoriasProductos from './CategoriasProductos';
+import Footer from './Footer';
 
 function MainContainer() {
 
@@ -16,6 +18,8 @@ function MainContainer() {
             <UltimoProducto />
             <UltimoUsuario />
           </div>
+          <CategoriasProductos />
+          <Footer />
       </div>
     )
   }
