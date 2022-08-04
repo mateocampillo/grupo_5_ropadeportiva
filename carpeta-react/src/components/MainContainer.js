@@ -1,5 +1,7 @@
 import React from 'react';
 import McDivTarjetasInicio from './McDivTarjetasInicio';
+import UltimoProducto from './UltimoProducto';
+import UltimoUsuario from './UltimoUsuario';
 
 function MainContainer() {
 
@@ -9,6 +11,10 @@ function MainContainer() {
           <hr className='hr-general'/>
           <div>
             <McDivTarjetasInicio/>
+          </div>
+          <div id='div-container-bottomRow'>
+            <UltimoProducto />
+            <UltimoUsuario />
           </div>
       </div>
     )

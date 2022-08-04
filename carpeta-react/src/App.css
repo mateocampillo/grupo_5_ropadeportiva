@@ -77,3 +77,58 @@
     font-size: 1.3rem;
     margin: 10px auto;
 }
+
+#div-container-bottomRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#container-ultimo-producto{
+    width: 48%;
+}
+
+#container-ultimo-producto a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+#container-ultimo-producto h3{
+    margin: 40px auto 0px;
+}
+
+#container-ultimo-producto h4{
+    background-color: #ede734;
+    text-align: center;
+    padding: 3px;
+    width: 75%;
+}
+
+#container-ultimo-producto p{
+    margin: 20px auto 35px;
+}
+
+#container-ultimo-usuario{
+    width: 40%;
+}
+
+#container-ultimo-usuario h4{
+    margin: 0px auto 40px;
+    background-color: #ede734;
+    text-align: center;
+    padding: 3px;
+    width: 75%;
+}
+
+#container-ultimo-usuario p{
+    margin: 10px auto 20px;
+}
+
+#container-ultimo-usuario a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+}
