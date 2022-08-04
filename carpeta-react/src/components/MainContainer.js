@@ -1,10 +1,15 @@
 import React from 'react';
+import McDivTarjetasInicio from './McDivTarjetasInicio';
 
 function MainContainer() {
 
     return (
       <div id='div-main-container'>
-          <h2>1234123</h2>
+          <h1>Todo Deportes Dashboard</h1>
+          <hr className='hr-general'/>
+          <div>
+            <McDivTarjetasInicio/>
+          </div>
       </div>
     )
   }

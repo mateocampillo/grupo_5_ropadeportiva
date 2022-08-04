@@ -36,6 +36,10 @@ const controller = {
                     color: producto.dataValues.p_color.name,
                     code: producto.dataValues.code,
                     active: producto.dataValues.active,
+                    img1: producto.dataValues.img1,
+                    img2: producto.dataValues.img2,
+                    img3: producto.dataValues.img3,
+                    img4: producto.dataValues.img4,
                     detail: `http://localhost:3000/api/productos/${producto.dataValues.id}`
                 })
             })

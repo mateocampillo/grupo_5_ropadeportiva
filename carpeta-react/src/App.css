@@ -41,7 +41,7 @@
 
 .dashboard-a{
     text-decoration: none;
-    color: black;
+    color: #000000;
     font-size: 1.3rem;
     font-weight: 500;
 }
@@ -52,7 +52,28 @@
 
 #div-main-container{
     display: flex;
-    flex-direction: row;
-    padding: 3px;
+    flex-direction: column;
+    padding: 30px;
     width: 100%;
+}
+
+#div-main-container h1{
+    text-align: center;
+}
+
+#mc-div-container-tarjetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 40px auto;
+}
+
+.div-subtarjetas{
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.div-subtarjetas p{
+    font-size: 1.3rem;
+    margin: 10px auto;
 }

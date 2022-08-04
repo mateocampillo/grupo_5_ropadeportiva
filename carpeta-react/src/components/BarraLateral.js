@@ -12,7 +12,7 @@ function BarraLateral() {
           </div>
           <hr className='hr-general'/>
           <div className='div-separador-barra-lateral'>
-              <Link className='dashboard-a' to='/'>Dashboard</Link>
+              <Link className='dashboard-a' to='/' exact='true'>Dashboard</Link>
           </div>
           <hr className='hr-general'/>
           <div>
