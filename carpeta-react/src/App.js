@@ -4,6 +4,7 @@ import './App.css';
 import BarraLateral from './components/BarraLateral';
 import MainContainer from './components/MainContainer';
 import ProductosList from './components/ProductosList';
+import UsuariosList from './components/UsuariosList';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
         <BarraLateral />
         <Routes>
           <Route path='/' exact='true' element={<MainContainer />}></Route>
-          <Route path='/productos' element={<ProductosList />}></Route>
+          <Route path='/productos' exact='true' element={<ProductosList />}></Route>
+          <Route path='/usuarios' exact='true' element={<UsuariosList />}></Route>
         </Routes>
       </div>
 

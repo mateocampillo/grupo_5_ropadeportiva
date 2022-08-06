@@ -2,31 +2,31 @@ import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import ApiSettings from '../ApiSettings.json';
 
-function ProductosList() {
+function UsuariosList() {
 
-  const [productos, setProductos] = useState([]);
+  const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
-    fetch(ApiSettings.BaseApi+'/api/productos')
+    fetch(ApiSettings.BaseApi+'/api/usuarios')
       .then(response => response.json())
-      .then(data => {setProductos(data.data)})
+      .then(data => {setUsuarios(data.users)})
   }, [])
 
     return (
       <div id='container-product-list'>
-          <h1>Listado de productos</h1>
+          <h1>Listado de Usuarios</h1>
           <div id='container-ul-product-list'>
             <ul>
-              {productos.map((producto, i) => {
-                return <li key={producto + '_' + i}>
+              {usuarios.map((usuario, i) => {
+                return <li key={usuario + '_' + i}>
                   <div id='container-li-product-list'>
-                    <p><strong>id:</strong> {producto.id}</p>
+                    <p><strong>id:</strong> {usuario.id}</p>
                     <hr className='hr-product-list'/>
-                    <p><strong>Nombre:</strong>{` ${producto.name}`}</p>
+                    <p><strong>Nombre:</strong>{` ${usuario.name}`}</p>
                     <hr className='hr-product-list'/>
-                    <p>Precio: {`$ ${producto.price}`}</p>
+                    <p>Email: {usuario.email}</p>
                     <hr className='hr-product-list'/>
-                    <Link to={`/productos/${producto.id}`}>Detalle</Link>
+                    <Link to={`/usuarios/${usuario.id}`}>Detalle</Link>
                   </div>
                 </li>
               })}
@@ -36,4 +36,4 @@ function ProductosList() {
     )
   }
   
-export default ProductosList; 
+export default UsuariosList; 
