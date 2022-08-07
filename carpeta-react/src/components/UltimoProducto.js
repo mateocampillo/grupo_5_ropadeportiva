@@ -17,7 +17,7 @@ function UltimoProducto() {
           <div>
               <h3>{ultimoProducto.name}</h3>
               <p>{ultimoProducto.descripcion}</p>
-              <Link to={`/`}>Ver detalle de producto</Link>
+              <Link to={`/productos/${ultimoProducto.id}`}>Ver detalle de producto</Link>
           </div>
       </div>
     )

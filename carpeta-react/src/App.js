@@ -7,6 +7,8 @@ import ProductosList from './components/ProductosList';
 import UsuariosList from './components/UsuariosList';
 import EnlaceCategorias from './components/EnlaceCategorias';
 import CategoriasList from './components/CategoriasList';
+import ProductDetail from './components/ProductDetail';
+import UsuarioDetail from './components/UsuarioDetail';
 
 function App() {
 
@@ -19,7 +21,9 @@ function App() {
         <Routes>
           <Route path='/' exact='true' element={<MainContainer />}></Route>
           <Route path='/productos' exact='true' element={<ProductosList />}></Route>
+          <Route path='/productos/:id' element={<ProductDetail />}></Route>
           <Route path='/usuarios' exact='true' element={<UsuariosList />}></Route>
+          <Route path='/usuarios/:id' element={<UsuarioDetail />}></Route>
           <Route path='/categorias' exact='true' element={<EnlaceCategorias />}></Route>
           <Route path='/categorias/hombres' element={<CategoriasList cat='Hombre' />}></Route>
           <Route path='/categorias/mujeres' element={<CategoriasList cat='Mujer' />}></Route>

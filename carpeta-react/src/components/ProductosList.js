@@ -14,12 +14,12 @@ function ProductosList(props) {
 
   let arrFiltrado = [];
   productos.forEach(producto => {
-    if(producto.category == props.categoria){
+    if(producto.category === props.categoria){
       arrFiltrado.push(producto)
     }
   })
 
-  if(props.categoria != undefined){
+  if(props.categoria !== undefined){
     return (
       <div id='container-product-list'>
           <h1>Listado de productos</h1>

@@ -17,7 +17,7 @@ function UltimoUsuario() {
           <div>
               <h3>Nombre: {ultimoUsuario.name}</h3>
               <p>Email: {ultimoUsuario.email}</p>
-              <Link to={`/`}>Ver detalle de usuario</Link>
+              <Link to={`/usuarios/${ultimoUsuario.id}`}>Ver detalle de usuario</Link>
           </div>
       </div>
     )
