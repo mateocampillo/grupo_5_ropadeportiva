@@ -8,15 +8,15 @@ function CategoriasProductos() {
         <h3>Todas las categorias de productos</h3>
         <div id='div-categoriasProductos'>
             <div className='container-link-categorias'>
-                <Link to='/'>Hombres</Link>
+                <Link to='/categorias/hombres'>Hombres</Link>
             </div>
             <hr/>
             <div className='container-link-categorias'>
-                <Link to='/'>Mujeres</Link>
+                <Link to='/categorias/mujeres'>Mujeres</Link>
             </div>
             <hr/>
             <div className='container-link-categorias'>
-                <Link to='/'>Infantil</Link>
+                <Link to='/categorias/infantil'>Infantil</Link>
             </div>
         </div>
     </div>
