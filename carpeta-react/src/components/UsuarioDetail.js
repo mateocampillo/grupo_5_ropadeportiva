@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ApiSettings from '../ApiSettings.json';
 import { useParams } from 'react-router-dom';
-import UsuariosList from './UsuariosList';
 
 function UsuarioDetail() {
 
