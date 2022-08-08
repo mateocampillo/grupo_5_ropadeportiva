@@ -23,19 +23,19 @@ window.addEventListener('load', function() {
 
         if(boton.innerText == 'Hombres'){
             botones[0].style.backgroundColor = '#e67070'
-            categorias.innerHTML = `<li><a href="/productos/?categoria=1&tipo=1">Camisetas</a></li>
-            <li><a href="/productos/?categoria=1&tipo=2">Pantalones</a></li>
-            <li><a href="/productos/?categoria=1&tipo=3">Zapatillas</a></li>`
+            categorias.innerHTML = `<li><a href="/productos/?categoria=Hombre&tipo=Camiseta">Camisetas</a></li>
+            <li><a href="/productos/?categoria=Hombre&tipo=Pantalon">Pantalones</a></li>
+            <li><a href="/productos/?categoria=Hombre&tipo=Zapatillas">Zapatillas</a></li>`
         } else if (boton.innerText == 'Mujeres'){
             botones[1].style.backgroundColor = '#e67070'
-            categorias.innerHTML = `<li><a href="/productos/?categoria=2&tipo=1">Camisetas</a></li>
-            <li><a href="/productos/?categoria=2&tipo=2">Pantalones</a></li>
-            <li><a href="/productos/?categoria=2&tipo=3">Zapatillas</a></li>`
+            categorias.innerHTML = `<li><a href="/productos/?categoria=Mujer&tipo=Camiseta">Camisetas</a></li>
+            <li><a href="/productos/?categoria=Mujer&tipo=Pantalon">Pantalones</a></li>
+            <li><a href="/productos/?categoria=Mujer&tipo=Zapatillas">Zapatillas</a></li>`
         } else {
             botones[2].style.backgroundColor = '#e67070'
-            categorias.innerHTML = `<li><a href="/productos/?categoria=3&tipo=1">Camisetas</a></li>
-            <li><a href="/productos/?categoria=3&tipo=2">Pantalones</a></li>
-            <li><a href="/productos/?categoria=3&tipo=3">Zapatillas</a></li>`
+            categorias.innerHTML = `<li><a href="/productos/?categoria=Infantil&tipo=Camiseta">Camisetas</a></li>
+            <li><a href="/productos/?categoria=Infantil&tipo=Pantalon">Pantalones</a></li>
+            <li><a href="/productos/?categoria=Infantil&tipo=Zapatillas">Zapatillas</a></li>`
         }
 
         if(categorias.classList.contains('clase-transicion-entrada-categorias')){
