@@ -8,11 +8,11 @@ Mateo:
 -Dejar de hacer: Debo dejar de esperar para profundizar con react ya que es una gran parte del proximo sprint y creo que es importante afinar el conocimiento y profundizar conceptos a base de la practica y de videos educacionales sobre el mismo.
 
 Felipe:
--Comenzar a hacer:
--Hacer mas:
--Continuar haciendo:
--Hacer menos:
--Dejar de hacer:
+-Comenzar a hacer: Deberíamos asignar tareas definidas para que cada integrante asuma una responsabilidad, y algo que se puede empezar a implementar es juntarse a realizar el sprint improvisadamente. Prestar mayor atencion a los detalles en clase
+-Hacer mas: Deberia comunicar mas mi progreso sea tanto positivo o negativo. Tambien deberia animarme a compartir pantalla mas seguido y realizar yo mismo los ejercicios para entrar mas en conocimiento con los temas
+-Continuar haciendo: Seguir con la buena onda, fundamental para que haya confianza, comodidad y seguridad de que el equipo. Deberia seguir aportando mi granito de arena en los sprints, como por ejemplo en clase y seguir estudiando los materiales de cada clase para aportar con mis compañeros
+-Hacer menos: Dejar de esperar para realizar los sprints, y dejar de que el resto de integrantes asuma mas responsabilidad de la que deberia. Ademas de no ponerme a resolver problemas con con contenido fuera del curso
+-Dejar de hacer: Redundo en que debo dejar de esperar tanto tiempo para empezar a realizar los sprints.
 
 Matias:
 -Comenzar a hacer:
