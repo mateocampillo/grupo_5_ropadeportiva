@@ -33,12 +33,16 @@
     width: 30%;
 }
 
+.a-imagen-header{
+    width: 160%;
+}
+
 .header-hamburguesa{
     width: 30%;
 }
 
 .header-logo{
-    width: 30%;
+    width: 75%;
 }
 
 .hidden{
@@ -178,10 +182,14 @@
 @media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
 
     .header-logo{
-        width: 15%;
+        width: 100%;
     }
     
     .header-icono{
+        width: 30%;
+    }
+
+    .a-imagen-header{
         width: 30%;
     }
 
@@ -303,8 +311,12 @@
         padding: 0px 20px;
     }
 
+    .a-imagen-header{
+        width: 10%;
+    }
+
     .header-logo{
-        width: 7%;
+        width: 75%;
     }
 
     .header-listado{
