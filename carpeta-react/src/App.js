@@ -9,6 +9,7 @@ import EnlaceCategorias from './components/EnlaceCategorias';
 import CategoriasList from './components/CategoriasList';
 import ProductDetail from './components/ProductDetail';
 import UsuarioDetail from './components/UsuarioDetail';
+import VentasList from './components/VentasList';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/categorias/hombres' element={<CategoriasList cat='Hombre' />}></Route>
           <Route path='/categorias/mujeres' element={<CategoriasList cat='Mujer' />}></Route>
           <Route path='/categorias/infantil' element={<CategoriasList cat='Infantil' />}></Route>
+          <Route path='/ventas' exact='true' element={<VentasList />}></Route>
         </Routes>
       </div>
 

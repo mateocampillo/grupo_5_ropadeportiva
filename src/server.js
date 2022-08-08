@@ -29,6 +29,7 @@ const productos = require("./routes/productos");
 const users = require("./routes/users");
 const apiProductos = require('./routes/api/productos');
 const apiUsuarios = require('./routes/api/usuarios');
+const apiMain = require('./routes/api/main');
 
 // Index de rutas
 app.use("/", main);
@@ -36,6 +37,7 @@ app.use("/productos", productos)
 app.use("/users", users);
 app.use('/api/productos', apiProductos);
 app.use('/api/usuarios', apiUsuarios);
+app.use('/api/main', apiMain);
 
 //Error 404
 app.use((req, res, next) => {

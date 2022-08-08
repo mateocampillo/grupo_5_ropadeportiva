@@ -232,6 +232,45 @@
     margin: 20px auto 20px ;
 }
 
+#container-ventas-list{
+    width: 100%;
+}
+
+#container-ventas-list h3{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 40px auto;
+}
+
+#container-ventas-list-ul{
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+}
+
+#container-ventas-list-ul li{
+    margin: 10px auto;
+    width: 80%;
+}
+
+#container-ventas-list-li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#container-ventas-list-li a{
+    text-decoration: none;
+    color: #000;
+}
+
+#ventas-div-productos{
+    display: flex;
+    flex-direction: row;
+}
+
 #footer-Container{
     position: absolute;
     bottom: 5%;
@@ -334,6 +373,15 @@
         width: 90%;
         margin: 0px auto;
         justify-content: space-around;
+    }
+
+    #container-ventas-list-li{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container-ventas-list-li p{
+        margin: 10px auto;
     }
 
 }

@@ -14,6 +14,9 @@ function NavBarLateral() {
           <div className='container-enlace-navBar'>
             <EnlaceNavBarLateral name='Categorias'/>
           </div>
+          <div className='container-enlace-navBar'>
+            <EnlaceNavBarLateral name='Ventas'/>
+          </div>
       </div>
     )
   }
