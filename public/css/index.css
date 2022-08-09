@@ -70,6 +70,10 @@ main h2{
     right: 8%;
     top: 45%;
     filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(134deg) brightness(110%) contrast(100%);
+    background-color: rgb(197, 197, 197);
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .main-producto-destacado-icono-flecha-izquierda{
@@ -78,6 +82,10 @@ main h2{
     left: 8%;
     top: 45%;
     filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(134deg) brightness(110%) contrast(100%);
+    background-color: rgb(197, 197, 197);
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .main-temporada{
