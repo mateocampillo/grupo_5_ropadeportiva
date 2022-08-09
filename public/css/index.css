@@ -28,8 +28,9 @@ main h2{
     margin: 0px auto;
 }
 
-.main-producto-destacado-imagen{            /*Esto es para el placeholder del carousel de productos, todavia no se como se hace :D*/
+.main-producto-destacado-imagen{
     width: 100%;
+    height: 20%;
 }
 
 .main-producto-destacado-nombre{
@@ -228,6 +229,11 @@ main h2{
 }
 
 @media (min-width: 380px){                  /*Aca empieza la resolucion de TABLET*/
+
+    .main-producto-destacado-imagen{
+        width: 100%;
+        height: 30%;
+    }
 
     .main-producto-destacado-nombre{
         display: block;

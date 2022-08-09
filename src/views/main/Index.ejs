@@ -21,8 +21,9 @@
             <div class="main-producto-destacado-descripcion">
                 <p><%= productos[5].description %></p>
             </div>
+            <input class="main-producto-destacado-index" type="hidden" value="0">
             <div>
-                <a href="/productos/detalle/<%= productos[5].id %>"><button class="main-producto-destacado-boton">Ver más</button></a>
+                <a class="main-producto-destacado-etiqueta-a" href="/productos/detalle/<%= productos[5].id %>"><button class="main-producto-destacado-boton">Ver más</button></a>
             </div>
             <div>
                 <img class="main-producto-destacado-icono-flecha-derecha" src="/images/index/mayorque.svg" alt="flecha derecha">
@@ -88,5 +89,6 @@
         </section>
     </main>
     <%- include("../partials/footer") %>
+    <script src="/js/indexCarousel.js"></script>
 </body>
 </html>
