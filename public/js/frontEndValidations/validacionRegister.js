@@ -41,6 +41,8 @@ window.addEventListener('load', function() {
 
         if(email.value.length == 0){
             inputErrorEmail.innerHTML = "El mail no puede estar vacio"
+        } else if(!email.value.includes('@')) {
+            inputErrorEmail.innerHTML = "Debes introducir un email valido"
         } else {
             inputErrorEmail.innerHTML = ''
         }
