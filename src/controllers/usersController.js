@@ -5,6 +5,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const { validationResult } = require('express-validator');
+const fs = require('fs');
 
 const controller = {
 
@@ -162,20 +163,45 @@ const controller = {
     },
     perfilImg: function(req, res){
 
-        db.users.update({
+        let promesaOldImg = db.users.findOne({
+            where: {
+                username: req.session.userLogeado.user
+            }
+        });
+        let promesaUpdateImg = db.users.update({
             img: req.file.filename
         } , {
             where: {
                 username: req.session.userLogeado.user
             }
-        })
-            .then(function() {
+        });
+        Promise.all([promesaOldImg, promesaUpdateImg])
+            .then(function(resultados) {
+                fs.unlink(`./public/images/Users/${resultados[0].dataValues.img}`, function (err) {
+                    if(err) return console.log(err);
+                    console.log('Archivo borrado con exito');
+                });
                 res.status(201).redirect("/users/perfil");
             })
-            .catch(function(err) {
+            .catch(function(err){
                 console.log(err);
                 res.status(500).render('./error/error-general');
             })
+
+        // db.users.update({
+        //     img: req.file.filename
+        // } , {
+        //     where: {
+        //         username: req.session.userLogeado.user
+        //     }
+        // })
+        //     .then(function() {
+        //         res.status(201).redirect("/users/perfil");
+        //     })
+        //     .catch(function(err) {
+        //         console.log(err);
+        //         res.status(500).render('./error/error-general');
+        //     })
     }
 }
 
