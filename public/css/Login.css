@@ -28,7 +28,7 @@ main{
     font-weight: 500;
     color: #ff5151;
     text-align: center;
-
+    margin: 0px auto 7px;
 }
 
 .contenedor{
@@ -64,6 +64,11 @@ main{
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
+}
+
+.form-div-texto{
+    display: flex;
+    flex-direction: column;
 }
 
 .form-div-texto input:required{
