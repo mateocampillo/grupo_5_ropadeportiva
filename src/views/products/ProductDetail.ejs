@@ -22,21 +22,20 @@
                 <div class="container-izq-der">
                     <div class="container-izq">
                         <div class="container-principal">
-                            <!-- <img class="imagen-principal" src="/images/ProductDetail/imagen1.jpg"> -->
-                            <img class="imagen-principal" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
+                            <img class="imagen-principal" id="imagen-principal" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
                         </div>
                         <div class="container-secundarias">
-                            <img class="imagen-secundaria1" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
-                            <img class="imagen-secundaria2" src="/images/ProductDetail/<%= producto.dataValues.img2 %>">
-                            <img class="imagen-secundaria3" src="/images/ProductDetail/<%= producto.dataValues.img3 %>">
+                            <img class="imagen-secundaria1 imgsec" src="/images/ProductDetail/<%= producto.dataValues.img1 %>">
+                            <img class="imagen-secundaria2 imgsec" src="/images/ProductDetail/<%= producto.dataValues.img2 %>">
+                            <img class="imagen-secundaria3 imgsec" src="/images/ProductDetail/<%= producto.dataValues.img3 %>">
                         </div>
                     </div>
                     <div class="container-der">
                         <div class="colores">
                             <p class="titulo"> Mas colores</p>
                         <div>
-                            <img class="imagen-secundaria4" src="/images/ProductDetail/<%= producto.dataValues.img3 %>">
-                            <img class="imagen-secundaria5" src="/images/ProductDetail/<%= producto.dataValues.img4 %>">
+                            <img class="imagen-secundaria4 imgsec" src="/images/ProductDetail/<%= producto.dataValues.img3 %>">
+                            <img class="imgsec imagen-secundaria5" src="/images/ProductDetail/<%= producto.dataValues.img4 %>">
                         </div>
                         <p class="color">Azul/Amarillo</p>
                     </div>
@@ -51,9 +50,6 @@
                         <p class="titulo-talle">Talles disponibles</p>
                         <div class="talles-disp">
                             <div class="talle-S"><p class="letra"><%= producto.dataValues.p_size.name %></p></div>
-                            <!-- <div class="talle-M"><p class="letra">M</p></div>
-                            <div class="talle-X"><p class="letra">X</p></div>
-                            <div class="talle-XL"><p class="letra">XL</p></div> -->
                         </div>
                         <div class="guia">
                             <p class="guia-talles">Guia de talles</p>
@@ -100,5 +96,6 @@
         </main>
         <%- include("../partials/footer") %> 
         <script src="/js/addProductoCarrito.js"></script>
+        <script src="/js/seleccionarFotoDetail.js"></script>
     </body>
 </html>

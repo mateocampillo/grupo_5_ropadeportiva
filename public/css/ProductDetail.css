@@ -48,7 +48,7 @@ main{
 }
 .imagen-secundaria1{
     width: 25%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
     margin-right: 5%;
 }
 .imagen-secundaria2{
